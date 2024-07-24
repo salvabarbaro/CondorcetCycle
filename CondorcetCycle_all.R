@@ -5,16 +5,13 @@
 #
 ################################################
 rm(list = ls())
-# library(foreign)
 library(haven)
 library(vote)
 
-#setwd("U:/PaperProjects/CondorcetCycle")
-setwd("U:/akurella/PaperProjects/CondorcetCycle")
 
-d1 <- read_dta("U:/akurella/data/cses_imd.dta")
+d1 <- read_dta("cses_imd.dta")
 
-d2 <- read_dta("U:/akurella/data/cses5.dta")
+d2 <- read_dta("cses5.dta")
 
 
 
@@ -27,21 +24,11 @@ d$cntry <- d$IMD1006_NAM
 # Generate case identifier=country x year
 d$year <- as.character(d$IMD1008_YEAR)
 d$case_ID <- paste(d$cntry, d$year, sep="_")
-
-
-
-
-
-
-
-
-
+#
 # Individual Party ratings
-
 # 0=strongly dislike
 # 10=strongly like
-
-
+#
 d$party_rating_a <- ifelse(d$IMD3008_A<11, d$IMD3008_A, NA)
 d$party_rating_b <- ifelse(d$IMD3008_B<11, d$IMD3008_B, NA)
 d$party_rating_c <- ifelse(d$IMD3008_C<11, d$IMD3008_C, NA)
@@ -51,7 +38,6 @@ d$party_rating_f <- ifelse(d$IMD3008_F<11, d$IMD3008_F, NA)
 d$party_rating_g <- ifelse(d$IMD3008_G<11, d$IMD3008_G, NA)
 d$party_rating_h <- ifelse(d$IMD3008_H<11, d$IMD3008_H, NA)
 d$party_rating_i <- ifelse(d$IMD3008_I<11, d$IMD3008_I, NA)
-
 # set missings on thermometer scores to minimum value 0
 d$party_rating_a[is.na(d$party_rating_a)] <- 0
 d$party_rating_b[is.na(d$party_rating_b)] <- 0
@@ -77,9 +63,7 @@ for(i in unique(d$case_ID)){
   
 }
 
-
 # Individual Candidate ratings
-
 # 0=strongly dislike
 # 10=strongly like
 
