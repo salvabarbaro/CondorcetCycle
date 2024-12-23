@@ -1,0 +1,221 @@
+\documentclass[a4paper, 12pt]{scrartcl}
+%
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+%\usepackage{setspace}
+\usepackage{lineno}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage[nice]{nicefrac}
+%\usepackage{xfrac}
+%\usepackage{marvosym}
+%\usepackage{circledsteps}
+\usepackage{natbib}
+\usepackage[titletoc]{appendix}
+\usepackage{ntheorem}
+\usepackage{authblk}
+\usepackage[breaklinks]{hyperref}
+\hypersetup{colorlinks, 
+	linkcolor=blue, 
+	citecolor=blue,
+	urlcolor=blue}
+\theoremstyle{break}
+%\usepackage{orcidlink}
+\newtheorem{Axiom}{Axiom}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proof}{Proof}[lemma]
+\newtheorem{corollary}{Corollary}[lemma]
+\newtheorem{property}{Property}[section]
+\newenvironment{changes}{\par\color{violet}\par\addvspace{\baselineskip}}{\par\addvspace{\baselineskip}}
+
+
+%opening
+\title{{\small Response memo concerning the submission entitled:} \\ On the Prevalence of Condorcet's Paradox }
+\subtitle{Ms. Ref. No.: EJ MS20240844}
+\author{Salvatore Barbaro and Anna-Sophie Kurella}
+\date{\today}
+\begin{document}
+\maketitle
+
+\linenumbers
+
+\noindent Dear Amanda, Dear Reviewers,
+
+
+First and foremost, we would like to express our heartfelt gratitude for the very constructive and exceptionally profound evaluations. Your assessments were highly motivating. Your insightful comments have significantly contributed to enhancing the quality and rigour of our work. In response, we have thoroughly revised the manuscript.
+
+For the sake of easier reference, I have taken the liberty of highlighting your comments in colour. This way, you can easily see how we have addressed the specific remarks. For the sake of improved readability, we have taken the liberty of summarising some comments briefly. This is by no means intended to imply a judgment, but rather to focus on the central essence of each remark.
+
+Before diving into details, we would like to provide an overview of the significant changes compared to the initial version.
+\begin{enumerate}
+    \item We reformulate the introduction, avoiding technical jargon, to make the research note appealing to a wider audience.
+	\item We carefully revised our data and clearly separate parliamentary and presidential elections in our analyses. Whenever parliamentary (Lower House) and presidential elections were held simultaneously, we included both. 
+    %We rely on party ratings to infer party rankings for parliamentary elections, and candidate ratings to infer preference rankings over presidential candidates.
+    \item Based on the reviewers' comments, we add a systematic analysis of the performance of Condorcet winners and losers across election type and electoral formulae, differentiating for electoral victory and winning different types of office.
+    \ite We update references, connect to recent work on the topic.
+\end{enumerate}
+
+
+\section{Editor}
+\begin{changes}
+How novel is the result?
+\end{changes}
+Existing results suffer from data: either it is artificial data, or elections in non-political contexts, e.g. associations. However, reason to believe that results differ in political elections, since preferences are structured by ideology. For large scale national elections, it is important to know about the prevalence of the Condorcet paradox, because normative claims, but evidence is limited to single countries, mostly USA (where possibility that a majority cycle is 0 if n=2). We are the first to investigate prevalence of Condorcet paradox for a broad range of democratic elections across different electoral systems.
+There are recent advances, others working on similar questions, which shows the general interest in the topic.
+Our contribution is unique in that we also present descriptive results on the identity of Condorcet winners and losers, and on the Condorcet efficiency of electoral systems. 
+
+\begin{changes}
+	What drives the result?
+\end{changes}
+
+
+\begin{changes}
+	Empirical strategy.
+\end{changes}
+
+\section{R1} 
+\begin{changes}
+1. Should we not worry that the preferences reported in polls are affected by the electoral system? I do not worry here about misrepresenting true preferences, but my preference over parties may be different in a system with majority voting where the winner then governs unchallenged than in a parliamentary system where I expect even the winner party to have to form a coalition? It would be good to have some discussion of this.
+\end{changes}
+
+
+\begin{changes}
+	2. I like that the authors attempt to characterize who the Condorcet winners typically are, and in particular, how much support the Condorcet losers typically get. I thought, though that this part of the paper could be a bit more expanded. For example, the last sentence of the conclusion says that "Condorcet loser parties often benefit from the actual voting methods", but the paper only gives one example of such a thing happening. Some quantification of this statement in the paper would be helpful. Similarly, there is an example of D66, a party that was a Condorcet winner but received very few votes. How frequent are such examples?
+\end{changes}
+
+Systematic analysis of government participation of Condorcet losers in new Table 2. Indeed, seldom, but most likely in PR systems. Two instances where Condorcet losers become president, which we discuss shortly in the main text.
+
+\begin{changes}
+	3. I enjoyed learning that in 85\% of the election sight a Condorcet winner that party ended up in the government. I have two questions, though. First, what does "ending up in the government" mean? How many times did the Condorcet winner become the coalition leader, that is, won the highest number of seats? And if it is close to 85\%, I would like to see some discussion how likely this is far from 100\%. I understand that one cannot put a standard confidence interval on that, but perhaps one can have a discussion based on the typical margin of error that the polls are expected to have and how frequently the election results actually defy the polls. 
+\end{changes}
+
+Bootstrap to generate CI. 
+Table 2: we separately report the frequencies at which CWs become the largest electoral party, at which they become prime minister/president, and at which the hold any government post. It shows that there is some interesting variation between these aspects of Condorcet efficiency, and also between election types and electoral systems. We hope that the insights generated by Table 2 will be of high interest to a broader audience and thank the reviewer for their suggestion.
+
+
+\newpage
+\section{R2}
+\subsection{Main Comments}
+\begin{changes}
+	The result is very interesting with great data but makes the reader wanting a thorough discussion. For example, the paper would benefit from a mechanism exploration for general interest journal like EJ. In some sense it’s a descriptive analysis of the Condorcet issue (which is an important first step), but the next step is to determine what
+	factors correlate with it. There is some exploratory analysis along this line, but is based only on party. It would be interesting to also analyze countries / institutional differences. The authors should investigate what specific factors (e.g., electoral systems, political culture, party fragmentation) correlate with the presence or absence of Condorcet winners. A first start would be to look at other work; do the papers
+	that this paper improves over do anything more than just counting winners/losers? I understand that finding variables to study mechanisms in this cross-country context may be very difficult.
+\end{changes}
+
+Analysis of electoral systems. Mechanism: ideology shape preferences. However, since virtually no instance of absence of CW, it is difficult to empirically test this mechanism. Instead, we focus on Condorcet efficiency across electoral systems and reveal significant variation between parliamentary and presidential elections, as well as between different electoral formulae. For the sake of brevity given the format of a research note, we keep these analyses at a descriptive level and hope that the variation we detect stimulates further research on institutional drivers of Condorcet efficiency.  
+
+\begin{changes}
+	Related to the last point, how do the results change compared to the older papers that use worse data? Understanding the bias of those papers and how it shows up in the results would be illuminating (and boost the argument for contribution). I understand this may be difficult if the elections don’t overlap (like their discussion on the Van
+	Deemen and Vergunst), but just an overall result comparison may be useful.
+\end{changes}
+
+New intro referring more to the van Deemen survey. Data in previous studies rather artificial.
+
+\begin{changes}
+	Why is this relevant beyond theoretical interest? Is there evidence policymakers take Condorcet paradox into account when devising voting rules? If so, you can quantify the extent of the over-correction. Overall, more discussion and some real-world policy relevance / recommendation would benefit the reader.
+\end{changes}
+
+Ongoing discussion on electoral reforms. Condorcet was frequently left aside (too early) because of the threat of indeterminacy. Such concern can be addressed now more carefully.
+
+\begin{changes}
+	If the number of Condorcet paradoxes in the data is ``surprisingly'' small (from a theory perspective), what explains the discrepancy? Are there nuances to the electoral systems that make them more complex than the idealized models?
+\end{changes}
+
+Anna Regression.
+
+\begin{changes}
+	For a general interest audience, more discussion on the Condorcet paradox (winner/loser) is needed. The concise definition in the intro doesn’t feel sufficient.
+\end{changes}
+
+New intro.
+
+\subsection{Minor Comments}
+\begin{changes}
+	More details on data. For example, why just 1996/2004 for the US? The reform party only did well in 1992/1996. What about Nader in 2000 with the greens? Is this scattered years list simply based on what CSES has (my guess for why 1992 is missing) or are there additional data processing steps that removed some years?
+\end{changes}
+
+To be explained.
+
+\begin{changes}
+	Other recent work that may be relevant for authors to compare to: \cite{Desai2024, Darmann2019}.
+\end{changes}
+
+\citeauthor{Desai2024}: Core and CW, Methods for inference.
+
+\citeauthor{Darmann2019}: little differences among voting systems, bootstrapping
+
+
+\begin{changes}
+Alternative measure / aggregation rule to see how things change?
+\end{changes}
+
+Condorcet efficiency table. Alternative measures: Borda, STV. 
+
+\begin{changes}
+	The mention of non-reporting of null results is interesting but is the claim that some authors sought evidence, presented, but did not end up publishing results a guess or based on knowledge? If the latter, the presentations could be cited.
+\end{changes}
+
+We have removed this part, because, indeed, the claim is a guess.
+
+\begin{changes}
+	Typo in Figure 1 for Conservative.
+\end{changes}
+Thank you for pointing on this. We have amended the caption. 
+
+\newpage
+\section{R3}
+%\begin{changes}
+%	My main concern is that the current manuscript looks more like a short technical note addressed to an audience of readers who already know the topic really well, rather than a paper addressed to a broad audience of economists. The results seem interesting and 	potentially important, but I believe the paper would have to be written completely differently to do them justice.
+%\end{changes}
+
+\begin{changes}
+	The authors could start by explaining in “simple” words what a Condorcet winner is and provide concrete examples to illustrate the Condorcet paradox. In its current form, the introduction immediately starts with some jargon that many readers who do not work in
+	social choice theory will not know. Although most economists have heard the term Condorcet paradox before, I believe it is worth reminding everyone what that is before testing for its existence.
+\end{changes}
+
+New intro. Concise example. Importance for economic theory (stability of core economy), main aspect in Arrow's seminal impossibility theorem. 
+
+\begin{changes}
+	There is very little information about the empirical strategy. I think it would be important to provide more information on the polling data that is used (e.g., who conducts these surveys, how many respondents there are, what the sampling strategy is, etc.). It would also be
+	interesting to know how the parties are classified between the different categories shown in Figure 1. Is it performed by the authors? Based on which sources?
+\end{changes}
+
+We provide more information on the CSES, e.g. information on the number of observations, as well as on the source of the party family classification.
+
+\begin{changes}
+	Similarly, it would be valuable to explain in more detail which calculations are performed to determine whether there is a Condorcet winner or not. The authors mention an R package but I think it would be important to explain what this package does exactly.
+\end{changes}
+
+\begin{changes}
+	On a more substantive note, isn’t there a risk that the party ratings given by respondents are endogenously influenced by the electoral system in which these respondents vote? It could be nice to defend a bit more the assumption that these ratings can be treated as
+	sincere voter preferences.
+\end{changes}
+
+\begin{changes}
+	The authors ﬁnd that the “electoral systems employed work well in selecting the Condorcet winner most of the time” (p.7), which I ﬁnd very interesting. Given the richness of the data, it seems like the authors could push their analysis further and check this propensity to pick the
+	Condorcet winner varies across systems and voting rules. It could be interesting to discuss whether some systems are better at picking the Condorcet winner than others. This could lead to an interesting discussion of the paper’s policy implications.
+\end{changes}
+
+Thank you. We compared electoral systems and across rules (Condorcet efficiency).
+
+\begin{changes}
+	I believe there in an inconsistency in the text as the abstract mentions 351 elections while Section 2 mentions only 221 elections.
+\end{changes}
+
+
+
+
+\newpage
+\section{Concluding Remarks}
+
+We would like to once again express our sincere gratitude for your exceptionally balanced and constructive remarks. We truly hope that the new version not only incorporates your valuable suggestions for improvement but also exhibits an overall increase in quality. We are eagerly looking forward to your feedback.
+
+\bibliographystyle{elsarticle-harv}
+\bibliography{CondorcetCycle}
+\end{document}

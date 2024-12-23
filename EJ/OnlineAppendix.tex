@@ -1,0 +1,364 @@
+\documentclass[12pt]{article}
+%
+\usepackage[utf8]{inputenc}
+\usepackage[british]{babel}
+\usepackage{lmodern}
+\usepackage[table, usenames,dvipsnames]{xcolor}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage[nice]{nicefrac}
+\usepackage{xfrac}
+\usepackage{marvosym}
+%\usepackage{wasysym}
+\usepackage{natbib}
+\usepackage{ntheorem}
+\usepackage{authblk}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{float}
+%for landscape tables
+\usepackage{pdflscape}
+\usepackage[labelfont=bf, 
+textfont=it,
+justification=raggedright,
+labelsep=colon]{caption}
+\usepackage[breaklinks]{hyperref}
+\hypersetup{colorlinks, 
+	citecolor=purple,
+	urlcolor=purple,
+	linkcolor=purple}
+
+
+\renewcommand\Affilfont{\fontsize{9}{10.8}\itshape}
+
+\title{Online Appendix: On the Prevalence of Condorcet's Paradox}
+
+\author[$\mp$]{Salvatore Barbaro}
+\author[$\otimes$]{Anna-Sophie Kurella}
+\affil[$\mp$, $\divideontimes$]{Johannes-Gutenberg University, Interdisciplinary Public Policy \\ 55122 Mainz, Germany \href{mailto:sbarbaro@uni-mainz.de}{sbarbaro@uni-mainz.de}} \affil[$\otimes$]{University of Mannheim, MZES, 68159 Mannheim, Germany \href{mailto:anna-sopie.kurella@uni-mannheim.de}{anna-sopie.kurella@uni-mannheim.de}}
+\date{\today}
+
+\begin{document}
+	\maketitle
+
+
+
+%\keywords{Elections; Condorcet Paradox; Condorcet Winner; Condorcet Loser}
+
+%\dedication{}
+
+%\thanks{omitted.
+%}
+
+
+%\subjclass[2010]{81T13, 53C07, 14D21}
+
+\newpage
+\onehalfspacing
+\section{Descriptives}\label{sec.intro}
+
+
+% latex table generated in R 4.2.3 by xtable 1.8-4 package
+% Mon Dec 16 13:10:01 2024
+\begin{table}[ht]
+\centering
+\caption{List of elections with Condorcet winner and loser party: Parliamentary Elections}
+\begin{footnotesize}
+\begin{tabular}{rllll}
+  \hline
+ & 1 & 2 & 3 & 4 \\ 
+  \hline
+1 & Albania & 2005 &   Democratic Party of Albania (PD) &   Agrarian Party (PAA) \\ 
+  2 & Albania & 2017 &   Socialist Party of Albania (PS) &   Libra Party (LIBRA) \\ 
+  3 & Argentina & 2015 &   Front for the Victory (FPV) &   United for a New Alternative (UNA)  \\ 
+  4 & Australia & 1996 &   Liberal Party (LP) &   Australian Greens (AG) \\ 
+  5 & Australia & 2004 &   Liberal Party (LP) &   Australian Democrats (AD) \\ 
+  6 & Australia & 2007 &   Australian Labor Party (ALP) &   National Party of Australia (NPA)   \\ 
+  7 & Australia & 2013 &   Liberal Party (LP) &   Australian Greens (AG) \\ 
+  8 & Australia & 2019 &   Liberal Party (LP) &   Palmer United Party (PUP) / Clive Palmer's United Australia Party (UAP) \\ 
+  9 & Austria & 2008 &   Social Democratic Party of Austria (SPO) &   Dinkhauser List  \\ 
+  10 & Austria & 2013 &   Social Democratic Party of Austria (SPO) &   Alliance for the Future of Austria (BZO) \\ 
+  11 & Austria & 2017 &   Austrian People's Party (OVP) &   Peter Pilz List (PILZ) \\ 
+  12 & B\_FL & 1999 &  &  \\ 
+  13 & B\_FL & 2019 &  &  \\ 
+  14 & B\_WA & 1999 &  &  \\ 
+  15 & B\_WA & 2019 &  &  \\ 
+  16 & Belgium & 2003 &   Socialist Party Differently (SP &   Confederated Ecologists (ECOLO) \\ 
+  17 & Bulgaria & 2001 &   National Movement for Stability and Progress (NDS) &   Euroleft (BE) \\ 
+  18 & Bulgaria & 2014 &   Citizens for European Development of Bulgaria (GERB) &   Movement for Rights and Freedoms (DPS) \\ 
+  19 & Belarus & 2001 &   Communist Party of Belarus  &  \\ 
+  20 & Belarus & 2008 &   Christian Conservative Party (BPF) &   Belarusian Left Party 'A Just World' \\ 
+  21 & Brazil & 2002 &   Workers Party (PT) &   Brazilian Socialist Party (PSB) \\ 
+  22 & Brazil & 2006 &   Workers Party (PT) &   Brazilian Labor Party (PTB) \\ 
+  23 & Brazil & 2010 &   Workers Party (PT) &   Republic Party (PR) \\ 
+  24 & Brazil & 2014 &   Workers Party (PT) &   Social Democratic Party (PSD) \\ 
+  25 & Brazil & 2018 &   Workers Party (PT) &   Brazilian Republican Party (PRB) \\ 
+  26 & Canada & 1997 &   Liberal Party (LIB) &   Bloc Quebecois (BQ) \\ 
+  27 & Canada & 2004 &   Liberal Party (LIB) &   Bloc Quebecois (BQ) \\ 
+  28 & Canada & 2008 &   Conservative Party (CP) &   Bloc Quebecois (BQ) \\ 
+  29 & Canada & 2011 &   Conservative Party (CP) &   Bloc Quebecois (BQ) \\ 
+  30 & Canada & 2015 &   Liberal Party (LIB) &   Bloc Quebecois (BQ) \\ 
+  31 & Canada & 2019 &   Liberal Party (LIB) &   Bloc Quebecois (BQ) \\ 
+  32 & Switzerland & 1999 &   Radical Democratic Party (FDP / PLR)  &   Green Party (GPS / PES) \\ 
+  33 & Switzerland & 2003 &   Social Democratic Party (SP / PS) &   Swiss People's Party (SVP / UDC) \\ 
+  34 & Switzerland & 2007 &   Christian Democratic People's Party (CVP / PDC) &   Evangelical People's Party (EVP / PEP) \\ 
+  35 & Switzerland & 2011 &   Christian Democratic People's Party (CVP / PDC) &   Swiss People's Party (SVP / UDC) \\ 
+  36 & Chile & 1999 &   Party for Democracy (PPD) &   Communist Party of Chile (PCCh) \\ 
+  37 & Chile & 2005 &   Party for Democracy (PPD) &   Independent Democratic Union (UDI) \\ 
+  38 & Chile & 2009 &   Christian Democratic Party (PDC) &   Peruvian Aprista Party (PAP) \\ 
+  39 & Chile & 2017 &   National Renewal (RN) &   Political Evolution (Evopoli) \\ 
+  40 & Costa Rica & 2018 &   Citizens' Action Party (PAC) &   Social Christian Republican Party (PRSC) \\ 
+  41 & Czech Republic  & 1996 &   Civic Democratic Party (ODS) &   Communist Party of Bohemia and Moravia (KSCM) \\ 
+  42 & Czech Republic  & 2002 &   Czech Social Democratic Party (CSSD) &   Communist Party of Bohemia and Moravia (KSCM) \\ 
+  43 & Czech Republic & 2006 &   Green Party (SZ) &   Communist Party of Bohemia and Moravia (KSCM) \\ 
+  44 & Czech Republic  & 2010 &   Public Affairs (VV) &   Communist Party of Bohemia and Moravia (KSCM) \\ 
+  45 & Czech Republic  & 2013 &   Action of Dissatisfied Citizens (ANO 2011) &   Civic Democratic Party (ODS) \\ 
+  46 & Czech Republic  & 2017 &   Action of Dissatisfied Citizens (ANO 2011) &   TOP 09 (TOP 09) \\ 
+  47 & Czech Republic  & 2021 &   Action of Dissatisfied Citizens (ANO 2011) &   Czech Pirate Party (Pirati) \\ 
+  48 & Germany & 2002 &   Social Democratic Party (SPD) &   Left Party (DIE LINKE) \\ 
+  49 & Germany & 1998 &   Social Democratic Party (SPD) &   Free Democratic Party (FDP) \\ 
+  50 & Germany & 2005 &   Social Democratic Party (SPD) &   Christian Social Union in Bavaria (CSU) \\ 
+  51 & Germany & 2009 &   Christian Democratic Party (CDU) &   Left Party (DIE LINKE) \\ 
+  52 & Germany & 2013 &   Christian Democratic Party (CDU) &   Free Democratic Party (FDP) \\ 
+  53 & Germany & 2017 &   Christian Democratic Party (CDU) &   Alternative for Germany (AfD) \\ 
+  54 & Germany & 2021 &   Social Democratic Party (SPD) &   Alternative for Germany (AfD) \\ 
+  55 & Denmark & 1998 &   Social Democrats (Sd) &   Danish People's Party (DF) \\ 
+  56 & Denmark & 2001 &   Venstre, Denmark's Liberal Party (V) &   Unity List - Red-Green Alliance (EL) \\ 
+  57 & Denmark & 2007 &   Social Democrats (Sd) &   Unity List - Red-Green Alliance (EL) \\ 
+  58 & Denmark & 2019 &   Social Democrats (Sd) &   The New Right (NB) \\ 
+  59 & Spain & 1996 &   Spanish Socialist Workers' Party (PSOE) &   Basque Nationalist Party (PNV) \\ 
+  60 & Spain & 2000 &   People's Party (PP) &   Basque Nationalist Party (PNV) \\ 
+  61 & Spain & 2004 &   Spanish Socialist Workers' Party (PSOE) &   People's Party (PP) \\ 
+  62 & Spain & 2008 &   Spanish Socialist Workers' Party (PSOE) &   Republican Left of Catalonia (ERC) \\ 
+  63 & Estonia & 2011 &   Social Democratic Party (SDE) &   Estonian People's Union (ER a)  \\ 
+  64 & Finland & 2003 &   Social Democratic Party of Finland (SDP) &   Swedish People's Party in Finland (RKP - SFP) \\ 
+  65 & Finland & 2007 &   Center Party of Finland (KESK) &   Left Alliance (VAS) \\ 
+  66 & Finland & 2011 &   Social Democratic Party of Finland (SDP) &   Christian Democrats (KD) \\ 
+  67 & Finland & 2015 &   Center Party of Finland (KESK) &  \\ 
+  68 & Finland & 2019 &   Social Democratic Party of Finland (SDP) &   Blue Reform (SIN) \\ 
+  69 & France & 2002 &   Socialist Party (PS) &   National Front (FN) \\ 
+  70 & France & 2007 &   Union for a Popular Movement (UMP) &   National Front (FN) \\ 
+  71 & France & 2012 &   Socialist Party (PS) &   National Front (FN) \\ 
+  72 & France & 2017 &   The Republic Onwards! (LaREM) &   National Front (FN) \\ 
+  73 & Great Britain & 1997 &   Labor (Lab) &   Conservatives (Con) \\ 
+  74 & Great Britain & 2005 &   Labor (Lab) &   Conservatives (Con) \\ 
+  75 & Great Britain & 2015 &   Conservatives (Con) &   United Kingdom Independence Party (UKIP) \\ 
+  76 & Great Britain & 2017 &   Labor (Lab) &   Plaid Cymru (PC)  \\ 
+  77 & Great Britain & 2019 &   Conservatives (Con) &   Plaid Cymru (PC)  \\ 
+  78 & Greece & 2015 &  &  \\ 
+  79 & Greece & 2009 &  &  \\ 
+  80 & Greece & 2012 &  &  \\ 
+  81 & Greece & 2019 &  &  \\ 
+  82 & Hong Kong & 1998 &   Democratic Party (DP) &   Citizen's Party \\ 
+  83 & Hong Kong & 2000 &   Democratic Party (DP) &   Citizen's Party \\ 
+  84 & Hong Kong & 2004 &   Democratic Party (DP) &   Democratic Alliance for Betterment of Hong Kong (DAB) \\ 
+  85 & Hong Kong & 2008 &   Civic Party (CPP) &   League of Social Democrats (LSD) \\ 
+  86 & Hong Kong & 2012 &  &   People Power (PP) \\ 
+  87 & Hong Kong & 2016 &   Democratic Party (DP) &   People Power - League of Social Democrats (PP - LSD) -  \\ 
+  88 & Croatia & 2007 &   Croatian Democratic Union (HDZ) &   Croatian Democratic Alliance of Slavonia and Baranja (HDSSB) \\ 
+  89 & Hungary & 1998 &   Fidesz-Hungarian Civic Party Alliance Party (Fidesz - MPP) &   Hungarian Justice and Life Party (MIEP) \\ 
+  90 & Hungary & 2002 &   Hungarian Socialist Party (MSZP) &   Hungarian Justice and Life Party (MIEP) \\ 
+  91 & Hungary & 2018 &   Fidesz - KDNP &   Democratic Coalition (DK) \\ 
+  92 & India & 2019 &  Indian People's Party (BJP) &  All India Trinamool Congress (AITC) \\ 
+  93 & Ireland & 2002 &   Fianna Fail (FF) &   Sinn Fein (SF) \\ 
+  94 & Ireland & 2007 &   Fianna Fail (FF) &   Sinn Fein (SF) \\ 
+  95 & Ireland & 2011 &   Fine Gael (FG) &   United Left Alliance (ULA) \\ 
+  96 & Ireland & 2016 &   Fine Gael (FG) &   Sinn Fein (SF) \\ 
+  97 & Iceland & 1999 &   Independence Party (Sj) &   Liberal Party (FF) \\ 
+  98 & Iceland & 2003 &   Independence Party (Sj) &   Liberal Party (FF) \\ 
+  99 & Iceland & 2007 &   Independence Party (Sj) &   Icelandic Movement (IL) \\ 
+  100 & Iceland & 2009 &   Social Democratic Alliance (Sam) &   Liberal Party (FF) \\ 
+  101 & Iceland & 2013 &   Progressive Party (F) &   Pirate Party (Pi) \\ 
+  102 & Iceland & 2016 &   Left-Green Movement (VG) &   Progressive Party (F) \\ 
+  103 & Iceland & 2017 &   Left-Green Movement (VG) &   Center Party (M) \\ 
+  104 & Israel & 1996 &   Israeli Labor Party (MHH) &   Sfarad's Keepers of the Torah (Shas) \\ 
+  105 & Israel & 2003 &   Likud - The Consolidation (L) &   Sfarad's Keepers of the Torah (Shas) \\ 
+  106 & Israel & 2006 &   Forward (Kadima) &   Sfarad's Keepers of the Torah (Shas) \\ 
+  107 & Israel & 2013 &   There is a Future (YA) &   Sfarad's Keepers of the Torah (Shas) \\ 
+  108 & Israel & 2020 &   Likud - The Consolidation (L) &   Joint List \\ 
+  109 & Italy & 2006 &   National Alliance (AN) &   Communist Refoundation Party (PRC) \\ 
+  110 & Italy & 2018 &   Five Star Movement (M5S) &   Free and Equal (LeU) \\ 
+  111 & Japan & 1996 &   Liberal Democratic Party (LDP) &   New Party Harbinger (NPH) \\ 
+  112 & Japan & 2004 &   Democratic Party of Japan (DPJ) &   Japanese Communist Party (JCP) \\ 
+  113 & Japan & 2007 &   Democratic Party of Japan (DPJ) &   Japanese Communist Party (JCP) \\ 
+  114 & Japan & 2013 &   Liberal Democratic Party (LDP) &   Green Wind \\ 
+  115 & Japan & 2017 &   Liberal Democratic Party (LDP) &   Japanese Communist Party (JCP) \\ 
+  116 & Kenya & 2013 &   The National Alliance (TNA) &   United Democratic Front (Forum) (UDFP) \\ 
+  117 & Kyrgyzstan & 2005 &   Ar Namys &   New Kyrgyzstan \\ 
+  118 & Republic of Korea & 2000 &   Millennium Democratic Party (MDP) &   New Korean Party of the Hope (NKPH) \\ 
+  119 & Republic of Korea & 2004 &   Our Party &   National Integration 21 \\ 
+  120 & Republic of Korea & 2008 &   New Frontier Party (NFP) &   New Progressive Party (NPP) \\ 
+  121 & Republic of Korea & 2012 &   Democratic United Party (DUP) &  \\ 
+  122 & Republic of Korea & 2016 &   Democratic Party of Korea (DP) &   Justice Party (JP) \\ 
+  123 & Lithuania & 1997 &   V  Adamkus (Independent) &  \\ 
+  124 & Lithuania & 2016 &   Lithuanian Farmers and Greens Union (LVZS) &   (Lithuanian) Poles Election Action - Christian Families Alliance  \\ 
+  125 & Lithuania & 2020 &   Homeland Union-Conservatives / Lithuanian Christian Democrats &   (Lithuanian) Poles Election Action - Christian Families Alliance  \\ 
+  126 & Latvia & 2010 &   Union of Greens and Farmers (ZZS) &   For Human Rights in United Latvia (PCTVL) \\ 
+  127 & Latvia & 2011 &   Unity (V) &   Latvia's First Party/Latvian Way (LPP/LC) \\ 
+  128 & Latvia & 2014 &   Union of Greens and Farmers (ZZS) &   Latvian Association of the Regions (LRa) \\ 
+  129 & Latvia & 2018 &   Union of Greens and Farmers (ZZS) &   Latvian Russian Union (LKS) \\ 
+  130 & Mexico & 1997 &   Democratic Revolution Party (PRD) &   Cardenista Party (PFCRN) \\ 
+  131 & Mexico & 2000 &   Alliance for Change &   Authentic Party of the Mexican Revolution (PARM) \\ 
+  132 & Mexico & 2003 &   National Action Party (PAN) &   Citizen's Movement (MC) \\ 
+  133 & Mexico & 2006 &   National Action Party (PAN) &   Social Democratic Party (PSD) \\ 
+  134 & Mexico & 2009 &   Institutional Revolutionary Party (PRI) &   Social Democratic Party (PSD) \\ 
+  135 & Mexico & 2012 &   Institutional Revolutionary Party (PRI) &   New Alliance Party (PANAL or: PNA) \\ 
+  136 & Mexico & 2015 &   Institutional Revolutionary Party (PRI) &   Citizen's Movement (MC) \\ 
+  137 & Mexico & 2018 &   National Regeneration Movement (MORENA) &   Institutional Revolutionary Party (PRI) \\ 
+  138 & Montenegro & 2012 &   Coalition "For a European Montenegro" &   Albanian Coalition (AK) \\ 
+  139 & Montenegro & 2016 &   Democratic Party of Socialists (DPS) &   Bosniak Party (BS) \\ 
+  140 & Netherlands & 1998 &   Labor Party (PvdA) &   Reformed Political Alliance (GPV) \\ 
+  141 & Netherlands & 2002 &   Christian Democratic Appeal (CDA) &   Reformed Political Party (SGP) \\ 
+  142 & Netherlands & 2006 &   Christian Democratic Appeal (CDA) &   Party for Freedom (PVV) \\ 
+  143 & Netherlands & 2010 &   Democrats 66 (D66) &   Party for Freedom (PVV) \\ 
+  144 & Netherlands & 2017 &   Democrats 66 (D66) &   Party for Freedom (PVV) \\ 
+  145 & Netherlands & 2021 &   Democrats 66 (D66) &   Forum for Democracy (FvD) \\ 
+  146 & Norway & 1997 &   Labor Party (Ap) &   Progress Party (FrP) \\ 
+  147 & Norway & 2001 &   Conservative Party (H) &   Progress Party (FrP) \\ 
+  148 & Norway & 2005 &   Labor Party (Ap) &   Red Electoral Alliance (RV) \\ 
+  149 & Norway & 2009 &   Labor Party (Ap) &   Red Party (R) \\ 
+  150 & Norway & 2013 &   Conservative Party (H) &   Red Party (R) \\ 
+  151 & Norway & 2017 &   Conservative Party (H) &   Red Party (R) \\ 
+  152 & New Zealand & 1996 &   Labor Party (Lab) &   Christian Coalition \\ 
+  153 & New Zealand & 2002 &   Labor Party (Lab) &   Jim Anderton's Progressive Party (PP) \\ 
+  154 & New Zealand & 2008 &   National Party (NP) &   Jim Anderton's Progressive Party (PP) \\ 
+  155 & New Zealand & 2011 &   National Party (NP) &   Maori Party (MP) \\ 
+  156 & New Zealand & 2014 &   National Party (NP) &   Internet MANA (IP - MANA) \\ 
+  157 & New Zealand & 2017 &   National Party (NP) &   MANA Movement (MANA) \\ 
+  158 & New Zealand & 2020 &   Labor Party (Lab) &   Conservative Party (CP)/New Conservative (NC) \\ 
+  159 & Peru & 2000 &   Possible Peru &   Peruvian Aprista Party (PAP) \\ 
+  160 & Peru & 2001 &   Possible Peru &   Andean Renaissance / National United Renaissance (RUNA) - \\ 
+  161 & Peru & 2006 &   Peruvian Aprista Party (PAP) &   National Restoration (RN) \\ 
+  162 & Peru & 2011 &   Peru Wins (UPP) &   Peruvian Aprista Party (PAP) \\ 
+  163 & Peru & 2016 &   Popular Force (FP) &   Popular Action (AP) \\ 
+  164 & Peru & 2021 &   Popular Action (AP) &   Popular Renewal (RP) \\ 
+  165 & Philippines & 2004 &   Lakas - Christian-Muslim Democrats (LAKAS-CMD) &   Democratic Action (AD) \\ 
+  166 & Philippines & 2010 &   Liberal Party (LP) &   New Nation- Volunteers for a New Philippines (VNP) \\ 
+  167 & Philippines & 2016 &   United Nationalist Alliance (UNA) &   Philippine Democratic Party (PDP-LABAN) \\ 
+  168 & Poland & 1997 &   Solidarity Electoral Action (AWSP) &   Movement for Reconstruction of Poland (ROP) \\ 
+  169 & Poland & 2001 &   Coalition Of The Alliance Of The Democratic Left - The Union of  Labor &   Solidarity Electoral Action (AWSP) \\ 
+  170 & Poland & 2005 &   Law and Justice (PiS) &   Democratic Party (PD) \\ 
+  171 & Poland & 2007 &   Civic Platform (PO) &   Left and Democrats (LiD)  \\ 
+  172 & Poland & 2011 &   Civic Platform (PO) &   Palikots Movement \\ 
+  173 & Poland & 2019 &   Law and Justice (PiS) &   Spring \\ 
+  174 & Portugal & 2002 &   Socialist Party (PS) &   Portuguese Communist Worker's Party (PCTP/MRPP) \\ 
+  175 & Portugal & 2005 &   Socialist Party (PS) &   Democratic and Social Centre - People's Party (CDS-PP) \\ 
+  176 & Portugal & 2009 &   Socialist Party (PS) &   Unitarian Democratic Coalition (CDU) \\ 
+  177 & Portugal & 2015 &   Socialist Party (PS) &   Party for People, Animals and Nature (PAN) \\ 
+  178 & Portugal & 2019 &   Socialist Party (PS) &   Democratic and Social Centre - People's Party (CDS-PP) \\ 
+  179 & Romania & 1996 &   Romanian Democratic Convention (CDR) &   Democratic Union of Hungarians in Romania (UDMR) \\ 
+  180 & Romania & 2004 &   Democratic Party (PD) &   Democratic Union of Hungarians in Romania (UDMR) \\ 
+  181 & Romania & 2009 &   Social Democratic Party - Conservative Party (PSD - PC) &   Democratic Union of Hungarians in Romania (UDMR) \\ 
+  182 & Romania & 2012 &   Social Liberal Union (USL) &   Democratic Union of Hungarians in Romania (UDMR) \\ 
+  183 & Romania & 2014 &   Christian-Liberal Alliance (ACL) &   Democratic Union of Hungarians in Romania (UDMR) \\ 
+  184 & Romania & 2016 &   Romanian Party of Social Democracy (PSD) &   Greater Romania Party (PRM) \\ 
+  185 & Russian Federation & 1999 &   Unity Inter-Regional movement &   Zhirinovsky Bloc \\ 
+  186 & Russian Federation & 2000 &   Communist Party of the Russian Federation (KPRF) &   Zhirinovsky Bloc \\ 
+  187 & Russian Federation & 2004 &   United Russia (ER) &   Union of Right Forces (SPS) \\ 
+  188 & El Salvador & 2019 &   Grand Alliance for National Unity (GANA) &   Let's Go (Vamos) \\ 
+  189 & Serbia & 2012 &   Serbian Progressive Party (SNS) &   Liberal Democratic Party (LDP) \\ 
+  190 & Slovakia & 2010 &   Direction - Social Democracy (Smer) &   Party Of The Hungarian Coalition (SMK) \\ 
+  191 & Slovakia & 2016 &   Slovak National Party (SNS) &   Network (S) / Slovak Conservative Party (SKS) \\ 
+  192 & Slovakia & 2020 &   We are family (SR) &   Kotleba - People's Party Our Slovakia (LsNS) \\ 
+  193 & Slovenia & 1996 &  &   Christian Democrats (SKD) \\ 
+  194 & Slovenia & 2004 &   Social Democratic Party (SDS) &   New Slovenia - Christian People's Party (NSi) \\ 
+  195 & Slovenia & 2008 &   Social Democrats (SD)  &   New Slovenia - Christian People's Party (NSi) \\ 
+  196 & Slovenia & 2008 &   United List of Social Democrats (ZLSD) &   New Slovenia - Christian People's Party (NSi) \\ 
+  197 & Slovenia & 2011 &   Social Democrats (SD)  &   Slovenian National Party (SNS) \\ 
+  198 & Slovenia & 2011 &   United List of Social Democrats (ZLSD) &   Slovenian National Party (SNS) \\ 
+  199 & Sweden & 1998 &   Sweden's Social Democratic Worker's Party (SAP) &   Liberal People's Party (FP) / Liberals (L) \\ 
+  200 & Sweden & 2002 &   Sweden's Social Democratic Worker's Party (SAP) &   Moderate Party (M) \\ 
+  201 & Sweden & 2006 &   Sweden's Social Democratic Worker's Party (SAP) &   Sweden Democrats (SD) \\ 
+  202 & Sweden & 2014 &   Sweden's Social Democratic Worker's Party (SAP) &   Sweden Democrats (SD) \\ 
+  203 & Sweden & 2018 &   Sweden's Social Democratic Worker's Party (SAP) &   Sweden Democrats (SD) \\ 
+  204 & Thailand & 2001 &   Thai Rak Thai Party (TRT) &   Justice and Freedom Party \\ 
+  205 & Thailand & 2007 &   People's Power Party (PPP) &   Referendum Party  \\ 
+  206 & Thailand & 2011 &   For Thais Party (PPT) &   Power of Choburi Party \\ 
+  207 & Thailand & 2019 &   For Thais Party (PPT) &   New Economics Party (NEP) \\ 
+  208 & Tunisia & 2019 &   Heart of Tunisia &   Dignity Coalition \\ 
+  209 & Turkey & 2011 &   Justice and Development Party (AKP) &   Peace and Democratic Party (BDP) \\ 
+  210 & Turkey & 2015 &   Justice and Development Party (AKP) &   Patriotic Party (VP) \\ 
+  211 & Turkey & 2018 &   Justice and Development Party (AKP) &   Peoples' Democratic Party (HDP) \\ 
+  212 & Taiwan & 1996 &   Kuomintang of China (KMT)  &   New Party (NP) \\ 
+  213 & Taiwan & 2001 &   Democratic Progressive Party (DPP) &   New Party (NP) \\ 
+  214 & Taiwan & 2004 &   Democratic Progressive Party (DPP) &   New Party (NP) \\ 
+  215 & Taiwan & 2008 &   Kuomintang of China (KMT)  &   Democratic Progressive Party (DPP) \\ 
+  216 & Taiwan & 2012 &   Kuomintang of China (KMT)  &   People First Party (PFP) \\ 
+  217 & Taiwan & 2016 &   Democratic Progressive Party (DPP) &   Minkuotang (MKT) \\ 
+  218 & Taiwan & 2020 &   Democratic Progressive Party (DPP) &   People First Party (PFP) \\ 
+  219 & Ukraine & 1998 &   Communist Party of Ukraine &   Peasants Party of Ukraine \\ 
+  220 & Uruguay & 2009 &   Broad Front (FA) &   Popular Assembly \\ 
+  221 & Uruguay & 2019 &   Broad Front (FA) &   Open Cabildo \\ 
+  222 &  USA  & 1996 &   Democratic Party (DEM) &   Reform Party (REF) \\ 
+  223 &  USA  & 2004 &   Democratic Party (DEM) &   Reform Party (REF) \\ 
+  224 &  USA  & 2008 &   Democratic Party (DEM) &   Republican Party (GOP) \\ 
+  225 &  USA  & 2012 &   Democratic Party (DEM) &   Republican Party (GOP) \\ 
+  226 &  USA  & 2016 &   Democratic Party (DEM) &   Republican Party (GOP) \\ 
+  227 &  USA  & 2020 &   Democratic Party (DEM) &   Republican Party (GOP) \\ 
+  228 & South Africa & 2009 &   African National Congress (ANC) &   Freedom Front Plus (VF Plus) \\ 
+  229 & South Africa & 2014 &   African National Congress (ANC) &   Freedom Front Plus (VF Plus) \\ 
+ \hline
+\end{tabular}
+   \end{footnotesize}
+\end{table}
+
+
+
+
+  \begin{table}[ht]
+\centering
+\caption{List of elections with Condorcet winner and loser party: Presidential Elections}
+\begin{footnotesize}
+\begin{tabular}{rllll}
+  \hline
+ & 1 & 2 & 3 & 4 \\ 
+  \hline
+  230 & Argentina\_presi & 2015 &   Front for the Victory (FPV) &   Workers' Left Front (FIT) \\ 
+  231 & Belarus\_presi & 2001 &  &   Agrarian Party  \\ 
+  232 & Brazil\_presi & 2002 &   Workers Party (PT) &   (Party of the) Brazilian Democratic Movement (PMDB/MDB) - SEE  \\ 
+  233 & Brazil\_presi & 2006 &   (Party of the) Brazilian Democratic Movement (PMDB/MDB) - SEE  &   Brazilian Social Democratic Party (PSDB) \\ 
+  234 & Brazil\_presi & 2010 &   Workers Party (PT) &   Brazilian Social Democratic Party (PSDB) \\ 
+  235 & Brazil\_presi & 2014 &   Workers Party (PT) &   Republic Party (PR) \\ 
+  236 & Brazil\_presi & 2018 &   Social Liberal Party (PSL) &   Social Democratic Party (PSD) \\ 
+  237 & Chile\_presi & 2009 &   Party for Democracy (PPD) &   Christian Democratic Party (PDC) \\ 
+  238 & Chile\_presi & 2017 &   National Renewal (RN) &   Communist Party of Chile (PCCh) \\ 
+  239 & Costa Rica\_presi & 2018 &   Citizens' Action Party (PAC) &   Social Christian Republican Party (PRSC) \\ 
+  240 & Kenya\_presi & 2013 &   The National Alliance (TNA) &   United Republican Party (URP) \\ 
+  241 & Mexico\_presi & 2000 &   Alliance for Mexico &   Alliance for Change \\ 
+  242 & Mexico\_presi & 2006 &   National Action Party (PAN) &   Ecological Green Party of Mexico (PVEM) \\ 
+  243 & Mexico\_presi & 2012 &   Institutional Revolutionary Party (PRI) &   Ecological Green Party of Mexico (PVEM) \\ 
+  244 & Mexico\_presi & 2018 &   National Regeneration Movement (MORENA) &   Democratic Revolution Party (PRD) \\ 
+  245 & Peru\_presi & 2000 &   Peru 2000 &   Peruvian Aprista Party (PAP) \\ 
+  246 & Peru\_presi & 2001 &   National Unity (UN) &   Andean Renaissance / National United Renaissance (RUNA) - \\ 
+  247 & Peru\_presi & 2011 &  &   Possible Peru \\ 
+  248 & Peru\_presi & 2016 &   Popular Force (FP) &   Direct Democracy \\ 
+  249 & Peru\_presi & 2021 &   Go on Country - Social Integration Party (AvP) &   We Can Peru (PP) \\ 
+  250 & Philippines\_presi & 2010 &   Liberal Party (LP) &   Jesus N P Perlas \\ 
+  251 & Philippines\_presi & 2016 &   National Unity Party (NUP) &   Nationalist People's Coalition (NPC) \\ 
+  252 & Romania\_presi & 1996 &   Romanian Democratic Convention (CDR) &   Romanian Party for National Unity (PUNR) \\ 
+  253 & Serbia\_presi & 2012 &   Serbian Progressive Party (SNS) &   Liberal Democratic Party (LDP) \\ 
+  254 & Tunisia\_presi & 2019 &   Heart of Tunisia &   People's Movement \\ 
+  255 & Turkey\_presi & 2018 &   Justice and Development Party (AKP) &   Peoples' Democratic Party (HDP) \\ 
+  256 & Taiwan\_presi & 1996 &   Kuomintang of China (KMT)  &   Democratic Progressive Party (DPP) \\ 
+  257 & Taiwan\_presi & 2012 &   Kuomintang of China (KMT)  &   People First Party (PFP) \\ 
+  258 & Taiwan\_presi & 2016 &   Democratic Progressive Party (DPP) &   Kuomintang of China (KMT)  \\ 
+  259 & Taiwan\_presi & 2020 &   Democratic Progressive Party (DPP) &   Kuomintang of China (KMT)  \\ 
+  260 & Uruguay\_presi & 2009 &   Broad Front (FA) &   Popular Assembly \\ 
+  261 & Uruguay\_presi & 2019 &   National Party (PN) &   Colorado Party \\ 
+  262 &  USA \_presi & 1996 &   Democratic Party (DEM) &   Republican Party (GOP) \\ 
+  263 &  USA \_presi & 2008 &   Democratic Party (DEM) &   Republican Party (GOP) \\ 
+  264 &  USA \_presi & 2012 &   Democratic Party (DEM) &   Republican Party (GOP) \\ 
+  265 &  USA \_presi & 2016 &   Democratic Party (DEM) &   Republican Party (GOP) \\ 
+  266 &  USA \_presi & 2020 &   Democratic Party (DEM) &   Republican Party (GOP) \\ 
+   \hline
+\end{tabular}
+   \end{footnotesize}
+\end{table}
+
+
+
+\end{document}
