@@ -27,3 +27,5 @@ Revision Points
 
 11. Am Ende des Results-Abschnitts habe ich Condorcet-Borda-STV verglichen und dabei erklärt, wann es zu Unterschieden kommt. Ist das zu lengthy?
 
+12. Können und sollen wir bei der Analyse der Kandidaten-Wahlen etwas darüber schreiben, ob es unterschiede zwischen open-office elections vs incumbency-effects gibt. Hintergrund: ein Paper der Herausgeberin beschäftigt sich genau damit. 
+
