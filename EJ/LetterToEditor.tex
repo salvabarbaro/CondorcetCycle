@@ -1,0 +1,74 @@
+\documentclass[a4paper, 12pt]{scrartcl}
+%
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+%\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage[nice]{nicefrac}
+%\usepackage{xfrac}
+%\usepackage{marvosym}
+%\usepackage{circledsteps}
+\usepackage{natbib}
+\usepackage[titletoc]{appendix}
+\usepackage{ntheorem}
+\usepackage{authblk}
+\usepackage[breaklinks]{hyperref}
+\hypersetup{colorlinks, 
+	linkcolor=blue, 
+	citecolor=blue,
+	urlcolor=blue}
+\newenvironment{changes}{\par\color{violet}\par\addvspace{\baselineskip}}{\par\addvspace{\baselineskip}}
+
+
+%opening
+\title{{\small Response Letter to the Editor concerning the Submission entitled:} \\ On the Prevalence of Condorcet's Paradox }
+\subtitle{Ms. Ref. No.: EJ MS20240844}
+\author{Salvatore Barbaro and Anna-Sophie Kurella}
+\date{\today}
+\begin{document}
+\maketitle
+
+\noindent Dear Amanda,
+
+First of all, we would like to express our gratitude once again for the invitation to resubmit. You will notice that we have thoroughly revised the manuscript following a detailed consideration of the comments. In this letter, we aim to respond to your decision letter. In our separate \textit{Letter to the Reviewers}, we address the specific comments made by the referees.
+
+Before addressing your questions, please allow us to briefly outline the main revisions compared to the initial version:
+\begin{enumerate}
+	\item The introduction now systematically presents the state of research and the research gap, linking the rather technical topic to recommendations for electoral reform.
+	\item Data and empirical strategies are described more clearly, and the questions and critiques raised in your letter and the reviewers' comments are addressed. Specifically, we clarify that we include all elections for which data is available for more than two parties or candidates. 
+	
+	Following your recommendation to address questions of statistical inference, we applied bootstrap methods. 
+	
+	While the initial version analysed presidential elections using party ratings, we now focus exclusively on presidential elections for which candidate ratings are available. Only in a few cases have we relied on party ratings, and then only when parliamentary and presidential elections occurred simultaneously. Additionally, we now utilise an updated version of the dataset that was recently published. 
+	
+	In the initial version, we interpreted ties as an indicator of cyclical majorities. Comments from the second reviewer regarding related literature led us to reconsider this approach and address it explicitly, which we have now done.
+	\item Alongside our main finding (that the Condorcet Paradox has virtually no empirical relevance), we present a range of new insights regarding who the Condorcet winners are, how often they make it into government, and how various electoral systems influence these outcomes.
+\end{enumerate}
+
+\subsection*{1. How Novel is the Result?}
+In the thoroughly revised introduction, we outline the various research approaches to the question at hand and explain why they have provided only limited insights into the prevalence of the paradox. We refer to the recent survey of empirical studies (van Deemen 2014) and cite its conclusion that our knowledge of the relevance of the Condorcet Paradox remains unsettled. Furthermore, we highlight the research gap identified by Amartya Sen (2017), which calls for a cross-national empirical analysis. You criticised that readers may struggle to identify the marginal contribution of our paper. We believe this is now very clear.
+
+You raised the question of whether our main finding is sufficiently surprising, given the prior conventional wisdom that the Condorcet Paradox occurs infrequently rather than commonly. We would like to address this concern as follows:
+\begin{enumerate}
+	\item Empirical studies have repeatedly reported instances of cyclical majorities. While not described as a very frequent phenomenon (in contrast to the simulation-based research branch), it remained unclear how often these cases occur. Our result, which demonstrates that it practically does not occur, is novel.
+	\item The expectation of infrequent cases was based on empirical studies with several weaknesses, which we detail precisely in the paper's Introduction: the data are often estimated, or the studies are case-based. This is why the existing research indicates that our understanding of the empirical relevance is vague. Our contribution meets the standards set in the literature for a comprehensive study, encompassing multiple countries and various time periods.
+	\item Our analysis enables a range of observations that, to the best of our knowledge, are novel: Who are the Condorcet winners, and how effective are non-Condorcet voting methods at bringing Condorcet winners into political and administrative positions of responsibility? We also provide, as far as we know for the first time, insights into which party families are most frequently Condorcet winners and which parties are disproportionately affected by failing to join the government as Condorcet winners. We believe that, overall, we offer a range of new insights, especially considering that we have presented these findings in a highly condensed format within a short paper.
+\end{enumerate}
+
+\subsection*{2. What Drives the Result?}
+We have followed the recommendations of the second reviewer by thoroughly addressing the question of which parties are Condorcet winners and how often they achieve governmental responsibility under different electoral systems. However, as you rightly point out, this analysis does not answer the question of \textit{why} there are virtually no Condorcet Paradoxes. For such an analysis, we simply lack the necessary variance. Following your suggestion, we highlight this issue and encourage future researchers to address this question. You can find our discussion of this issue in lines \texttt{148$–$153}. 
+
+Our initial approach involved searching for cyclical majorities below the level of the Condorcet winner.\footnote{
+	As an example: there are cyclical majorities involving candidates $B$, $C$, and $D$; however, all voters prefer candidate $A$ the most.
+} This procedure is described in lines \texttt{138$–$147}. However, even when we search for intransitive social orders, they are so exceedingly rare that we fail to observe sufficient variance.
+
+
+
+%\bibliographystyle{elsarticle-harv}
+%\bibliography{CondorcetCycle}
+\end{document}
