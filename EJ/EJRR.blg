@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: EJRR.aux
+The style file: ejbib.bst
+quote is an unknown function---line 962 of file ejbib.bst
+quote is an unknown function---line 963 of file ejbib.bst
+Database file #1: CondorcetCycle.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+You've used 40 entries,
+            3136 wiz_defined-function locations,
+            967 strings with 12317 characters,
+and the built_in function-call counts, 24731 in all, are:
+= -- 2106
+> -- 681
+< -- 86
++ -- 283
+- -- 225
+* -- 1821
+:= -- 3476
+add.period$ -- 80
+call.type$ -- 40
+change.case$ -- 268
+chr.to.int$ -- 41
+cite$ -- 40
+duplicate$ -- 2020
+empty$ -- 2004
+format.name$ -- 333
+if$ -- 5171
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 365
+newline$ -- 128
+num.names$ -- 162
+pop$ -- 671
+preamble$ -- 1
+purify$ -- 234
+quote$ -- 0
+skip$ -- 935
+stack$ -- 0
+substring$ -- 1250
+swap$ -- 1243
+text.length$ -- 54
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 342
+warning$ -- 0
+while$ -- 188
+width$ -- 0
+write$ -- 480
+(There were 2 error messages)

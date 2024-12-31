@@ -105,6 +105,10 @@ To account for the uncertainty surrounding our survey-based results, we generate
 
 If no paradox is observed in the original sample, we reject the null hypothesis ('no Condorcet paradox occurs') if a paradox emerges in more than 5\% of the bootstrap replications for the respective election. Conversely, if cyclical majorities are observed in an election, we reject the null hypothesis (which assumes a paradox exists) if more than 5\% of the bootstrap replications exhibit transitive preferences. 
 
+Using the bootstrap method, we address the randomness of the sample. In addition to the bootstrap approach, we also applied a random-noise method to account for the uncertainty in the rating data. In this approach, we add a random number from the interval $[-1, 1]$ to each rating of parties or candidates. In doing so, we generated 10,000 new rating matrices for each election, which were then converted into preference orders using the procedure described above and subsequently evaluated for the presence of cyclical majorities. Thus, we obtained approximately 2.53 million replications, this time as random-noise replications. 
+
+This procedure effectively resolves any indifference between two parties or candidates. For example, if a respondent rated two parties equally, the random-noise approach ensures that, in half of the replications, one party is rated as the better alternative. We chose this approach because the possibility of indifferences reduces the likelihood of Condorcet Paradoxes. Effectively, this allows us to test whether our central result is robust when we assume anti-symmetric (strict) preferences instead of reflexive ones.
+
 \section{Results} \label{sec.results}
 We do not find a single instance of a Condorcet paradox among the \nbparliament parliamentary elections. Among the \nbpresidential presidential elections, for which the dataset provides ratings on more than two viable candidates, we identify one case of cyclical majorities, namely the Peruvian presidential election in 2011. 
 
@@ -113,6 +117,8 @@ The overall picture remains robust across all bootstrap replications. With the e
 A similar pattern emerges for the presidential elections. In 
 39 %%% check: 39 = \nbpresidential - 2 (!)
 out of \nbpresidential elections, none of the respective bootstrap replications reveal a case of cyclical majorities. Even in the instance where we identified a Condorcet paradox in the sample (Peru 2011), the vast majority of replications (69.53\%) do not exhibit cyclical majorities. Consequently, we must reject the hypothesis of a Condorcet paradox occurring in this election. On the other hand, in a subsequent election in Peru in 2021, we detected Condorcet paradoxa in approximately eleven percent of the bootstrap replications. To the extent that we must reject the hypothesis of an existence of a paradox in 2011, we must equally reject the hypothesis of non-existence in 2021. In both cases, there is a strong likelihood $(69-31, 89-11)$ that no paradox is present.
+
+A very similar pattern emerges from the evaluation of the 2.53 million random-noise replications. In the vast majority of cases, we find no Condorcet Paradox across the 10,000 replications for each election. In the few elections where cyclical majorities do occur in the replications, they account for less than 1\% of the total replications. For no election do we find that a Condorcet Paradox occurs in more than 5\% of the replications. Exceptions, as was the case with the bootstrap analysis, are the Peruvian elections.
 
 The literature distinguishes between a \textit{strong} and a \textit{weak} Condorcet winner \citep{Barbera2023}. While the former wins every pairwise comparison, the latter does not lose any pairwise comparison (due to ties). Except for two cases, we find strict Condorcet winners in every election.
 
@@ -210,6 +216,7 @@ Our analysis also demonstrates that Condorcet losers nearly always exist. A conc
 
 Moreover, our work can be understood as academic endorsement for advocates of electoral reforms favouring the Condorcet method \citep{Maskin2016, Maskin2017, Maskin2017a}. While these advocates emphasise its axiomatic advantages, they are, of course, mindful of the paradox's challenges. Our findings suggest that, in weighing the strengths and weaknesses of the Condorcet method, its principal shortcoming should not be overemphasized. In this sense, this study aims not only to make an academic contribution but also to inform and inspire current and future debates on electoral reform.
 
+\newpage 
 \singlespacing
 %\bibliographystyle{abbrvnat}
 \bibliographystyle{ejbib}
