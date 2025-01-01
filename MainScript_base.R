@@ -11,9 +11,9 @@ library(vote)
 library(dplyr)
 library(data.table)
 
-setwd("U:/akurella/PaperProjects/CondorcetCycle")
+#setwd()
 
-d1 <- read_dta("U:/data/cses_imd.dta")    # Version 18.11.2024, includes waves 1- 5
+d1 <- read_dta("cses_imd.dta")    # Version 18.11.2024, includes waves 1- 5
 
 
 # CSES IMD #
