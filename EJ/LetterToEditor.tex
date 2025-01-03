@@ -36,9 +36,9 @@ First of all, we would like to express our gratitude once again for the invitati
 Before addressing your questions, please allow us to briefly outline the main revisions compared to the initial version:
 \begin{enumerate}
 	\item The introduction now systematically presents the state of research and the research gap, linking the rather technical topic to recommendations for electoral reform.
-	\item Data and empirical strategies are described more clearly, and the questions and critiques raised in your letter and the reviewers' comments are addressed. Specifically, we clarify that we include all elections for which data is available for more than two parties or candidates. 
-	
-	Following your recommendation to address questions of statistical inference, we applied bootstrap methods. 
+	\item Data and empirical strategies are described more clearly, and the questions and critiques raised in your letter and the reviewers' comments are addressed.
+
+	Following your recommendation to address questions of statistical inference, we applied bootstrap methods and a random-noise approach.
 	
 	While the initial version analysed presidential elections using party ratings, we now focus exclusively on presidential elections for which candidate ratings are available. Only in a few cases have we relied on party ratings, and then only when parliamentary and presidential elections occurred simultaneously. Additionally, we now utilise an updated version of the dataset that was recently published. 
 	
@@ -47,21 +47,21 @@ Before addressing your questions, please allow us to briefly outline the main re
 \end{enumerate}
 
 \subsection*{1. How Novel is the Result?}
-In the thoroughly revised introduction, we outline the various research approaches to the question at hand and explain why they have provided only limited insights into the prevalence of the paradox. We refer to the recent survey of empirical studies (van Deemen 2014) and cite its conclusion that our knowledge of the relevance of the Condorcet Paradox remains unsettled. Furthermore, we highlight the research gap identified by Amartya Sen (2017), which calls for a cross-national empirical analysis. You criticised that readers may struggle to identify the marginal contribution of our paper. We believe this is now very clear.
+In the thoroughly revised introduction, we outline the various research approaches to the question at hand and explain why they have provided only limited insights into the prevalence of the paradox. We refer to the recent survey of empirical studies \citep{vanDeemen2013} and cite its conclusion that our knowledge of the relevance of the Condorcet Paradox remains unsettled. Furthermore, we highlight the research gap identified by Amartya \cite{Sen2017}, which calls for a cross-national empirical analysis. We believe that the marginal contribution of our paper is now outlined very clear.
 
 You raised the question of whether our main finding is sufficiently surprising, given the prior conventional wisdom that the Condorcet Paradox occurs infrequently rather than commonly. We would like to address this concern as follows:
 \begin{enumerate}
-	\item Empirical studies have repeatedly reported instances of cyclical majorities. While not described as a very frequent phenomenon (in contrast to the simulation-based research branch), it remained unclear how often these cases occur. Our result, which demonstrates that it practically does not occur, is novel.
+	\item Empirical studies have repeatedly reported instances of cyclical majorities. While not described as a very frequent phenomenon (in contrast to the simulation-based research branch), it remained unclear how often these cases occur. Our central finding is novel because cyclical majorities do not occur sometimes, occasionally, or 'not as frequently as expected,' but practically never.
 	\item The expectation of infrequent cases was based on empirical studies with several weaknesses, which we detail precisely in the paper's Introduction: the data are often estimated, or the studies are case-based. This is why the existing research indicates that our understanding of the empirical relevance is vague. Our contribution meets the standards set in the literature for a comprehensive study, encompassing multiple countries and various time periods.
-	\item Our analysis enables a range of observations that, to the best of our knowledge, are novel: Who are the Condorcet winners, and how effective are non-Condorcet voting methods at bringing Condorcet winners into political and administrative positions of responsibility? We also provide, as far as we know for the first time, insights into which party families are most frequently Condorcet winners and which parties are disproportionately affected by failing to join the government as Condorcet winners. We believe that, overall, we offer a range of new insights, especially considering that we have presented these findings in a highly condensed format within a short paper.
+	\item Our analysis enables a range of observations that, to the best of our knowledge, are novel: Who are the Condorcet winners, and how effective are non-Condorcet voting methods at bringing Condorcet winners into political and administrative positions of responsibility? We also provide, as far as we know for the first time, insights into which party families are most frequently Condorcet winners and which parties are disproportionately affected by failing to join the government as Condorcet winners. In this context, we report differences between the various electoral \emph{systems} (FPTP, PR, Mixed), which, to the best of our knowledge, have not been analyzed before. Furthermore, the current version also includes an analysis of the Condorcet efficiency of other voting \emph{methods} (Borda, STV), which, to our knowledge, has not been conducted in this form before. Finally, we also searched for cyclical majorities below the level of the Condorcet winners\footnote{
+	As an example: there are cyclical majorities involving candidates $B$, $C$, and $D$; however, all voters prefer candidate $A$ the most.
+} . In doing so, we analyzed over 8,000 triplets and found that cyclical majorities occur only in absolute exceptional cases. Practically always, the social orderings resulting from simple majority rule are transitive (see lines \texttt{148$–$153}).
+
+We believe that, overall, we offer a range of new insights, especially considering that we have presented these findings in a highly condensed format within a short paper.
 \end{enumerate}
 
 \subsection*{2. What Drives the Result?}
-We have followed the recommendations of the second reviewer by thoroughly addressing the question of which parties are Condorcet winners and how often they achieve governmental responsibility under different electoral systems. However, as you rightly point out, this analysis does not answer the question of \textit{why} there are virtually no Condorcet Paradoxes. For such an analysis, we simply lack the necessary variance. Following your suggestion, we highlight this issue and encourage future researchers to address this question. You can find our discussion of this issue in lines \texttt{148$–$153}. 
-
-Our initial approach involved searching for cyclical majorities below the level of the Condorcet winner.\footnote{
-	As an example: there are cyclical majorities involving candidates $B$, $C$, and $D$; however, all voters prefer candidate $A$ the most.
-} This procedure is described in lines \texttt{138$–$147}. However, even when we search for intransitive social orders, they are so exceedingly rare that we fail to observe sufficient variance.
+We have followed the recommendations of the second reviewer by thoroughly addressing the question of which parties are Condorcet winners and how often they achieve governmental responsibility under different electoral systems. However, as you rightly point out, this analysis does not answer the question of \textit{why} there are virtually no Condorcet Paradoxes. For such an analysis, we simply lack the necessary variance. Following your suggestion, we highlight this issue and encourage future researchers to address this question. You can find our discussion of this issue in lines (\texttt{173 - 178}).
 
 \subsection*{Empirical Strategy}
 
@@ -83,21 +83,41 @@ The cases with only two ratings for parties or candidates amount to six in total
 	The paper assumes agents report truthfully. Why is this a good assumption in the context of this setting? $\ldots$ might the institution / might culture influence whether subjects report truthfully?
 \end{quote}
 
-Vielen Dank für diesen Hinweis, auf den wir hier und natürlich auch im Text gerne eingehen. Die von uns verwendeten 'thermometer-style' Daten werden in einer Reihe von Untersuchungen als strategy-proofed Benchmark genutzt. Sie werden mit der Wahlabsicht bzw. den ermittelten Wahlverhalten (in Nachwahlumfragen) verglichen, um so Erkenntnisse zum strategischen Verhalten zu erzielen. Nach unserer Kenntnis haben dies \cite{Abramson2009} erstmals so eingeführt, und bis heute \cite{Eggers2020, Eggers2022, Nunez2024, Eggers2024} werden die like/dislike-Daten als strategy-proofed Werte angesehen. Wir haben dieses Argument in den Zeilen 66-69 formuliert.
+Thank you for this suggestion, which we are happy to address here and in the text. The 'thermometer-style' (like/dislike) data we used have been employed in numerous studies as a strategy-proofed benchmark. They are compared with voting intentions or observed voting behavior (in post-election surveys) to gain insights into strategic voting. To our knowledge, this approach was first introduced by \citet{Abramson2009}, and to this day \citep{Eggers2020, Eggers2022, Nunez2024, Eggers2024}, like/dislike data are considered strategy-proofed values. We have articulated this argument in lines \texttt{66$–$69}.
 
+We reviewed the literature on 'thermometer-style' data and found no source that examines whether institutions or cultural motives influence truthful reporting. We are aware of a frequently cited study that investigates the difference between FPTP and PR systems regarding strategic voting. This study is relevant to our analysis of these two systems.
 
 \item \begin{quote}
 	The paper appears to assume that preferences are measured accurately, i.e., there is no noise in reports or measurement 	error. This is far from a typical assumption. Why do we think it is a good assumption in this context?
 \end{quote}
+Thank you for this suggestion. We have expanded the methodological approach concerning statistical inference in two ways. Firstly, as already described, we used a bootstrap procedure to determine the probabilities of the paradox occurring. This addresses random variations in the sample.
 
+Regarding the approach: for each sample (each election), we generated 10,000 bootstrap replications and examined how often a paradox emerged within these replications. We followed a recommendation by the second reviewer, who referred to \cite{Darmann2019}, where a similar procedure was applied. The results demonstrate that our central finding is highly robust. To avoid repetition, we kindly refer to the relevant passages in Section 3 of the paper.
+
+Secondly, we added random-noise values to the ratings of parties or candidates. Again, to avoid duplication, we refer to the last two paragraphs of Section 2 of the text. The main effect of the random-noise procedure is that we effectively (except for extremely rare cases) eliminate all instances of indifference. For each election, we generated 10,000 new replications, resulting in 2.53 million checks for the occurrence of cyclical majorities. Similar to the bootstrap analysis results, we conclude that cyclical majorities occur very rarely.
 
 \item \begin{quote}
 	As Referee 3 points out, it is not terribly helpful to point to what R package you use. Much more helpful would be a discussion of what is actually done.
 \end{quote}
-
+Thank you for this valid comment. The paper now presents the methodological approach in a precise manner. We refer to the discussion starting from line 92 (up to line 104).
 \end{enumerate}
 
 \subsection*{Modest Comments}
+\begin{quotation}
+ As the referees note, the paper needs to do a better job of writing for a general interest audience.
+\end{quotation}
+
+We have taken this comment very seriously and comprehensively revised the paper in light of it. The relevance and significance of the research question should now be clear from the introduction, as well as the novelty of our findings. We have eliminated overly field-specific terminology and moved it to footnotes where necessary. Additionally, we incorporated the suggestion of the second reviewer to highlight the relevance for policy advising already in the introduction.
+
+\begin{quotation}
+I did not find the discussion of the IAC particularly helpful. You use it to contrast \textit{actual}
+preference profiles from the fraction of potential preference profiles. I am not sure that the
+latter is what a researcher would jump to in 2024.
+\end{quotation}
+
+Thank you for this valid comment. As you can see, the discussion regarding the research area of simulations and probability calculations has now been significantly reduced. We note that this area has existed and continues to exist (around line \texttt{22}), but it has also been clear for several years that only a comprehensive empirical investigation can meet contemporary standards.
+
+
 
 
 \bibliographystyle{elsarticle-harv}
