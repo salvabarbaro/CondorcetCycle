@@ -1,0 +1,27 @@
+\begin{table}[h]
+	\centering
+	\caption{Mixed Regression model of party ratings on ideological distance between respondent and party, including random slope for ideological distance}
+	\label{mreg}
+	\begin{tabular}{lcc}
+		\toprule
+		\textit{Fixed Effects} & \textit{Coeff.} & \textit{Std. Err.}\\
+		Intercept & $5.425^{***}$ & 0.063 \\
+		Ideological distance & $-0.457^{***}$&  0.017 \\ \midrule
+		\textit{Random Effects} & \textit{Variance }& \textit{Std. Err. (Var)}\\
+		Individual: Intercept&     1.092 & 1.0448 \\
+		Election: Intercept  & 0.978 & 0.9892 \\
+		Election: Ideological distance & 0.071 & 0.2672 \\
+		Residual & 6.945 & 2.6353 \\ \midrule
+		\# Individuals & \multicolumn{2}{c}{289,297} \\
+		\# Elections  & \multicolumn{2}{c}{249} \\
+		\# Observations (Individual $\times$ party)  &  \multicolumn{2}{c}{1,869,633}    \\ \midrule
+		Log-likelihood & \multicolumn{2}{c}{-4,564,707.977} \\
+		AIC & \multicolumn{2}{c}{9,129,000} \\
+		$R^2$& \multicolumn{2}{c}{0.269} \\
+		\bottomrule
+		\multicolumn{3}{p{.7\linewidth}}{Significance: 
+			$*** \equiv p < 0{.}001$; 
+			$** \equiv p < 0{.}01$; 
+			$* \equiv p < 0{.}05$}\\
+	\end{tabular}
+\end{table}
