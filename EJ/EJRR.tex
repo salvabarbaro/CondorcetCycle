@@ -1,5 +1,5 @@
 \documentclass[12pt]{scrartcl}
-% v 06JAN25-15.13
+% v 07JAN25-17.08
 \usepackage[utf8]{inputenc}
 \usepackage[british]{babel}
 \usepackage{lmodern}
@@ -67,7 +67,9 @@ The Condorcet paradox, intensely discussed during the French Revolution, faded i
 
 Despite its theoretical significance, the empirical relevance of the paradox in democratic elections remains insufficiently substantiated. The most recent survey concluded that its empirical relevance is far from settled \citep{VanDeemen2013}, largely due to a persistent lack of reliable data. Most results on the occurrence of Condorcet paradoxes are based on simulated data \citep{Lepelley2001, Gehrlein2006, Sauermann2022}, or on non-political elections, like electing the head of an academic association \citep{Chamberlin1984, Feld1992, Regenwetter2007, Tideman2009, Popov2014}.
 
-Empirical studies of real-world (democratic) elections have primarily focused on single elections \citep{Kurrild2018, Darmann2019, Potthoff2021}, or on country-specific case studies (i.e., multiple elections within a single country) \citep{Abramson1995, vanDeemen1998, KurrildKlitgaard2001, KurrildKlitgaard2008}. Although instances of the Condorcet paradox have been identified, these studies have failed to provide conclusive insights into its prevalence. So far, empirical research has largely relied on small survey datasets or limited samples. Some studies were based solely on plurality data \citep[e.g.,][]{Riker1988} or voting intentions \citep[e.g.,][]{McDonald2012}, requiring the preference orderings to be estimated. Adding to the challenge is the observation that most studies refrain from making claims about statistical inference. Notable exceptions include \cite{Desai2025, Regenwetter2007, Darmann2019}, with the latter two explicitly assessing the robustness of their findings through bootstrap methods.
+Empirical studies of real-world (democratic) elections have primarily focused on single elections \citep{Kurrild2018, Darmann2019, Potthoff2021}, or on country-specific case studies (i.e., multiple elections within a single country) \citep{Abramson1995, vanDeemen1998, KurrildKlitgaard2001, KurrildKlitgaard2008}. Although instances of the Condorcet paradox have been identified, these studies have failed to provide conclusive insights into its prevalence. So far, empirical research has largely relied on small survey datasets or limited samples. Some studies were based solely on election results \citep[e.g.,][]{Riker1988} or voting intentions \citep[e.g.,][]{McDonald2012}, requiring the preference orderings to be estimated.
+
+Adding to the challenge is the observation that most studies refrain from making claims about statistical inference. Notable exceptions include \cite{Desai2025, Regenwetter2007, Darmann2019}, with the latter two explicitly assessing the robustness of their findings through bootstrap methods.
 
 Eminent economists have recently advocated for electoral reforms in favour of the Condorcet method, even beyond the academic realm \citep{Maskin2016, Maskin2017, Maskin2017a}. In this public discourse, the Condorcet paradox is the unresolved core issue, as it is—alongside the debate over whether cardinal information should be considered—the main argument against the practical implementation of the Condorcet method.
 
@@ -77,8 +79,6 @@ We analyse data from \nbelections elections across \nbcountries countries, using
 
 Beyond this, we provide insights into who the Condorcet winners are and evaluate the extent to which different electoral systems succeed in bringing these winners to office (in candidate elections) or into government (in parliamentary elections). We also examine which parties, identified as Condorcet winners, fail to win elections. Thus, for the first time, we offer insight into the identification and success of Condorcet winners.
 
-%This paper is closely related to \cite{Desai2025},  who identified non-empty cores across various elections and countries, analysing how often core parties assumed leadership roles in post-election governments. However, our approach differs from theirs, as will be elaborated in Section \ref{sec.results}.
-
 \section{Data and Methods}\label{sec.datamethods}  
 We use survey data from the Comparative Study of Electoral Systems \citep{CSES2020}. The dataset includes party and candidate ratings on a non-ipsative $11$-point like-dislike scale (\emph{integer sympathy scales}) for up to nine political parties and candidates, widely utilized in related research \citep[e.g.,][]{Kalandrakis2022, Desai2025}. Such like/dislike data are frequently used to analyze strategic voting. These data serve as strategy-proof reference values that are compared with actual vote casts or voting intentions \citep{Abramson2009, Eggers2024, Nunez2024}. In this sense, we assume that our data are not significantly biased by strategic considerations. Following an established procedure (most recently: \cite{Lachat2024}), we convert the ratings into individual preference orderings.\footnote{
     Based on a comprehensive dataset for Germany, where respondents provided both their ranking and their thermometer rating, \cite{Barbaro2022} showed that the orders generated by the thermometer variables have a very high correlation (measured in Kendall's $\tau$) with the directly reported orderings.
@@ -86,7 +86,9 @@ We use survey data from the Comparative Study of Electoral Systems \citep{CSES20
 
 In total, we analyze data on \nbparliament parliamentary elections and \nbpresidential presidential elections. Restricting the CSES data to respondents who rated at least one party or candidate leaves us with 424,413 individual-level observations.\footnote{
     37,504 respondents reported no ratings, which is less than ten percent of our dataset. Respondents with incomplete ratings are included in our analysis.
-} We only include elections in which more than three parties or candidates were evaluated in the dataset. As a result, we had to exclude a few elections from the analysis. This primarily affects presidential elections in the United States. While multiple candidates ran in these elections, 'like-dislike' ratings were only collected for two candidates in each case.
+} We only include elections in which more than two 
+%three
+parties or candidates were evaluated in the dataset. As a result, we had to exclude a few elections from the analysis. This primarily affects presidential elections in the United States. While multiple candidates ran in these elections, 'like-dislike' ratings were only collected for two candidates in each case.
 
 We treat the election survey as a representative sample of voter preferences within a single national district to determine whether a Condorcet paradox existed at a specific election. This simplification of the national electoral system is valid for our purposes because our primary interest is not in analysing how paradoxes occur while processing preferences into electoral outcomes. Instead, we focus on whether the pattern of voter preferences would lead to a Condorcet paradox if amalgamated most simply and directly, irrespective of geographic boundaries and electoral stages.
 
@@ -95,10 +97,8 @@ We identify the Condorcet winner and loser party for each parliamentary election
 } 
 We first construct party and candidate preference profiles from the rating data, as explained earlier. We then apply the Condorcet method to these preference profiles for each election separately.\footnote{
     We used the \texttt{condorcet} function in \texttt{R}'s \texttt{vote} package \citep{vote}.
-}  Specifically, we calculated how many voters strictly prefer candidate $A$ over $B$ and vice versa. If a respondent rated $B$ but not $A$, we assume they prefer $B$, and the same logic applies in reverse. %Missing ratings for both candidates are excluded from determining the majority winner for that pair.\footnote{
-%    These respondents will still contribute to determining the majority winner for other pairs in the same election if they provided ratings for any of the remaining candidates.
-%}
-%% --> Anna: den Part mit der Indifferenz finde ich eher verwirrend, und wenn A,B jeweils NA sind, dass wir sie dann im paarweisen Vergleich ignorieren, ist eigentlich auch klar, oder?
+}  Specifically, we calculated how many voters strictly prefer candidate $A$ over $B$ and vice versa. If a respondent rated $B$ but not $A$, we assume they prefer $B$, and the same logic applies in reverse. 
+
 With $\kappa$ candidates, the procedure is repeated for all $\binom{\kappa}{2}$ pairwise contests, such as $A$ vs. $C$ and $B$ vs. $C$, and so on. A party or candidate that wins each pairwise contest is identified as the Condorcet winner. An election is classified as exhibiting a Condorcet paradox if no such winner exists due to cyclical majorities, as described in the Introduction. Conversely, a party or candidate that loses all pairwise contests is referred to as the Condorcet loser.
 
 To account for the uncertainty surrounding our survey-based results, we generate 10,000 bootstrap replications from the preference profiles of each election. Specifically, for each election we draw with replacement 10,000 samples of size $n$ from the original sample of $n$ individuals and apply the Condorcet method to each replication. For every single replication, we determine whether a Condorcet winner exists. This process results in 10,000 outcomes per election, where a Condorcet winner either exists or does not. In this way, we generate \nbboostraprep million profiles. With this approach, we adopt a method very similar to that employed by \cite{Darmann2019}.
@@ -123,26 +123,22 @@ The results from the random-noise replications align closely with those of the b
 
 The literature distinguishes between a \textit{strong} and a \textit{weak} Condorcet winner \citep{Barbera2023}. While the former wins every pairwise comparison, the latter does not lose any pairwise comparison (due to ties). Except for two cases, we find strict Condorcet winners in every election.
 
-% ANNA: Suche dir ein Bild aus. Du kannst beurteilen, ob die Gruppierung sinnvoll ist. Weiter unten in der Textbeschreibung habe ich aber nun geschrieben, dass die sozialdemokratischen (und nicht mehr nur diese und die Konservativen) am häufigsten CW sind. Denn im aggregierten Bild (barplotFAM) sind konservative und liberale gleichauf. 
 \begin{figure}
 	\centering
 	\caption{Frequency of Condorcet winner and loser parties by party family \label{f1}}
 %\includegraphics[width=.85\linewidth]{barplot.pdf}
-%\includegraphics[width=\linewidth]{barplotFAM}
-\includegraphics[width=\linewidth]{barplotraw}
+\includegraphics[width=\linewidth]{barplotFAM}
+%\includegraphics[width=\linewidth]{barplotraw}
 \end{figure}
 
 It should be noted that the presence of a Condorcet winner in an election does not necessarily imply a transitive order. Cyclical majorities can still occur even when a Condorcet winner exists. This happens when cyclical majorities appear in the middle or lower ranks. In our analysis, we observe such cases four times, including the election in Finland in 2005, which is the only instance where no Condorcet loser is present. Overall, our findings indicate that collective preferences are almost universally transitive. Note that accounting for cyclical majorities in cases with a Condorcet winner does not dilute the overall result. On the contrary, in each election, we have $\binom{\kappa}{3}$ triplets. Summed across all elections, we analyse 8,099 triplets. Among these, we find cyclical majorities in five cases (0.06\%).
 
-%% New paragraph to address the second editor's point
-Thus, we arrive—also through this approach—at the rather surprising finding that cyclical majorities are practically irrelevant from an empirical perspective. The drawback of this sharp result is that an analysis of why the Condorcet Paradox occurs so rarely is hardly possible. As is well known, empirical analyses require variance, which we do not observe. Therefore, we do not address the question of why cyclical majorities are virtually non-existent but instead encourage future research to explore this question.
-%%%: should we add the regression analysis from November?
+Thus, we arrive—also through this approach—at the rather surprising finding that cyclical majorities are practically irrelevant from an empirical perspective. The drawback of this sharp result is that an analysis of why the Condorcet Paradox occurs so rarely is hardly possible. As is well known, empirical analyses require variance, which we do not observe. Our assumption is that the absence of Condorcet Paradoxes is  due to the fact that preferences over political parties and candidates are strongly shaped by ideology, which leads to a large proportion of single-peaked preference profiles. For preference profiles that are value restricted in that way, Condorcet winners exist \citep{Black1958}. To evaluate the degree of ideological value restriction in our data we regress the individual party  ratings on the distance between respondents' and parties' ideal points on an 11-point left-right scale, considering the nested data structure by fitting a mixed regression model. The results confirm that ideological distance exerts a statistically significant effect on party ratings. Furthermore, this effect (slope) does not vary significantly across elections. The results are shown in Table \ref{multireg} in the (Online-)Appendix. However, given the lack of variation in the occurrence of Condorcet Paradoxes in our empirical data, we cannot explore the question of why cyclical majorities are virtually non-existent any further, but instead encourage future research to explore this question.
 
 Given that Condorcet winners exist in virtually all of the elections under study, we subsequently focus on descriptive results on these winner parties and candidates. Figure \ref{f1} plots the frequency of Condorcet winners and losers by party family.\footnote{
     We use the classification of party families as provided by the CSES. It is based on expert judgments of the CSES national collaborators as to which ideological family each party belongs to. 
 } It shows that Condorcet winners are most often social-democratic parties. National parties are the most common among the Condorcet losers. A full list of Condorcet winner and loser parties is presented in the (Online-)Appendix \texttt{(for the review process, the appendix is attached to this file)}. Table \ref{tab.g7} provides an extract from the full list, covering the G7 countries only.
 
-% ANNA: Was ist mit den beiden USA-Wahlen, die wir nun mal haben? Ich habe sie eingefügt, ist das korrekt?
 \input{G7}
 
 This list yields some interesting insights. For example, although Condorcet-winner parties are often centrally located within the party system, they are not necessarily large parties. In the Netherlands, for instance, the liberal party 'Democrats 66' (D66) was the Condorcet-winner party in 2010, 2017, and 2021, despite its low vote share of only 7\%, 12\%, and 15\%, respectively. In the 2010 election, it was only the sixth-largest party in terms of votes and parliamentary seats. In 2017, it ranked fourth, and in 2021, it ranked second. In an earlier study for the election year 1994---which our dataset does not extend back to---\cite{vanDeemen1998} had already found that D66 emerged as the Condorcet-winner party. Even then, the vote share of 15.5\% did not reflect the broad support for the D66 party among the electorate. We also find a correspondence with the results from two Danish elections in 1998 and 2001, as identified by \cite{KurrildKlitgaard2008} (using a different dataset than the one we employed). 
@@ -151,7 +147,7 @@ For Great Britain, our data show that the Condorcet winners can indeed vary but 
 
 Our (Online-)Appendix presents the values for all other countries.
 
-Noteworthy, there are instances where Condorcet-loser parties gain a significant number of votes and seats. Polarising parties on the far-right fringe, in particular, benefit from this imbalance. For example the 'Sweden Democrats' were the Condorcet-loser party in 2006, 2014, and 2018. Yet, they increased their vote share to 12.9\% in the 2018 election, becoming the third-largest party out of eight in the 2014 and 2018 parliaments. In Germany, the Condorcet loser AfD became the third-largest faction in the Bundestag in 2017 with 12.5\% of the vote, surpassing three parties that had each won their pairwise comparison against the AfD. An even more extreme case is the Swiss 2011 election, where the Swiss People's Party gained the largest vote share while emerging as the Condorcet loser, according to the data. %% Anna: SVP extreme right? Or should be attribute the party as conservative-right?
+Noteworthy, there are instances where Condorcet-loser parties gain a significant number of votes and seats. Polarising parties on the far-right fringe, in particular, benefit from this imbalance. For example the 'Sweden Democrats' were the Condorcet-loser party in 2006, 2014, and 2018. Yet, they increased their vote share to 12.9\% in the 2018 election, becoming the third-largest party out of eight in the 2014 and 2018 parliaments. In Germany, the Condorcet loser AfD became the third-largest faction in the Bundestag in 2017 with 12.5\% of the vote, surpassing three parties that had each won their pairwise comparison against the AfD. An even more extreme case is the Swiss 2011 election, where the Swiss People's Party gained the largest vote share while emerging as the Condorcet loser, according to the data. 
 
 Table \ref{tb.efficiency} provides a systematic overview of the empirical \textit{Condorcet efficiency}\footnote{
     The term Condorcet efficiency refers to the conditional probability that a voting rule selects the Condorcet winner, given that one exists \citep{Gehrlein1998}.
@@ -189,16 +185,7 @@ government / president &  & \emph{[11-22]} & \emph{[2-19]} & \emph{[0-12]} \\
 \label{tb.efficiency}
 \end{table}
 
-% While our results point in the same direction, we examine a broader range of electoral systems and uncover significant differences in government participation across these systems.
-%Salva: Ich habe den Teil direkt zu den Ergebnissen der prime minister geschoben. Desai untersuchen nur prime minister posts, nicht andere Formen von government participation.
-
-Another aspect by which to evaluate the Condorcet efficiency of electoral systems is to ask for how often the government participation of the Condorcet loser is prevented. The bottom row in Table \ref{tb.efficiency} indicates that proportional electoral systems are most prone to the 'Condorcet-loser-turns-winner' \citep{vanDeemen1993} or Borda paradox (named after the Chevalier de Borda, who identified the paradoxical situation that a Condorcet loser can emerge as plurality winner). From a normative standpoint, this may be justified, as one of the premisses of proportional systems is to enable ethnic, religious or other minorities to have their legitimate share of power, so as to prevent the 'tyranny of the majority'. However, our results indicate that in only three out of 20 instances in which Condorcet losers obtain cabinet posts, it is ethnic parties. Most often (4 out of 20 cases), the Condorcet loser party that enters government is a national party. %% Anna: can we explain what a National party is? In particular, can we relate this result to the above mentioned insight that the beneficiaries are far-right parties?
-
-%% Hier noch mal ein Text zu den USA
-%%
-%Our results also reveal two instances of Condorcet losers winning presidency. This happened at the 2016 US presidential election, where Donald Trump won the presidency although being the Condorcet loser based on our results. Thus, our results confirm existing research by \citet{Potthoff2021}, who used a different data source\footnote{
-%    \citet{Potthoff2021} draw on data from the American National Election Study (ANES), which also provides information on two unviable candidates, Gary Johnson and Jill Stein. The results indicate that when considering the four candidates, there was no Condorcet winner, but that Trump was the Condorcet loser.
-%}, and also arrived at the conclusion that Trump was a Condorcet loser at the 2016 US election. 
+Another aspect by which to evaluate the Condorcet efficiency of electoral systems is to ask for how often the government participation of the Condorcet loser is prevented. The bottom row in Table \ref{tb.efficiency} indicates that proportional electoral systems are most prone to the 'Condorcet-loser-turns-winner' \citep{vanDeemen1993} or Borda paradox (named after the Chevalier de Borda, who identified the paradoxical situation that a Condorcet loser can emerge as plurality winner). From a normative standpoint, this may be justified, as one of the premisses of proportional systems is to enable ethnic, religious or other minorities to have their legitimate share of power, so as to prevent the 'tyranny of the majority'. However, our results indicate that in only three out of 20 instances in which Condorcet losers obtain cabinet posts, it is ethnic parties. Most often (4 out of 20 cases), the Condorcet loser party that enters government is a national party. 
 
 The other Borda-paradox case is the 2000 Mexican presidential election, at which Vicente Fox won the plurality vote, but was a Condorcet loser. The Condorcet winner was Cuauht\'{e}moc C\'{a}rdenas Sol\'{o}rzano, who ranked third at the election.
 
@@ -247,4 +234,38 @@ Note: The appendix is  proposed to be published online. We add the appendices to
 \section{Full List of Condorcet Winner and Condorcet Loser Candidates/Parties in Presidential Elections}
 \input{candtab}
 %
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Impact of ideological distance on party ratings}
+\begin{table}[]
+    \centering
+        \caption{Mixed Regression model of party ratings on ideological distance between respondent and party, including random slope for ideological distance}
+    \label{mreg}
+\begin{tabular}{lcc}
+\toprule
+\textit{Fixed Effects} & \textit{Coeff.} & \textit{Std. Err.}\\
+Intercept                              & $5.425^{***}$ & 0.063 \\
+Ideological distance                           & $-0.457^{***}$&  0.017 \\
+\midrule
+\textit{Random Effects} & \textit{Variance }& \textit{Std. Err. (Var)}\\
+Individual: Intercept&     1.092 & 1.0448\\
+Election: Intercept  & 0.978 & 0.9892 \\
+Election: Ideological distance & 0.071 & 0.2672\\
+Residual &               6.945 & 2.6353\\
+\midrule
+N Individuals                                       & \multicolumn{2}{c}{289,297}\\
+N Elections                                  & \multicolumn{2}{c}{249}\\
+N Observations (Individual x party)       &  \multicolumn{2}{c}{1,869,633}    \\
+\midrule
+Log-likelihood                           & \multicolumn{2}{c}{-4,564,707.977}\\
+Aikake Information Criterion              & \multicolumn{2}{c}{9,129,000}\\
+$R^2$& \multicolumn{2}{c}{0.269}\\
+\bottomrule
+\multicolumn{3}{p{.7\linewidth}}{Significance: 
+              $*** \equiv p < 0{.}001$; 
+              $** \equiv p < 0{.}01$; 
+              $* \equiv p < 0{.}05$}\\
+\end{tabular}
+\end{table}
 \end{document}
