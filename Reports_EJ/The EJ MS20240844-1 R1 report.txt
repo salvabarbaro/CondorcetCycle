@@ -1,7 +1,13 @@
 I like the main idea of the paper of using polls to identify how frequently the Condorcet winner fails to exist.
-
-1. Should we not worry that the preferences reported in polls are affected by the electoral system? I do not worry here about misrepresenting true preferences, but my preference over parties may be different in a system with majority voting where the winner then governs unchallenged than in a parliamentary system where I expect even the winner party to have to form a coalition? It would be good to have some discussion of this.
-
-2. I like that the authors attempt to characterize who the Condorcet winners typically are, and in particular, how much support the Condorcet losers typically get. I thought, though that this part of the paper could be a bit more expanded. For example, the last sentence of the conclusion says that "Condorcet loser parties often benefit from the actual voting methods", but the paper only gives one example of such a thing happening. Some quantification of this statement in the paper would be helpful. Similarly, there is an example of D66, a party that was a Condorcet winner but received very few votes. How frequent are such examples?
-
-3. I enjoyed learning that in 85% of the election sight a Condorcet winner that party ended up in the government. I have two questions, though. First, what does "ending up in the government" mean? How many times did the Condorcet winner become the coalition leader, that is, won the highest number of seats? And if it is close to 85%, I would like to see some discussion how likely this is far from 100%. I understand that one cannot put a standard confidence interval on that, but perhaps one can have a discussion based on the typical margin of error that the polls are expected to have and how frequently the election results actually defy the polls. 
+
+
+
+1. Should we not worry that the preferences reported in polls are affected by the electoral system? I do not worry here about misrepresenting true preferences, but my preference over parties may be different in a system with majority voting where the winner then governs unchallenged than in a parliamentary system where I expect even the winner party to have to form a coalition? It would be good to have some discussion of this.
+
+
+
+2. I like that the authors attempt to characterize who the Condorcet winners typically are, and in particular, how much support the Condorcet losers typically get. I thought, though that this part of the paper could be a bit more expanded. For example, the last sentence of the conclusion says that "Condorcet loser parties often benefit from the actual voting methods", but the paper only gives one example of such a thing happening. Some quantification of this statement in the paper would be helpful. Similarly, there is an example of D66, a party that was a Condorcet winner but received very few votes. How frequent are such examples?
+
+
+
+3. I enjoyed learning that in 85% of the election sight a Condorcet winner that party ended up in the government. I have two questions, though. First, what does "ending up in the government" mean? How many times did the Condorcet winner become the coalition leader, that is, won the highest number of seats? And if it is close to 85%, I would like to see some discussion how likely this is far from 100%. I understand that one cannot put a standard confidence interval on that, but perhaps one can have a discussion based on the typical margin of error that the polls are expected to have and how frequently the election results actually defy the polls. 
