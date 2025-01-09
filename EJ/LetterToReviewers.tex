@@ -121,48 +121,49 @@ Thank your for raising the point of mechanism exploration, which we agree to be 
 \begin{changes}
 	Related to the last point, how do the results change compared to the older papers that use worse data? Understanding the bias of those papers and how it shows up in the results would be illuminating (and boost the argument for contribution). I understand this may be difficult if the elections don’t overlap (like their discussion on the Van	Deemen and Vergunst), but just an overall result comparison may be useful.
 \end{changes}
-The answer to this point is related to the previous one. We focus on real-world national elections, which is based on systematically different preference data than non-political elections or simulated preference data. This may be one explanation for the rare occurrence of Condorcet Paradoxes, but we cannot prove this claim. Considering other research on political elections, we explicitly state where our sample overlaps, and where not. Unfortunately, our data do not cover the Danish 1994 election and the 2016 US election, for which existing research suggests majority cycles may have existed. For all other overlapping cases, we reach the same conclusion as existing research that no Paradox occurred.
-
+The answer to this point is related to the previous one. We focus on real-world national elections, which is based on systematically different preference data than non-political elections or simulated preference data. This may be one explanation for the rare occurrence of Condorcet Paradoxes, but we cannot prove this claim. Considering other research on political elections, we explicitly state where our sample overlaps, and where not. Unfortunately, our data do not cover the Danish 1994 election and the 2016 US election, for which existing research suggests majority cycles may have existed. For all other overlapping cases, we reach the same conclusion as existing research. Please refer to lines \texttt{215 $-$ 226}.
 
 
 \begin{changes}
-	Why is this relevant beyond theoretical interest? Is there evidence policymakers take Condorcet paradox into account when devising voting rules? If so, you can quantify the extent of the over-correction. Overall, more discussion and some real-world policy relevance / recommendation would benefit the reader.
+Why is this relevant beyond theoretical interest? Is there evidence policymakers take Condorcet paradox into account when devising voting rules? If so, you can quantify the extent of the over-correction. Overall, more discussion and some real-world policy relevance / recommendation would benefit the reader.
 \end{changes}
 
-Thank you for raising this important point. At the beginning of the manuscript and in the Conclusion, we connect our findings to the ongoing discussion on electoral reforms. We argue that the Condorcet method has often been dismissed prematurely due to concerns about indeterminacy; however, our results demonstrate that this issue is not empirically significant. In particular, we highlight the findings in Table 2 regarding the Condorcet efficiency of various electoral systems, which we believe should be carefully considered when drafting electoral reforms. We hope the practical relevance of this topic is evident.
+Thank you for raising this important point. At the beginning of the manuscript and in the Conclusion, we connect our findings to the ongoing discussion on electoral reforms. In particular, we point to authors advocating for the Condorcet method \citep{Maskin2016, Maskin2017, Maskin2017a}. We argue that the Condorcet method has often been dismissed prematurely due to concerns about indeterminacy; however, our results demonstrate that this issue is not empirically significant. In particular, we highlight the findings in Table \textit{2} regarding the Condorcet efficiency of various electoral systems, which we believe should be carefully considered when drafting electoral reforms. We hope the practical relevance of this topic is evident.
 
 \begin{changes}
-	If the number of Condorcet paradoxes in the data is ``surprisingly'' small (from a theory perspective), what explains the discrepancy? Are there nuances to the electoral systems that make them more complex than the idealized models?
+If the number of Condorcet paradoxes in the data is ``surprisingly'' small (from a theory perspective), what explains the discrepancy? Are there nuances to the electoral systems that make them more complex than the idealized models?
 \end{changes}
 
-We trust that this point is addressed in our response to your first query regarding the underlying mechanism driving the results. To reiterate, we do not believe the key factor lies in the electoral systems, as there is no significant variation across them. Instead, the structure of preference profiles appears to be predominantly shaped by a single latent dimension. As demonstrated by the additional regression analysis in Online Appendix D, this dimension is strongly associated with ideology. If a sufficiently large proportion of voters exhibit single-peaked preferences along this underlying dimension, a Condorcet winner will emerge. This explanation seems the most plausible for the absence of Condorcet paradoxes, particularly in contrast to non-political elections.
+We trust that this point is addressed in our response to your first query regarding the underlying mechanism driving the results. To reiterate, we do not believe the key factor lies in the electoral systems, as there is no significant variation across them. Instead, the structure of preference profiles appears to be predominantly shaped by a single latent dimension. As demonstrated by the additional regression analysis in Online Appendix \textit{D}, this dimension is strongly associated with ideology. If a sufficiently large proportion of voters exhibit single-peaked preferences along this underlying dimension, a Condorcet winner will emerge \citep{Black1958}. This explanation seems the most plausible for the absence of Condorcet paradoxes, particularly in contrast to non-political elections.
 
 \begin{changes}
-	For a general interest audience, more discussion on the Condorcet paradox (winner/loser) is needed. The concise definition in the intro doesn’t feel sufficient.
+For a general interest audience, more discussion on the Condorcet paradox (winner/loser) is needed. The concise definition in the intro doesn’t feel sufficient.
 \end{changes}
 
-We agree and revised the introduction. The introduction now presents a standard definition of the Condorcet Paradox, trying to avoid technical jargon as remarked by Reviewer No. 3.
+We agree and revised the introduction. The Introduction now presents a standard definition of the Condorcet Paradox, trying to avoid technical jargon as remarked by Reviewer \# $3$.
 
-\subsection{Minor Comments}
+\subsection*{Minor Comments}
 \begin{changes}
-	More details on data. For example, why just 1996/2004 for the US? The reform party only did well in 1992/1996. What about Nader in 2000 with the greens? Is this scattered years list simply based on what CSES has (my guess for why 1992 is missing) or are there additional data processing steps that removed some years?
+More details on data. For example, why just 1996/2004 for the US? The reform party only did well in 1992/1996. What about Nader in 2000 with the greens? Is this scattered years list simply based on what CSES has (my guess for why 1992 is missing) or are there additional data processing steps that removed some years?
 \end{changes}
-Thank you for highlighting the weaknesses in our data description. We agree that the original manuscript did not sufficiently detail the data utilised. To address this, we have included a new section, "2. Data and Methods" which is dedicated to describing our data and research strategy. To clarify, we used all available data for elections involving more than two parties or candidates, excluding only those elections for which essential data was unavailable. Unfortunately, this includes most US presidential elections, as the CSES often only provides ratings for Democratic and Republican candidates, even when more than two candidates were on the ballot. Similarly, we excluded the presidential elections in Kyrgyzstan and Russia due to the absence of ratings for the most viable candidates, Kurmanbek Bakiyev and Vladimir Putin, respectively.
+Thank you for highlighting the weaknesses in our data description. We agree that the original manuscript did not sufficiently detail the utilised data. To address this, we have included a new section, "2. Data and Methods" which is dedicated to describing our data and research strategy. 
 
-We explicitly address these data limitations in the main text and provide details on the number of respondents, countries, and elections included in our final dataset. Additionally, we describe the bootstrap and random noise approaches employed to account for uncertainty in our data. We hope that this newly added section offers all the necessary details to follow our analysis. Furthermore, we will make all replication materials publicly available.
+To clarify, we used all available data for elections involving more than two parties or candidates, excluding only those elections for which essential data was unavailable. Unfortunately, this includes most US presidential elections, as the CSES often only provides ratings for Democratic and Republican candidates, even when more than two candidates were on the ballot. Similarly, we excluded the presidential elections in Kyrgyzstan and Russia due to the absence of ratings for the most viable candidates, Kurmanbek Bakiyev and Vladimir Putin, respectively.
+
+We explicitly address these data limitations in the main text and provide details on the number of respondents, countries, and elections included in our final dataset (see lines \texttt{86$-$93}). Additionally, we describe the bootstrap and random noise approaches employed to account for uncertainty in our data (lines \texttt{114$-$142}). We hope that this newly added section offers all the necessary details to follow our analysis. Furthermore, we will make all replication materials publicly available.
 
 \begin{changes}
-	Other recent work that may be relevant for authors to compare to: \cite{Desai2025, Darmann2019}.
+Other recent work that may be relevant for authors to compare to: \cite{Desai2025, Darmann2019}.
 \end{changes}
 
-Thanks for suggesting additional literature, that we indeed have not been aware of. Both papers were highly inspiring for our revision, especially regarding their approaches to statistical inference. We employ a similar Bootstrap approach as \citeauthor{Darmann2019} and cite both references accordingly in the main text. 
+Thanks for suggesting additional literature, that we indeed have not been aware of. Both papers were highly inspiring for our revision, especially regarding their approaches to statistical inference. We employ a similar bootstrap approach as \citeauthor{Darmann2019} and cite both references accordingly in the main text.  We were pleased to see that \cite{Desai2025} also utilized the like/dislike data from the CSES. Their note on the necessity of splitting the data for Belgium was particularly helpful and saved us from making a mistake. Thank you for your valuable hints.
 
 
 \begin{changes}
 Alternative measure / aggregation rule to see how things change?
 \end{changes}
 
-Thank you for this interesting suggestion. We have not only calculated the Condorcet efficiency for various voting systems (see Table 2, as described above) but also analysed how it compares under the plurality rule and Borda rule. The values for the plurality rule are presented in Table 2, while the Condorcet efficiency of  Borda's rule was determined by re-evaluating all data according to Borda's scoring rule. There is extensive literature on the debate between 'Condorcet vs. Borda'. Our analysis highlights that the outcomes of these two approaches often align, and we explain the circumstances under which they diverge. For further details, please refer to lines 285–300. 
+Thank you for this interesting suggestion. We have not only calculated the Condorcet efficiency for various voting systems (see Table \textit{2}, as described above) but also analysed how it compares under the plurality rule and Borda rule. The values for the plurality rule are presented in Table \textit{2}, while the Condorcet efficiency of  Borda's rule was determined by re-evaluating all data according to Borda's scoring rule. There is extensive literature on the debate between 'Condorcet vs. Borda'. Our analysis highlights that the outcomes of these two approaches often align, and we explain the circumstances under which they diverge. For further details, please refer to lines \texttt{285$–$300}. 
 
 \begin{changes}
 The mention of non-reporting of null results is interesting but is the claim that some authors sought evidence, presented, but did not end up publishing results a guess or based on knowledge? If the latter, the presentations could be cited.
@@ -171,7 +172,7 @@ The mention of non-reporting of null results is interesting but is the claim tha
 We have removed this part, because, indeed, the claim is a guess.
 
 \begin{changes}
-	Typo in Figure 1 for Conservative.
+Typo in Figure 1 for Conservative.
 \end{changes}
 Thank you for pointing on this. We have amended the caption. 
 
@@ -183,19 +184,17 @@ My main concern is that the current manuscript looks more like a short technical
 
 First of all, thank you for this critical yet very valid remark. Following your advice, we have thoroughly revised the entire paper, guided by the aim of creating an accessible, engaging piece filled with new findings that appeals to a broad spectrum of economists.
 
-
 \begin{changes}
 The authors could start by explaining in “simple” words what a Condorcet winner is and provide concrete examples to illustrate the Condorcet paradox. In its current form, the introduction immediately starts with some jargon that many readers who do not work in social choice theory will not know. Although most economists have heard the term Condorcet paradox before, I believe it is worth reminding everyone what that is before testing for its existence.
 \end{changes}
 
-Thanks for pointing at this weakness. We revised the introduction by removing much of the social-choice jargon, providing a standard definition of the Condorcet Paradox and mentioning its significance to economic theory (stability of core economy). 
-
+Thanks for pointing at this weakness. We revised the introduction by removing much of the social-choice jargon, providing a standard definition/example of the Condorcet Paradox (lines \texttt{6$-$11}) and mentioning its significance beyond voting theory (stability of the core economy). 
 
 \begin{changes}
 There is very little information about the empirical strategy. I think it would be important to provide more information on the polling data that is used (e.g., who conducts these surveys, how many respondents there are, what the sampling strategy is, etc.). It would also be interesting to know how the parties are classified between the different categories shown in Figure 1. Is it performed by the authors? Based on which sources?
 \end{changes}
 
-Thank you for highlighting the weaknesses in our data description. We agree that the original manuscript did not sufficiently detail the data utilised. To address this, we have included a new section, "2. Data and Methods", in the revision, which is dedicated to describing our data and research strategy. It starts with giving a short description on the CSES data. 
+Thank you for highlighting the weaknesses in our data description. We agree that the original manuscript did not sufficiently detail the data and the empirical approach. To address this, we have included a new section, "2. Data and Methods", in the revision, which is dedicated to describing our data and research strategy. It starts with giving a brief description of the CSES data. 
 % Anna: das würde ich gerne weglassen:
 %Since it is a joint program of multiple national elections study teams, the sampling procedures vary between countries and over time. Given the brevity of the research note, we cannot provide details on each national subset of the data. However, all details are documented at their website, to which we direct the interested reader in footnote 1. 
 
