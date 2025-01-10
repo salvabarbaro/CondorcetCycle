@@ -1,0 +1,92 @@
+\documentclass[a4paper, 12pt]{scrartcl}
+% This version: 10 JAN, 11:21
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+%\usepackage{setspace}
+\usepackage{lineno}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage[nice]{nicefrac}
+\usepackage{natbib}
+\usepackage{ntheorem}
+\usepackage{authblk}
+\usepackage[breaklinks]{hyperref}
+\hypersetup{colorlinks, 
+	linkcolor=blue, 
+	citecolor=blue,
+	urlcolor=blue}
+\theoremstyle{break}
+%\usepackage{orcidlink}
+\newtheorem{Axiom}{Axiom}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proof}{Proof}[lemma]
+\newtheorem{corollary}{Corollary}[lemma]
+\newtheorem{property}{Property}[section]
+\newenvironment{changes}{\par\color{violet}\par\addvspace{\baselineskip}}{\par\addvspace{\baselineskip}}
+
+
+%opening
+\title{{\small Response memo for reviewer R1 concerning the submission entitled:} \\ On the Prevalence of Condorcet's Paradox }
+\subtitle{Ms. Ref. No.: EJ MS20240844}
+\author{Salvatore Barbaro and Anna-Sophie Kurella}
+\date{\today}
+\begin{document}
+\maketitle
+
+%\linenumbers
+
+\noindent Esteemed Reviewer,
+
+First and foremost, we would like to express our heartfelt gratitude for the very constructive and exceptionally profound evaluations. Your assessments were highly motivating. Your insightful comments have significantly contributed to enhancing the quality and rigour of our work. In response, we have thoroughly revised the manuscript.
+
+For the sake of easier reference, I have taken the liberty of highlighting your comments in colour. This way, you can easily see how we have addressed the specific remarks. For the sake of improved readability, we have taken the liberty of summarising some comments briefly. This is by no means intended to imply a judgment, but rather to focus on the central essence of each remark.
+
+Before diving into details, we would like to provide an overview of the significant changes compared to the initial version.
+
+Before addressing your questions, please allow us to briefly outline the main revisions compared to the initial version:
+\begin{enumerate}
+\item The introduction now systematically presents the state of research and the research gap, linking the rather technical topic to recommendations for electoral reform.
+\item Data and empirical strategies are described more clearly, and the questions and critiques raised your reports are addressed.
+	
+Following an advice of the editor to address questions of statistical inference, we applied bootstrap methods and a random-noise approach.
+	
+While the initial version analysed all available party and candidate ratings, we now focus exclusively on real-world elections and use party ratings for parliamentary elections and candidate ratings for presidential elections. We analyse both types of data only if parliamentary and presidential elections occurred simultaneously. Additionally, we now utilize an updated version of the dataset that was recently published. 
+	
+In the initial version, we interpreted ties as an indicator of cyclical majorities. Comments from the second reviewer regarding related literature led us to reconsider this approach and address it explicitly, which we have now done.
+%
+\item Alongside our main finding (that the Condorcet Paradox has virtually no empirical relevance), we present a range of new insights regarding who the Condorcet winners are, how often they make it into government, and how various electoral systems influence these outcomes.
+\end{enumerate}
+\section*{Response Memo} 
+\begin{changes}
+1. Should we not worry that the preferences reported in polls are affected by the electoral system? I do not worry here about misrepresenting true preferences, but my preference over parties may be different in a system with majority voting where the winner then governs unchallenged than in a parliamentary system where I expect even the winner party to have to form a coalition? It would be good to have some discussion of this.
+\end{changes}
+
+We agree that the patterns of national preference profiles reflect to some extend the institutional design of a country's electoral system. The number of viable parties/candidates will be lower in majoritarian systems than in proportional systems, and we know from the literature that the number of candidates increases the likelihood of a Condorcet Paradox. However, respondents will likely express more indifferences between parties that are ideologically close and/or coalition partners in large party sytems, a pattern which we will rather not observe in presidential systems or Westminster-type systems. Indifferences reduce the likelihood of a Condorcet Paradox. Therefore it is hard to assess how the institutional impact on preference profiles will influence the occurrence of Condorcet Paradoxes. 
+
+We thus acknowledge that the electoral system affects party preferences, and that this might affect the likelihood of majority cycles. However, we do not see this as a bias to our results. We do not regard institutions as a disturbance parameters to  preference profiles, but  instead we are interested in the occurrence of Condorcet Paradoxes given real-world institutions and the resulting empirical preference distributions over national political parties and candidates. To be clear, our aim is not to make claims about how voters would vote under the Condorcet method as an alternative to their national electoral system, but we want to investigate whether their true, empirical preferences over the national parties or candidates lead to a majority cycle. And indeed our results show that Condorcet Paradoxes do practically not occur under any electoral institution in our sample. For the sake of brevity, we refrain from discussing this point in the research note, and instead focus on the Condorcet efficiency of electoral institutions, where do detect significant variation.
+
+\begin{changes}
+2. I like that the authors attempt to characterize who the Condorcet winners typically are, and in particular, how much support the Condorcet losers typically get. I thought, though that this part of the paper could be a bit more expanded. For example, the last sentence of the conclusion says that "Condorcet loser parties often benefit from the actual voting methods", but the paper only gives one example of such a thing happening. Some quantification of this statement in the paper would be helpful. Similarly, there is an example of D66, a party that was a Condorcet winner but received very few votes. How frequent are such examples?
+\end{changes}
+
+\begin{changes}
+3. I enjoyed learning that in 85\% of the election sight a Condorcet winner that party ended up in the government. I have two questions, though. First, what does "ending up in the government" mean? How many times did the Condorcet winner become the coalition leader, that is, won the highest number of seats? And if it is close to 85\%, I would like to see some discussion how likely this is far from 100\%. I understand that one cannot put a standard confidence interval on that, but perhaps one can have a discussion based on the typical margin of error that the polls are expected to have and how frequently the election results actually defy the polls. 
+\end{changes}
+
+Due to the substantive connection between the two points and to avoid repetition, we have taken the liberty of addressing them together.
+
+Thank you for raising this question, which we aim to address satisfactorily in (and around) Table \textit{2} of the revised manuscript. The table provides a detailed breakdown of the frequencies at which Condorcet winners emerge as the largest electoral party, assume the position of prime minister or president, and hold any government post. Additionally, we present confidence intervals from Agresti-Coull binomial tests to account for the statistical uncertainty. We hope that the insights offered by Table \textit{2} will be of considerable interest to a wider audience, and -- again -- we are grateful for your valuable suggestion.
+
+Concretely, we expand the discussion of the electoral performance of selected Condorcet winners and losers in lines \texttt{209$-$236}. The data in Table \textit{2} show that government participation of Condorcet losers is indeed quite rare, and most likely occurs in systems of proportional representation. There is one instance where the Condorcet loser become president. We discuss these results lines \texttt{270$-$284} in the main text.
+
+\section*{Concluding Remarks}
+
+We would like to once again express our sincere gratitude for your exceptionally balanced and constructive remarks. We truly hope that the new version not only incorporates your valuable suggestions for improvement but also exhibits an overall increase in quality. We are eagerly looking forward to your feedback.
+
+\end{document}
