@@ -57,17 +57,17 @@ You raised the question of whether our main finding is sufficiently surprising, 
 %
 \item The expectation of infrequent cases was based on empirical studies with several weaknesses, which we detail precisely in the paper's Introduction: the findings are limited to single countries and different types of elections (sub-national elections, primaries, referenda). Comparative empirical evidence on large-scale national elections is too scarce to draw conclusions on the prevalence of the Condorcet Paradox in national elections, especially beyond the boundaries of Western Europe and the US. Our contribution meets the standards set in the literature for a comprehensive study, encompassing multiple countries and various time periods.
 %
-\item Our analysis enables a range of observations that, to the best of our knowledge, are novel: Who are the Condorcet winners, and how effective are non-Condorcet voting methods at bringing Condorcet winners into political and administrative positions of responsibility? We also provide, as far as we know for the first time, insights into which party families are most frequently Condorcet winners and which parties are disproportionately affected by failing to join the government as Condorcet winners. In this context, we report differences between the various electoral \emph{systems} (FPTP, PR, Mixed), which, to the best of our knowledge, have not been analysed before. Furthermore, the current version also includes an analysis of the Condorcet efficiency of the Borda count, which, to our knowledge, has not been conducted in this form before. Finally, we also searched for cyclical majorities below the level of the Condorcet winners\footnote{
- As an example: there are cyclical majorities involving candidates $B$, $C$, and $D$; however, all voters prefer candidate $A$ the most.
-} . In doing so, we analysed over 8,000 triplets and found that cyclical majorities occur only in absolute exceptional cases. Practically always, the social orderings resulting from simple majority rule are transitive (see lines \texttt{148$–$153}).
+\item Our analysis enables a range of observations that, to the best of our knowledge, are novel: Who are the Condorcet winners, and how effective are non-Condorcet voting methods at bringing Condorcet winners into political and administrative positions of responsibility? We also provide, as far as we know for the first time, insights into which party families are most frequently Condorcet winners and which parties are disproportionately affected by failing to join the government as Condorcet winners. In this context, we report differences between the various electoral \emph{systems} (FPTP, PR, Mixed), which, to the best of our knowledge, have not been analysed before. Furthermore, the current version also includes an analysis of the Condorcet efficiency of the Borda count, which, to our knowledge, has not been conducted in this form before. Finally, we also searched for cyclical majorities below the level of the Condorcet winners.\footnote{
+	 As an example: there are cyclical majorities involving candidates $B$, $C$, and $D$; however, all voters prefer candidate $A$ the most.
+} In doing so, we analysed $\sim$ 8,100 triplets and found that cyclical majorities occur only in absolute exceptional cases. Practically always, the social orderings resulting from simple majority rule are transitive (see lines \texttt{178$–$181}).
 
 We believe that, overall, we offer a range of new insights, especially considering that we have presented these findings in a highly condensed format within a short paper.
 \end{enumerate}
 
 \subsection*{2. What Drives the Result?}
-We have followed the recommendations of the second reviewer by thoroughly addressing the question of which parties are Condorcet winners and how often they achieve governmental responsibility under different electoral systems. However, as you rightly point out, this analysis does not answer the question of \textit{why} there are virtually no Condorcet Paradoxes. For such an analysis, we simply lack the necessary variance. Following your suggestion, we point at the role of single-peaked preferences, provide an additional analysis and encourage future researchers to address this question. You can find our discussion of this issue in lines (\texttt{180-196}), and results of a regression analysis in Appendix \textit{D}.
+We have followed the recommendations of the second reviewer by thoroughly addressing the question of which parties are Condorcet winners and how often they achieve governmental responsibility under different electoral systems. However, as you rightly point out, this analysis does not answer the question of \textit{why} there are virtually no Condorcet Paradoxes. For such an analysis, we simply lack the necessary variance. Following your suggestion, we point at the role of single-peaked preferences, provide an additional analysis and encourage future researchers to address this question. You can find our discussion of this issue in lines (\texttt{182-200}), and results of a regression analysis in Appendix \textit{D}.
 
-\subsection*{Empirical Strategy}
+\subsection*{3. Empirical Strategy}
 
 \begin{enumerate}[label=(\alph*)] 
 	\item
@@ -89,7 +89,7 @@ Additionally, we had to remove the presidential elections in Kyrgyzstan 2005, as
 	The paper assumes agents report truthfully. Why is this a good assumption in the context of this setting? $\ldots$ might the institution / might culture influence whether subjects report truthfully?
 \end{quote}
 
-Thank you for this suggestion, which we are happy to address here and in the text. The 'thermometer-style' (like/dislike) data we used have been employed in numerous studies as a strategy-proofed benchmark. They are compared with voting intentions or observed voting behaviour (in post-election surveys) to gain insights into strategic voting. To our knowledge, this approach was first introduced by \citet{Abramson2009}, and to this day \citep{Eggers2020, Eggers2022, Nunez2024, Eggers2024}, like/dislike data are considered strategy-proofed values. We have articulated this argument in lines \texttt{66$–$69}.
+Thank you for this suggestion, which we are happy to address here and in the text. The 'thermometer-style' (like/dislike) data we used have been employed in numerous studies as a strategy-proofed benchmark. They are compared with voting intentions or observed voting behaviour (in post-election surveys) to gain insights into strategic voting. To our knowledge, this approach was first introduced by \citet{Abramson2009}, and to this day \citep{Eggers2020, Eggers2022, Nunez2024, Eggers2024}, like/dislike data are considered strategy-proofed values. We have articulated this argument in lines \texttt{72$–$78}.
 
 We reviewed the literature on 'thermometer-style' data and found no source that examines whether institutions or cultural motives influence truthful reporting. We believe that respondents did not face incentives to report untruthfully to party or candidate ratings in the CSES, even in authoritarian settings. Generally, the CSES data is regarded as of high-quality, adhering to scientific standards, and is used widely within the political science literature. The national surveys are usually embedded in a larger election study coordinated by non-for profit research institutes and collected by professional survey firms. We are convinced that this is the best available data source for comparative research on voting behaviour and political preferences.
 
@@ -108,7 +108,7 @@ Secondly, we added random-noise values to the ratings of parties or candidates. 
 \item \begin{quote}
 As Referee 3 points out, it is not terribly helpful to point to what R package you use. Much more helpful would be a discussion of what is actually done.
 \end{quote}
-Thank you for this valid comment. The paper now presents the methodological approach in a precise manner. We refer to the discussion starting from line \texttt{92} (up to line \texttt{104}).
+Thank you for this valid comment. The paper now presents the methodological approach in a precise manner. We refer to the discussion starting from line \texttt{101} (up to line \texttt{113}).
 \end{enumerate}
 
 \subsection*{Modest Comments}
@@ -128,16 +128,16 @@ Thank you for this valid comment. As you can see, the discussion regarding the r
 
 \hspace{0.8cm}
 
-Esteemed Editor, 
+Dear Amanda, 
 
-We hope to have adequately addressed the three major issues. In a separate document, we provide a detailed response to each aspect raised by the three reviewers. We have taken the liberty of drafting a single letter addressing all three reviewers. Please let us know if you would prefer three separate letters instead. Otherwise, we would like to express our gratitude for the thoughtful and constructive feedback on our submission. It has been a pleasure revising our manuscript, and we hope you will continue to consider our work. 
+we hope to have adequately addressed the three major issues. In a separate document, we provide a detailed response to each aspect raised by the three reviewers. We have taken the liberty of drafting a single letter addressing all three reviewers. Please let us know if you would prefer three separate letters instead. Otherwise, we would like to express our gratitude for the thoughtful and constructive feedback on our submission. It has been a pleasure revising our manuscript, and we hope you will continue to consider our work. 
 
 
 Best regards
 
 \hspace{.6cm}
 
-Salvatore Barbaro and Anna-Sophie Kurella.
+Anna and Salva
 
 \newpage
 

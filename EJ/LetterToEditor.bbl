@@ -1,0 +1,82 @@
+\begin{thebibliography}{8}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{#2}
+\providecommand{\path}[1]{#1}
+\providecommand{\DOIprefix}{doi:}
+\providecommand{\ArXivprefix}{arXiv:}
+\providecommand{\URLprefix}{URL: }
+\providecommand{\Pubmedprefix}{pmid:}
+\providecommand{\doi}[1]{\href{http://dx.doi.org/#1}{\path{#1}}}
+\providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Article
+\bibitem[{Abramson et~al.(2009)Abramson, Aldrich, Blais, Diamond, Diskin,
+  Indridason, Lee and Levine}]{Abramson2009}
+\bibinfo{author}{Abramson, P.R.}, \bibinfo{author}{Aldrich, J.H.},
+  \bibinfo{author}{Blais, A.}, \bibinfo{author}{Diamond, M.},
+  \bibinfo{author}{Diskin, A.}, \bibinfo{author}{Indridason, I.H.},
+  \bibinfo{author}{Lee, D.J.}, \bibinfo{author}{Levine, R.},
+  \bibinfo{year}{2009}.
+\newblock \bibinfo{title}{Comparing strategic voting under {FPTP} and {PR}}.
+\newblock \bibinfo{journal}{Comparative Political Studies}
+  \bibinfo{volume}{43}, \bibinfo{pages}{61--90}.
+\newblock \DOIprefix\doi{10.1177/0010414009341717}.
+%Type = Article
+\bibitem[{Darmann et~al.(2019)Darmann, Grundner and Klamler}]{Darmann2019}
+\bibinfo{author}{Darmann, A.}, \bibinfo{author}{Grundner, J.},
+  \bibinfo{author}{Klamler, C.}, \bibinfo{year}{2019}.
+\newblock \bibinfo{title}{Evaluative voting or classical voting rules: {D}oes
+  it make a difference? {E}mpirical evidence for consensus among voting rules}.
+\newblock \bibinfo{journal}{European Journal of Political Economy}
+  \bibinfo{volume}{59}, \bibinfo{pages}{345--353}.
+\newblock \DOIprefix\doi{10.1016/j.ejpoleco.2019.04.003}.
+%Type = Article
+\bibitem[{Eggers and Nowacki(2024)}]{Eggers2024}
+\bibinfo{author}{Eggers, A.C.}, \bibinfo{author}{Nowacki, T.},
+  \bibinfo{year}{2024}.
+\newblock \bibinfo{title}{Susceptibility to strategic voting: {A} comparison of
+  {P}lurality and {I}nstant-{R}unoff elections}.
+\newblock \bibinfo{journal}{The Journal of Politics} \bibinfo{volume}{86},
+  \bibinfo{pages}{521--534}.
+\newblock \DOIprefix\doi{10.1086/726943}.
+%Type = Article
+\bibitem[{Eggers et~al.(2022)Eggers, Rubenson and Loewen}]{Eggers2022}
+\bibinfo{author}{Eggers, A.C.}, \bibinfo{author}{Rubenson, D.},
+  \bibinfo{author}{Loewen, P.J.}, \bibinfo{year}{2022}.
+\newblock \bibinfo{title}{Who votes more strategically? evidence from canada}.
+\newblock \bibinfo{journal}{The Journal of Politics} \bibinfo{volume}{84},
+  \bibinfo{pages}{1862--1868}.
+\newblock \DOIprefix\doi{10.1086/717296}.
+%Type = Article
+\bibitem[{Eggers and Vivyan(2020)}]{Eggers2020}
+\bibinfo{author}{Eggers, A.C.}, \bibinfo{author}{Vivyan, N.},
+  \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{Who votes more strategically?}
+\newblock \bibinfo{journal}{American Political Science Review}
+  \bibinfo{volume}{114}, \bibinfo{pages}{470--485}.
+\newblock \DOIprefix\doi{10.1017/s0003055419000820}.
+%Type = Article
+\bibitem[{Núñez(2024)}]{Nunez2024}
+\bibinfo{author}{Núñez, L.}, \bibinfo{year}{2024}.
+\newblock \bibinfo{title}{Encouraging loyalty and defection: {T}he impact of
+  campaigns on tactical voting in {B}ritain}.
+\newblock \bibinfo{journal}{American Journal of Political Science}
+  \DOIprefix\doi{10.1111/ajps.12882}.
+%Type = Book
+\bibitem[{Sen(2017)}]{Sen2017}
+\bibinfo{author}{Sen, A.}, \bibinfo{year}{2017}.
+\newblock \bibinfo{title}{Collective Choice and Social Welfare}.
+\newblock \bibinfo{publisher}{Harvard University Press},
+  \bibinfo{address}{Cambridge, Massachusetts}.
+%Type = Article
+\bibitem[{Van~Deemen(2013)}]{vanDeemen2013}
+\bibinfo{author}{Van~Deemen, A.}, \bibinfo{year}{2013}.
+\newblock \bibinfo{title}{On the empirical relevance of {C}ondorcet’s
+  paradox}.
+\newblock \bibinfo{journal}{Public Choice} \bibinfo{volume}{158},
+  \bibinfo{pages}{311--330}.
+\newblock \DOIprefix\doi{10.1007/s11127-013-0133-3}.
+
+\end{thebibliography}
