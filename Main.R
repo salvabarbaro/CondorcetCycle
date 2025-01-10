@@ -1,7 +1,7 @@
 #
 #   CSES Integrated File
 #
-#   Frequency of Condorcet Cycles
+#   Frequency of Condorcet Cycles - Main R-Script
 #
 ################################################
 rm(list = ls())
