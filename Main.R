@@ -6,21 +6,21 @@
 ################################################
 rm(list = ls())
 # library(foreign)
-#library(haven)
+library(haven)
 library(vote)
 library(dplyr)
 library(data.table)
 library(tidyr)
 
-#setwd(")
-#load("cses_imd.rdata") 
+#setwd("")
+load("cses_imd.rdata")    # Version 18.11.2024, includes waves 1- 5
 
 d <- cses_imd
 
-# CSES IMD #
-
 na.countries <- c("Switzerland_2019")
+
 d$cntry <- d$IMD1006_NAM
+
 d$cntry[d$IMD1003==5611999] <- "B_FL"
 d$cntry[d$IMD1003==5621999] <- "B_WA"
 
@@ -36,6 +36,7 @@ d$case_ID <- paste(d$cntry, d$year, sep="_")
 d <- d %>% filter(., !case_ID %in% na.countries)
 
 # Add party names
+
 partyname.fun <- function(case){
   partycodes <- d %>% filter(., case_ID == case) %>% 
     select(c("case_ID", starts_with("IMD5000_"))) %>%
@@ -53,6 +54,7 @@ csespartycsv <- read.csv("csespartycsv.csv")
 testcases <- as.list(unique(d$case_ID))
 testnames.list <- lapply(testcases, partyname.fun)
 partyname.df <- bind_rows(testnames.list) %>% filter(., is.na(Country) == F)
+
 
 d$presidential <- ifelse(d$IMD1009==20, 1, 0)
 d$both <- ifelse(d$IMD1009==12, 1, 0)
@@ -162,7 +164,7 @@ d$leri_party_f <- d$IMD3007_F
 d$leri_party_g <- d$IMD3007_G
 d$leri_party_h <- d$IMD3007_H
 d$leri_party_i <- d$IMD3007_I
-
+############################################
 d$leri_party_a[d$leri_party_a>10] <- NA
 d$leri_party_b[d$leri_party_b>10] <- NA
 d$leri_party_c[d$leri_party_c>10] <- NA
@@ -237,6 +239,7 @@ d$pm_g <- ifelse(d$IMD5008_2==d$IMD5000_G & d$IMD5008_2<9999989, 1, 0)
 d$pm_h <- ifelse(d$IMD5008_2==d$IMD5000_H & d$IMD5008_2<9999989, 1, 0)
 d$pm_i <- ifelse(d$IMD5008_2==d$IMD5000_I & d$IMD5008_2<9999989, 1, 0)
 
+
 d$votes_party_a <- d$IMD5001_A
 d$votes_party_b <- d$IMD5001_B
 d$votes_party_c <- d$IMD5001_C
@@ -267,8 +270,8 @@ d$votes_party_f[d$votes_party_f>99] <- NA
 d$votes_party_g[d$votes_party_g>99] <- NA
 d$votes_party_h[d$votes_party_h>99] <- NA
 d$votes_party_i[d$votes_party_i>99] <- NA
-
 ##################################################################
+### LOOP START ###################################################
 d <- d[!is.na(d$case_ID),]  
 final <- as.data.frame(matrix(unique(d$case_ID), ncol=1))
 names(final) <- "case_ID"
@@ -276,14 +279,14 @@ names(final) <- "case_ID"
 for(k in unique(d$case_ID)){
   #for(k in unique(final$case_ID)){
   dt <-d[d$case_ID==k,]
- 
+
   final$cntry[final$case_ID==k]     <- dt$cntry[1]
   final$year[final$case_ID==k]      <- dt$year[1]
   final$polityIV[final$case_ID==k]  <- dt$IMD5051_1[1]
   final$system[final$case_ID==k]    <- dt$IMD5013[1]
   final$n_eff_parties[final$case_ID==k] <- dt$IMD5058_2[1]
   final$presidential[final$case_ID==k] <- ifelse(dt$presidential[1]==1, 1, 0)
- 
+
   # Party rankings
   # Which parties are included in this case?
   include <- rep(FALSE,9)
@@ -306,14 +309,14 @@ for(k in unique(d$case_ID)){
                       dt$party_rating_f,
                       dt$party_rating_g,
                       dt$party_rating_h,
-                      dt$party_rating_i)  
+                      dt$party_rating_i)
   
   if(k=="Switzerland_2007") {include[7:8] <- FALSE}
   if(k== "Spain_2004") {include[4:9] <- FALSE}
   if(k== "Great Britain_1997") {include[4:5] <- FALSE}
   if(k== "Great Britain_2005") {include[4:5] <- FALSE}
   if(k== "Great Britain_2015") {include[c(5,7)] <- FALSE}
-  
+
   final$n_parties[final$case_ID==k] <- length(include[include==TRUE])
   
   rating_mat.s <- rating_mat[,include == TRUE] %>% 
@@ -327,28 +330,13 @@ for(k in unique(d$case_ID)){
                                                    na.last = TRUE)))) %>%
     setNames(., LETTERS[1:9][include==TRUE]) 
   # Determine Condorcet winner
-  Celection <- condorcet(trank, runoff = FALSE, quiet = T)
+  Celection <- condorcet(trank, runoff = FALSE)
   if(length(Celection$elected)>0){
     final$Cwinner_party[final$case_ID==k] <- Celection$elected}
   if(length(Celection$loser)>0){
     final$Closer_party[final$case_ID==k] <- Celection$loser}
-### New snippet (20DEC24) --> include Borda
-  # Borda #
-  Belection <- score(trank, nseats = 1, larger.wins = F, quiet = T)
-  if(length(Belection$elected)>0){
-    final$Bwinner_party[final$case_ID==k] <- Belection$elected}
-  if(length(Belection$loser)>0){
-    final$Bloser_party[final$case_ID==k] <- Belection$loser}
-  # STV #
-  Selection <- stv(trank, nseats = 1, equal.ranking = TRUE, quiet = T)
-  if(length(Selection$elected)>0){
-    final$Swinner_party[final$case_ID==k] <- Selection$elected}
-  if(length(Selection$loser)>0){
-    final$Sloser_party[final$case_ID==k] <- Selection$loser}
-## end of new snippet (20DEC24)
-    
-  # ideological position of winner and loser party
   
+  # ideological position of winner and loser party
   mat <- cbind(dt$leri_party_a,
                dt$leri_party_b,
                dt$leri_party_c,
@@ -380,11 +368,6 @@ for(k in unique(d$case_ID)){
     final$family_loser[final$case_ID==k] <- fam[which(c("A", "B", "C", "D", "E", "F", "G", "H", "I")==Celection$loser)]
   }
   
-  ## new snippet:
-  if(length(Belection$elected)>0){
-    final$family_borda[final$case_ID==k] <- fam[which(c("A", "B", "C", "D", "E", "F", "G", "H", "I")==Belection$elected)]
-  }
-  ## 
   # Percent votes of winner
   
   
@@ -400,6 +383,9 @@ for(k in unique(d$case_ID)){
                dt$votes_party_h,
                dt$votes_party_i        )
   
+  if(k=="Japan_2004"){vot[1,] <- c(37.8,30,15.4,7.8,5.4, NA, NA, NA ,NA)}
+  if(k=="Japan_2007"){vot[1,] <- c(39.5, 28.1, 13.2, 7.5, 4.5, NA, NA, NA, NA )}
+  if(k=="Japan_2013"){vot[1,] <- c(34.7, 13.4, 9.7, 8.9, 11,9, 14.2, NA, NA)}
   
   if(length(Celection$elected)>0 ){
     final$votes_winner[final$case_ID==k] <- vot[1,which(c("A", "B", "C", "D", "E", "F", "G", "H", "I")==Celection$elected)]}
@@ -609,25 +595,12 @@ for(k in unique(d$case_ID[d$both==1 & d$case_ID!="Chile_1999" & d$case_ID!="Chil
                                                    na.last = TRUE)))) %>%
     setNames(., LETTERS[1:9][include==TRUE]) 
   # Determine Condorcet winner
-  Celection <- condorcet(trank, runoff = FALSE, quiet = T)
+  Celection <- condorcet(trank, runoff = FALSE)
   if(length(Celection$elected)>0){
     final$Cwinner_party[final$case_ID==k] <- Celection$elected}
   if(length(Celection$loser)>0){
     final$Closer_party[final$case_ID==k] <- Celection$loser}
-  ### New snippet (20DEC24) --> include Borda
-  # Borda #
-  Belection <- score(trank, nseats = 1, larger.wins = F, quiet = T)
-  if(length(Belection$elected)>0){
-    final$Bwinner_party[final$case_ID==k] <- Belection$elected}
-  if(length(Belection$loser)>0){
-    final$Bloser_party[final$case_ID==k] <- Belection$loser}
-  # STV #
-  Selection <- stv(trank, nseats = 1, equal.ranking = TRUE, quiet = T)
-  if(length(Selection$elected)>0){
-    final$Swinner_party[final$case_ID==k] <- Selection$elected}
-  if(length(Selection$loser)>0){
-    final$Sloser_party[final$case_ID==k] <- Selection$loser}
-  ## end of new snippet (20DEC24)  
+  
   
   # ideological position of winner and loser party
   
@@ -652,7 +625,7 @@ for(k in unique(d$case_ID[d$both==1 & d$case_ID!="Chile_1999" & d$case_ID!="Chil
   }
   
   # party family of winner and loser
-  fam <- dt %>% select(contains("family"))
+  fam <- dt %>%select(contains("family"))
   fam <- as.data.frame(fam[1,])
   fam <- as.numeric(fam)
   
@@ -662,12 +635,7 @@ for(k in unique(d$case_ID[d$both==1 & d$case_ID!="Chile_1999" & d$case_ID!="Chil
     final$family_loser[final$case_ID==k] <- fam[which(c("A", "B", "C", "D", "E", "F", "G", "H", "I")==Celection$loser)]
   }
   
-  ## New snippet (Borda family)
-  if(length(Belection$elected)>0){
-    final$family_borda[final$case_ID==k] <- fam[which(c("A", "B", "C", "D", "E", "F", "G", "H", "I")==Belection$elected)]
-    }
-  ### end new script (20DEC24)
-    # Percent votes of winner
+  # Percent votes of winner
   
   
   #percent votes of Condorcet Winner
@@ -835,6 +803,8 @@ for(k in unique(d$case_ID[d$both==1 & d$case_ID!="Chile_1999" & d$case_ID!="Chil
 
 final_all <- rbind(final_imd, final)
 
+
+
 ### Manually add party names #####
 
 final_all$elected <- final_all$Cwinner_party
@@ -872,14 +842,7 @@ results2.df <- final_all %>%
 
 
 final_all <- results2.df
-
-
-
-
-
 ### manually add government composition for wave 1 ####
-
-
 party_columns <- grep("^minis_party_", names(d), value = TRUE)
 
 # Group by case_ID and determine parties in the government
@@ -944,18 +907,21 @@ cabinet.efficiency <- final_all %>% select(., -c("n_parties")) %>%
 round(sum(cabinet.efficiency$efficiency)/nrow(cabinet.efficiency)*100,2)
 # % of all cases the CW belongs to the cabinet after the resp. election.
 
-
 final_all$efficiency <- cabinet.efficiency$efficiency
 
-for(i in 1:length(final_all[1])){
+# Special case Slovenia, tie between Condorcet winner parties
+final_all$efficiency[final_all$case_ID=="Slovenia_1996"] <- 1  # LDS
+final_all$pm_after[final_all$case_ID=="Slovenia_1996"] <- 1  # LDS
+final_all$votemargin_winner[final_all$case_ID=="Slovenia_1996"] <- 8  # LDS
+
+# Special case Hong Kong 2012, tie between Condorcet winner parties
+final_all$efficiency[final_all$case_ID=="Hong Kong_2012"] <- 0  # Democratic Party
+final_all$pm_after[final_all$case_ID=="Hong Kong_2012"] <- 0  # Democratic Party
+final_all$votemargin_winner[final_all$case_ID=="Hong Kong_2012"] <- -7  # Democratic Party
+
+for(i in 1:266){
   final_all$cabinet_composition[i] <- paste(unlist(cabinet.efficiency$gov.parties[i]), collapse="")
 }
-
-
-
-
-
-
 
 # Manually add presidents
 
@@ -963,8 +929,8 @@ for(i in 1:length(final_all[1])){
 
 final_all$case_ID[final_all$presidential==1 & is.na(final_all$president_after)]
 
-final_all$president_after[final_all$case_ID=="Belarus_2001"&final_all$presidential==1] <- 1
-final_all$Cwinner_party.y[final_all$case_ID=="Belarus_2001"&final_all$presidential==1] <- "Lukashenko"
+final_all$president_after[final_all$case_ID=="Belarus_2001"&final_all$presidential==1] <- 0
+final_all$Cwinner_party.y[final_all$case_ID=="Belarus_2001"&final_all$presidential==1] <- "Gajdukkevich"
 
 
 final_all$president_after[final_all$case_ID=="France_2002"&final_all$presidential==1] <- 1
@@ -1007,20 +973,14 @@ final_all$Cwinner_party.y[final_all$case_ID=="Argentina_2015"&final_all$presiden
 # Kyrgyzstan remains NA, as president Kurmanbek Bakiyev ran as independent - not included in our rating matrix which is based on party ratings only
 # Russia 2000 and 2004 remain NA, as president Putin ran as independent - not included in our rating matrix which is based on party ratings only
 
-
-
-
 final_all$president_after_loser[final_all$case_ID=="France_2002"&final_all$presidential==1] <- 0
 final_all$Closer_party.y[final_all$case_ID=="France_2002"&final_all$presidential==1] <- "LePen"
 
 final_all$president_after_loser[final_all$case_ID=="Belarus_2001"&final_all$presidential==1] <- 0
 final_all$Closer_party.y[final_all$case_ID=="Belarus_2001"&final_all$presidential==1] <- "Goncharik"
 
-
 final_all$president_after_loser[final_all$case_ID=="Lithuania_1997"&final_all$presidential==1] <- 0
 final_all$Closer_party.y[final_all$case_ID=="Lithuania_1997"&final_all$presidential==1] <- "Pavilionis"
-
-
 
 final_all$president_after_loser[final_all$case_ID=="Mexico_2000"&final_all$presidential==1] <- 1
 final_all$Closer_party.y[final_all$case_ID=="Mexico_2000"&final_all$presidential==1] <- "Fox"
@@ -1032,25 +992,16 @@ final_all$Closer_party.y[final_all$case_ID=="Peru_2000"&final_all$presidential==
 final_all$president_after_loser[final_all$case_ID=="Romania_1996"&final_all$presidential==1] <- 0
 final_all$Closer_party.y[final_all$case_ID=="Romania_1996"&final_all$presidential==1] <- "Funar"
 
-
 final_all$president_after_loser[final_all$case_ID=="Tunisia_2019"&final_all$presidential==1] <- 0
 final_all$Closer_party.y[final_all$case_ID=="Tunisia_2019"&final_all$presidential==1] <- "Maghzaoui"
 
-
-
-
-
-
 # largest party by votes?
-  
-  
   final_all$system[final_all$presidential==1] <- 4
-
 
 # Is p the largest party?
 final_all$largest_party <- ifelse(final_all$votemargin_winner>=0, 1, 0)
 
-final_all$largest_party[final_all$case_ID=="Belarus_2001" & final_all$presidential==1] <- 1  #Lukashenko
+final_all$largest_party[final_all$case_ID=="Belarus_2001" & final_all$presidential==1] <- 0  #Lukashenko president, Gajdukkevich CW
 final_all$largest_party[final_all$case_ID=="Romania_2014" & final_all$presidential==1] <- 1  #Iohannis
 final_all$largest_party[final_all$case_ID=="France_2002" & final_all$presidential==1] <- 1  #Chirac
 final_all$largest_party[final_all$case_ID=="Costa Rica_2018" & final_all$presidential==1] <- 1  #Alvarado
@@ -1059,7 +1010,7 @@ final_all$largest_party[final_all$case_ID=="Philippines_2010" & final_all$presid
 final_all$largest_party[final_all$case_ID=="Philippines_2016" & final_all$presidential==1] <- 1  #Duterte
 final_all$largest_party[final_all$case_ID=="Uruguay_2019" & final_all$presidential==1] <- 1  #Lacalle Pou
 final_all$largest_party[final_all$case_ID=="Argentina_2015" & final_all$presidential==1] <- 0  #Macri
-final_all$largest_party[final_all$case_ID=="Peru_2016" & final_all$presidential==1] <- 0  #Fujimori
+final_all$largest_party[final_all$case_ID=="Peru_2016" & final_all$presidential==1] <- 0  #Kuckinsky president, Castillo CW
 
 
 
@@ -1077,10 +1028,11 @@ final_all$pm_pres[final_all$presidential==1] <- final_all$president_after[final_
 final_all$loser_turns_winner <- ifelse(final_all$presidential==0 & final_all$cab_posts_loser>0, 1, 0)
 final_all$loser_turns_winner[final_all$presidential==1] <- final_all$president_after_loser[final_all$presidential==1]
 
-
+# Manually add info on Belarus parliamentary election 2000
+final_all$largest_party[final_all$case_ID=="Belarus_2001" & final_all$presidential==0] <- 0 # communist party
+final_all$pm_pres[final_all$case_ID=="Belarus_2001" & final_all$presidential==0] <- 0 # communist party
+final_all$efficiency[final_all$case_ID=="Belarus_2001" & final_all$presidential==0] <- 0 # communist party
 ###########################################################
-
-
 # sort 
 final_all <- arrange(final_all, case_ID)
 final_all <- arrange(final_all, presidential)
@@ -1089,10 +1041,10 @@ final_all <- final_all[final_all$case_ID!="Kyrgyzstan_2005" &
                          final_all$case_ID!="Russian Federation_2000" &
                          final_all$case_ID!="Russian Federation_2004" ,]
  
-#write.csv(final_all, file="final_imd.csv", row.names = F)
+write.csv(final_all, file="final_imd.csv", row.names = F)
 
-#save(final_all, file="final_imd.rdata")
+save(final_all, file="final_imd.rdata")
 
 
-
+### END OF SCRIPT ###############################################################
 
