@@ -1,0 +1,1241 @@
+
+> ####################################################################################
+> #
+> # File:                 ReplicateStep2.R
+> #
+> # Authors:              Zuheir Desai and Tasos Kalandrakis
+> #
+> # Description:          Replicates figure 2 and the tables in
+> #                       ``The Core of the Party System.''
+> #                       Please see the associated README.txt file for more details.
+> #
+> # Created:              Jun - 2024
+> #
+> # Last Modified:        Jul - 2024
+> #
+> # Language:             R
+> #
+> # Related References:   [1] Zuheir Desai and Tasos Kalandrakis. 2024. "The
+> #                       Core of the Party System," Journal of Politics,
+> #                       conditionally accepted.
+> #
+> ####################################################################################
+> 
+> rm(list = ls(all = TRUE))
+
+> options("width"=500,"digits" = 3)
+
+> # install packages if not already and load libraries
+> 
+> packages.to.install <- c("dplyr","lfe","qwraps2","stargazer","readxl","data.table",
++                         "scales","stringr")
+
+> not.installed <- packages.to.install[!(packages.to.install %in%
++                                     installed.packages()[,"Package"])]
+
+> if(length(not.installed)) install.packages(not.installed,
++     repos='http://cran.us.r-project.org')
+
+> library(dplyr);library(lfe);library(stargazer);library(qwraps2)
+
+> library(readxl);library(data.table);library(scales);library(stringr)
+
+> # SET WORKING DIRECTORY TO THE FOLDER THAT CONTAINS THIS SCRIPT
+> setwd("/Users/home/Library/CloudStorage/Dropbox/RESEARCH/TestingCore/Replication")
+
+> # setwd("~/Dropbox/Active_papers/TestingCore/Replication")
+> 
+> 
+> #### Read data files, source functions ####
+> 
+> source("./Code/processing/finish_creation.R")
+
+> source("./Code/processing/ancillary_functions.R")
+
+> data <- readRDS("Finaldata.Rds")
+
+> indiff <- fread("Indiff_ind.csv")
+
+> base <- read_excel("Tablebase_top1.xlsx")
+
+> corebase <- read_excel("Tablecore_top1.xlsx")
+
+> govbase <- read_excel("Tablegov_top1.xlsx")
+
+> #################################################################################
+> ################################# MAIN PAPER ####################################
+> #################################################################################
+> 
+> ################### FIGURE 2: Party level test p-values ######################
+> 
+> source("./Code/tabs_figs/Figure2.R")
+
+> ##################### TABLE 1: Party level test results #######################
+> 
+> source("./Code/tabs_figs/Table1.R")
+
+> table1 <- fulltable
+
+> printsumtable(table1,"Table 1: Party level test results")
+
+
+
+
+ Table 1: Party level test results 
+
+                    Unadjusted             FDR control             FWER control       
+                CW Possible CW Not CW   CW Possible CW Not CW   CW  Possible CW Not CW
+Core            43          40    312   30          53    273   27           55    230
+              3.7%        3.4%  26.5% 2.6%        4.5%  23.2% 2.3%         4.7%  19.6%
+Possible core    0           0    171    0           0    210    0            1    253
+              0.0%        0.0%  14.5% 0.0%        0.0%  17.9% 0.0%         0.1%  21.5%
+Not core         0           0    610    0           0    610    0            0    610
+              0.0%        0.0%  51.9% 0.0%        0.0%  51.9% 0.0%         0.0%  51.9%
+
+
+
+
+
+> ############# TABLE 2: Survey-level tests of existence of core/CW #############
+> 
+> source("./Code/tabs_figs/Table2.R")
+
+> table2 <- surveytable
+
+> printsumtable(table2,"Table 2: Survey-level tests of existence of core/CW")
+
+
+
+
+ Table 2: Survey-level tests of existence of core/CW 
+
+             Core is not empty Core may be empty Empty core CW exists CW may exist CW does not exist
+Unadjusted                 196                 0          0        40           43               113
+                        100.0%              0.0%       0.0%     20.4%        21.9%             57.7%
+FDR control                195                 1          0        31           52               113
+                         99.5%              0.5%       0.0%     15.8%        26.5%             57.7%
+FWER control               196                 0          0        27           56               113
+                        100.0%              0.0%       0.0%     13.8%        28.6%             57.7%
+
+
+
+
+
+> ###################### TABLE 3: Reported Indifferences  #######################
+> 
+> source("./Code/tabs_figs/Table3.R")
+
+> table3 <- indiffsumtable
+
+> printsumtable(table3,"Table 3: Reported Indifferences")
+
+
+
+
+ Table 3: Reported Indifferences 
+
+  Total pairwise comparisons any pair core parties core party and complement core party compelement of core parties
+1                    4250865   932208       120171                               315836                      496201
+2                     100.0%    21.9%         2.8%                                 7.4%                       11.7%
+3                         NA   100.0%        12.9%                                33.9%                       53.2%
+
+
+
+
+
+> ########### TABLE 4: Reported Indifferences and profile of responses ###########
+> 
+> source("./Code/tabs_figs/Table4.R")
+
+> table4 <- indiffcattable
+
+> printsumtable(table4,"Table 4: Reported Indifferences and profile of responses")
+
+
+
+
+ Table 4: Reported Indifferences and profile of responses 
+
+                                   All All but top  Some  None
+Share of respondents              5.5%        5.4% 70.4% 18.7%
+Share of comparisons              3.9%        4.2% 83.6%  8.3%
+Share of indifferent comparisons 17.7%       12.5% 69.8%  0.0%
+
+
+
+
+
+> ######################## TABLE 5: Summary statistics ###########################
+> 
+> source("./Code/tabs_figs/Table5.R")
+
+> table5 <- partyobsnew
+
+> printsumtable(table5,"Table 5: Summary statistics")
+
+
+
+
+ Table 5: Summary statistics 
+
+                           CW Possibly CW Core & not CW Possible Core Not Core All Parties
+#                          24          22           138            98      383         665
+%                        3.6%        3.3%         20.8%         14.7%    57.6%      100.0%
+% In Gov               100.0%       81.8%         63.0%         36.7%    18.3%       35.3%
+Relative odds (gov)       5.5         4.5           3.4             2        1        <NA>
+% PM                    95.8%       59.1%         34.8%         11.2%     0.3%       14.4%
+Relative odds (PM)        367       226.3         133.2            43        1        <NA>
+LH seat share (%)       41.09       33.87         24.24         14.78     8.12       14.49
+% Seat Plurality Party 100.0%       63.6%         35.5%         11.2%     0.3%       14.9%
+% Legislative Median    61.8%       39.4%         17.9%         19.2%     8.3%       14.8%
+Distance to Median       0.46        1.19          1.52          1.49        2        1.74
+% Incumbent             54.2%       59.1%         42.0%         31.6%    22.2%       30.1%
+% Incumbent PM          50.0%       50.0%         28.3%         14.3%     5.2%       14.4%
+
+
+
+
+
+> ######################## TABLE 6 & 7: regressions ###############################
+> 
+> source("./Code/tabs_figs/Tables6_7.R")
+
+> printregtable(list(GovOLS,Govparty),coef,"Table 6: Government Participation")
+
+
+ Table 6: Government Participation 
+
+
+================================================================================================
+                                                Dependent variable:                             
+                   -----------------------------------------------------------------------------
+                                                     post_gov                                   
+                     (1)       (2)       (3)       (4)      (5)       (6)       (7)       (8)   
+------------------------------------------------------------------------------------------------
+Core0.05           0.441*** 0.279***            0.278***  0.500***  0.235**             0.238** 
+                   (0.041)   (0.051)             (0.051)  (0.090)   (0.094)             (0.096) 
+                                                                                                
+Condorcet0.05      0.383***             0.107     0.089   0.514***             0.116     0.135  
+                   (0.050)             (0.070)   (0.064)  (0.109)             (0.132)   (0.125) 
+                                                                                                
+LH seats                      0.002   0.007***    0.002            0.011***  0.015***  0.010*** 
+                             (0.002)   (0.002)   (0.002)            (0.004)   (0.004)   (0.004) 
+                                                                                                
+Seat Plurality              0.219***  0.260***   0.201**           0.329***  0.358***  0.304*** 
+                             (0.078)   (0.086)   (0.084)            (0.102)   (0.107)   (0.109) 
+                                                                                                
+Legislative Median           0.143**   0.134**   0.134**             0.078     0.049     0.068  
+                             (0.062)   (0.065)   (0.063)            (0.106)   (0.109)   (0.107) 
+                                                                                                
+Distance to median          -0.066*** -0.077*** -0.066***          -0.101*** -0.112*** -0.099***
+                             (0.012)   (0.013)   (0.012)            (0.031)   (0.034)   (0.031) 
+                                                                                                
+Incumbent party               0.060     0.062     0.062             -0.141    -0.161*   -0.141  
+                             (0.049)   (0.050)   (0.049)            (0.087)   (0.088)   (0.087) 
+                                                                                                
+Constant           0.179*** 0.265***  0.307***  0.267***                                        
+                   (0.019)   (0.038)   (0.039)   (0.038)                                        
+                                                                                                
+------------------------------------------------------------------------------------------------
+Observations         665       665       665       665      665       665       665       665   
+R2                  0.240     0.326     0.291     0.327    0.619     0.681     0.672     0.682  
+Adjusted R2         0.237     0.320     0.285     0.320    0.282     0.391     0.373     0.391  
+================================================================================================
+Note:                                                                *p<0.1; **p<0.05; ***p<0.01
+
+
+
+
+
+> printregtable(list(PMOLS,PMparty),coefp,"Table 7: Premiership")
+
+
+ Table 7: Premiership 
+
+
+===========================================================================================
+                                             Dependent variable:                           
+                   ------------------------------------------------------------------------
+                                                    pmalt                                  
+                     (1)      (2)       (3)      (4)      (5)      (6)      (7)      (8)   
+-------------------------------------------------------------------------------------------
+Core0.05           0.331*** 0.087***           0.084*** 0.363*** 0.129***          0.138***
+                   (0.020)  (0.028)            (0.026)  (0.050)  (0.050)           (0.051) 
+                                                                                           
+Condorcet0.05      0.612***          0.206***  0.201*** 0.693***          0.321*** 0.331***
+                   (0.058)            (0.078)  (0.076)  (0.092)           (0.115)  (0.115) 
+                                                                                           
+LH seats                    0.004*** 0.005***  0.004***          0.008*** 0.009*** 0.006** 
+                            (0.001)   (0.001)  (0.001)           (0.003)  (0.003)  (0.003) 
+                                                                                           
+Seat Plurality              0.567*** 0.543***  0.524***          0.626*** 0.597*** 0.567***
+                            (0.082)   (0.087)  (0.089)           (0.100)  (0.106)  (0.108) 
+                                                                                           
+Legislative Median           -0.026   -0.047    -0.047            -0.019   -0.053   -0.043 
+                            (0.037)   (0.037)  (0.037)           (0.060)  (0.063)  (0.063) 
+                                                                                           
+Distance to median          -0.016** -0.018*** -0.015**           -0.025   -0.028   -0.020 
+                            (0.006)   (0.006)  (0.006)           (0.019)  (0.018)  (0.018) 
+                                                                                           
+Incumbent premier            0.029     0.032    0.035             -0.074   -0.087   -0.077 
+                            (0.058)   (0.058)  (0.058)           (0.084)  (0.080)  (0.079) 
+                                                                                           
+Constant            -0.004   -0.005    0.013    0.001                                      
+                   (0.005)  (0.013)   (0.013)  (0.013)                                     
+                                                                                           
+-------------------------------------------------------------------------------------------
+Observations         665      665       665      665      665      665      665      665   
+R2                  0.407    0.621     0.624    0.629    0.701    0.794    0.801    0.807  
+Adjusted R2         0.405    0.617     0.620    0.626    0.436    0.607    0.620    0.631  
+===========================================================================================
+Note:                                                           *p<0.1; **p<0.05; ***p<0.01
+
+
+
+
+
+> ############# Table 8: Government coalition party base preferences ##############
+> 
+> source("./Code/tabs_figs/Table8.R")
+
+> table8 <- govbasesub
+
+> printsumtable(table8,"Table 8: Government coalition party base preferences")
+
+
+
+
+ Table 8: Government coalition party base preferences 
+
+                  Party base               weakly              prefers         Party base             strictly              prefers
+          Average Base share Majority support (#) Majority support (%) Average Base share Majority support (#) Majority support (%)
+G over NG              77.4%                 1498                91.7%              58.1%                 1043                63.8%
+NG over G              41.9%                  577                35.3%              22.6%                  128                 7.8%
+
+
+
+
+
+> ##################### Table 9: Core party base preferences #######################
+> 
+> source("./Code/tabs_figs/Table9.R")
+
+> table9 <- corebasesub
+
+> printsumtable(table9,"Table 9: Core party base preferences")
+
+
+
+
+ Table 9: Core party base preferences 
+
+                  Party base               weakly              prefers         Party base             strictly              prefers
+          Average Base share Majority support (#) Majority support (%) Average Base share Majority support (#) Majority support (%)
+C over NC              80.9%                  556                96.2%              61.0%                  405                70.1%
+NC over C              39.0%                  166                28.7%              19.1%                   22                 3.8%
+
+
+
+
+
+> ######## Table 10: Legislative preferences for core v. non-core parties ##########
+> 
+> source("./Code/tabs_figs/Table10.R")
+
+> table10 <- basesubsummary
+
+> printsumtable(table10,"Table 10: Legislative preferences for core v. non-core parties")
+
+
+
+
+ Table 10: Legislative preferences for core v. non-core parties 
+
+                                              Party base                  weakly                 prefers                 Party base                strictly                 prefers
+                              Average seat share sum (%) Seat share majority (#) Seat share majority (%) Average seat share sum (%) Seat share majority (#) Seat share majority (%)
+parties that prefer C over NC                       84.4                     581                   98.0%                       67.4                     472                   79.6%
+parties that prefer NC over C                       30.6                      88                   14.8%                       13.6                       5                    0.8%
+
+
+
+
+
+> #################################################################################
+> ################################# APPENDIX ######################################
+> #################################################################################
+> 
+> ################## Table B.2: Party level test results ##########################
+> 
+> source("./Code/tabs_figs/TableB2.R")
+
+> tableb2 <- fulltable
+
+> printsumtable(tableb2,"Table B.2: Party level test results")
+
+
+
+
+ Table B.2: Party level test results 
+
+                                 Unadjusted             FDR adjusted             FWER adjusted       
+                             CW Possible CW Not CW   CW  Possible CW Not CW   CW   Possible CW Not CW
+                      Core   40          59    278   27           70    233   24            72    191
+                           3.4%        5.0%  23.6% 2.3%         6.0%  19.8% 2.0%          6.1%  16.2%
+$\\alpha$    Possible core    0           0    218    0            2    263    0             3    305
+=0.01                      0.0%        0.0%  18.5% 0.0%         0.2%  22.4% 0.0%          0.3%  25.9%
+                  Not core    0           0    581    0            0    581    0             0    581
+                           0.0%        0.0%  49.4% 0.0%         0.0%  49.4% 0.0%          0.0%  49.4%
+                     Core    43          40    312   30           53    273   27            55    230
+                           3.7%        3.4%  26.5% 2.6%         4.5%  23.2% 2.3%          4.7%  19.6%
+$\\alpha$    Possible core    0           0    171    0            0    210    0             1    253
+=0.05                      0.0%        0.0%  14.5% 0.0%         0.0%  17.9% 0.0%          0.1%  21.5%
+                  Not core    0           0    610    0            0    610    0             0    610
+                           0.0%        0.0%  51.9% 0.0%         0.0%  51.9% 0.0%          0.0%  51.9%
+                    Core     46          35    332   32           49    283   30            50    241
+                           3.9%        3.0%  28.2% 2.7%         4.2%  24.1% 2.6%          4.3%  20.5%
+$\\alpha$    Possible core    0           0    133    0            0    182    0             1    224
+=0.1                       0.0%        0.0%  11.3% 0.0%         0.0%  15.5% 0.0%          0.1%  19.0%
+                  Not core    0           0    630    0            0    630    0             0    630
+                           0.0%        0.0%  53.6% 0.0%         0.0%  53.6% 0.0%          0.0%  53.6%
+
+
+
+
+
+> ############# Table B.3: Survey level tests of existence of core/CW #############
+> 
+> source("./Code/tabs_figs/TableB3.R")
+
+> tableb3 <- surveytable
+
+> printsumtable(tableb3,"Table B.3: Survey level tests of existence of core/CW")
+
+
+
+
+ Table B.3: Survey level tests of existence of core/CW 
+
+                        Unadjusted              FDR control             FWER control       
+$\\alpha$          0.01       0.05    0.1  0.01        0.05   0.1  0.01         0.05    0.1
+Non-empty core      195        196    196   193         195   195   193          196    196
+                  99.5%     100.0% 100.0% 98.5%       99.5% 99.5% 98.5%       100.0% 100.0%
+Core may be empty     1          0      0     3           1     1     3            0      0
+                   0.5%       0.0%   0.0%  1.5%        0.5%  0.5%  1.5%         0.0%   0.0%
+Empty core            0          0      0     0           0     0     0            0      0
+                   0.0%       0.0%   0.0%  0.0%        0.0%  0.0%  0.0%         0.0%   0.0%
+CW exists            36         40     41    26          31    33    24           27     30
+                  18.4%      20.4%  20.9% 13.3%       15.8% 16.8% 12.2%        13.8%  15.3%
+CW may exist         63         43     40    73          52    48    75           56     51
+                  32.1%      21.9%  20.4% 37.2%       26.5% 24.5% 38.3%        28.6%  26.0%
+CW does not exist    97        113    115    97         113   115    97          113    115
+                  49.5%      57.7%  58.7% 49.5%       57.7% 58.7% 49.5%        57.7%  58.7%
+
+
+
+
+
+> ################ Table C.4: Party level weighted test results ###################
+> 
+> source("./Code/tabs_figs/TableC4.R")
+
+> tablec4 <- fulltable
+
+> printsumtable(tablec4,"Table C.4: Party level weighted test results")
+
+
+
+
+ Table C.4: Party level weighted test results 
+
+                                 Unadjusted             FDR adjusted             FWER adjusted       
+                             CW Possible CW Not CW   CW  Possible CW Not CW   CW   Possible CW Not CW
+                      Core   36          62    276   21           75    233   21            74    190
+                           3.1%        5.3%  23.5% 1.8%         6.4%  19.8% 1.8%          6.3%  16.2%
+$\\alpha$    Possible core    0           2    224    0            4    267    0             5    310
+=0.01                      0.0%        0.2%  19.0% 0.0%         0.3%  22.7% 0.0%          0.4%  26.4%
+                  Not core    0           0    576    0            0    576    0             0    576
+                           0.0%        0.0%  49.0% 0.0%         0.0%  49.0% 0.0%          0.0%  49.0%
+                     Core    40          45    314   26           57    272   22            60    226
+                           3.4%        3.8%  26.7% 2.2%         4.8%  23.1% 1.9%          5.1%  19.2%
+$\\alpha$    Possible core    0           0    171    0            2    213    0             3    259
+=0.05                      0.0%        0.0%  14.5% 0.0%         0.2%  18.1% 0.0%          0.3%  22.0%
+                  Not core    0           0    606    0            0    606    0             0    606
+                           0.0%        0.0%  51.5% 0.0%         0.0%  51.5% 0.0%          0.0%  51.5%
+                    Core     44          35    338   29           50    284   24            54    238
+                           3.7%        3.0%  28.7% 2.5%         4.3%  24.1% 2.0%          4.6%  20.2%
+$\\alpha$    Possible core    0           0    131    0            0    185    0             1    231
+=0.1                       0.0%        0.0%  11.1% 0.0%         0.0%  15.7% 0.0%          0.1%  19.6%
+                  Not core    0           0    628    0            0    628    0             0    628
+                           0.0%        0.0%  53.4% 0.0%         0.0%  53.4% 0.0%          0.0%  53.4%
+
+
+
+
+
+> ####################### Table D.5: Country Aggregates ############################
+> 
+> source("./Code/tabs_figs/TableD5.R")
+
+> tabled5 <- cbind(T3country1, T3country2)
+
+> printsumtable(tabled5,"Table D.5: Country Aggregates")
+
+
+
+
+ Table D.5: Country Aggregates 
+
+   Country Avg. # of CW Avg. # of possible CW Avg. # of Core & not CW Avg. # of possible Core Avg. # of parties # of elections Country Avg. # of CW Avg. # of possible CW Avg. # of Core & not CW Avg. # of possible Core Avg. # of parties # of elections
+1      ALB   1.00 ( NA)            0.00 ( NA)              0.00 ( NA)              0.00 ( NA)        9.00 ( NA)              1     ARG   0.00 ( NA)            0.00 ( NA)              2.00 ( NA)              1.00 ( NA)        6.00 ( NA)              1
+2      AUS  0.00 (0.00)           0.40 (0.55)             1.40 (1.34)             1.20 (1.10)       4.80 (0.84)              5     AUT  0.33 (0.58)           0.00 (0.00)             1.67 (1.53)             0.33 (0.58)       6.67 (0.58)              3
+3     BELF  0.00 (0.00)           0.00 (0.00)             3.50 (0.71)             0.50 (0.71)       5.50 (0.71)              2    BELW  0.00 (0.00)           0.00 (0.00)             2.50 (0.71)             0.50 (0.71)       4.50 (0.71)              2
+4      BGR  0.50 (0.71)           0.00 (0.00)             1.00 (1.41)             1.50 (2.12)       7.50 (0.71)              2     BLR  0.00 (0.00)           0.00 (0.00)             2.50 (0.71)             0.00 (0.00)       2.50 (0.71)              2
+5      BRA  0.40 (0.55)           0.00 (0.00)             1.60 (1.52)             0.60 (1.34)       4.40 (1.82)              5     CAN  0.20 (0.45)           0.20 (0.45)             1.40 (1.34)             0.80 (0.84)       4.40 (0.55)              5
+6      CHE  0.00 (0.00)           0.00 (0.00)             3.00 (1.41)             1.25 (0.50)       5.50 (1.00)              4     CHL  0.00 (0.00)           0.25 (0.50)             4.25 (2.99)             0.50 (1.00)       5.75 (2.06)              4
+7      CZE  0.20 (0.45)           0.00 (0.00)             1.80 (1.10)             1.20 (1.10)       6.00 (1.00)              5     DEU  0.29 (0.49)           0.29 (0.49)             1.00 (1.29)             0.86 (0.90)       7.00 (0.82)              7
+8      DNK  0.33 (0.58)           0.00 (0.00)             1.33 (1.15)             0.33 (0.58)       7.67 (1.53)              3     ESP  0.50 (0.58)           0.25 (0.50)             0.50 (1.00)             0.25 (0.50)       4.75 (1.26)              4
+9      EST   0.00 ( NA)            1.00 ( NA)              0.00 ( NA)              2.00 ( NA)        6.00 ( NA)              1     FIN  0.00 (0.00)           0.50 (0.58)             1.25 (1.50)             1.50 (0.58)       7.75 (0.50)              4
+10     FRA  0.25 (0.50)           0.50 (0.58)             1.25 (1.89)             0.75 (0.50)       6.75 (0.96)              4     GBR  0.00 (0.00)           0.33 (0.58)             1.33 (1.15)             1.00 (1.00)       3.67 (1.15)              3
+11     GRC  0.50 (0.58)           0.00 (0.00)             2.25 (2.63)             0.50 (0.58)       7.00 (0.82)              4     HKG  0.00 (0.00)           0.17 (0.41)             2.33 (1.51)             2.00 (0.89)       5.67 (1.51)              6
+12     HRV   0.00 ( NA)            0.00 ( NA)              6.00 ( NA)              3.00 ( NA)        9.00 ( NA)              1     HUN  0.00 (0.00)           0.33 (0.58)             1.67 (1.53)             1.33 (0.58)       5.67 (0.58)              3
+13     IRL  0.25 (0.50)           0.25 (0.50)             1.00 (1.15)             0.75 (0.96)       6.25 (0.50)              4     ISL  0.14 (0.38)           0.14 (0.38)             1.43 (0.98)             0.86 (0.69)       6.14 (1.07)              7
+14     ISR  0.00 (0.00)           0.50 (0.58)             1.00 (1.15)             1.50 (1.29)       5.75 (0.50)              4     ITA  0.00 (0.00)           0.00 (0.00)             4.00 (2.83)             0.50 (0.71)       6.00 (0.00)              2
+15     JPN  0.25 (0.50)           0.25 (0.50)             1.00 (1.15)             0.25 (0.50)       6.25 (1.89)              4     KEN   0.00 ( NA)            0.00 ( NA)              2.00 ( NA)              1.00 ( NA)        6.00 ( NA)              1
+16     KGZ   0.00 ( NA)            0.00 ( NA)              4.00 ( NA)              0.00 ( NA)        5.00 ( NA)              1     KOR  0.00 (0.00)           0.00 (0.00)             2.00 (0.00)             1.40 (0.89)       5.20 (1.30)              5
+17     LTU  0.50 (0.71)           0.00 (0.00)             1.00 (1.41)             0.50 (0.71)       7.00 (1.41)              2     LVA  0.00 (0.00)           0.33 (0.58)             2.67 (2.08)             1.00 (1.00)       6.00 (0.00)              3
+18     MEX  0.14 (0.38)           0.14 (0.38)             1.71 (1.25)             0.86 (1.07)       6.29 (1.11)              7     MNE  0.00 (0.00)           0.50 (0.71)             1.00 (1.41)             4.00 (1.41)       6.00 (1.41)              2
+19     NLD  0.50 (0.58)           0.00 (0.00)             1.75 (2.06)             0.25 (0.50)       8.50 (1.00)              4     NOR  0.17 (0.41)           0.67 (0.52)             0.33 (0.82)             1.00 (1.10)       7.83 (1.17)              6
+20     NZL  0.50 (0.55)           0.17 (0.41)             0.67 (1.03)             0.17 (0.41)       7.67 (1.03)              6     PER  0.00 (0.00)           0.20 (0.45)             2.60 (1.95)             1.00 (1.00)       5.80 (0.45)              5
+21     PHL  0.00 (0.00)           0.33 (0.58)             4.00 (3.46)             1.00 (1.73)       6.33 (0.58)              3     POL  0.40 (0.55)           0.20 (0.45)             0.80 (1.10)             0.60 (0.89)       6.00 (1.58)              5
+22     PRT  0.25 (0.50)           0.00 (0.00)             2.00 (1.41)             1.00 (1.41)       5.50 (0.58)              4     ROU  0.00 (0.00)           0.40 (0.55)             1.40 (1.34)             0.80 (0.84)       6.20 (0.45)              5
+23     RUS  0.67 (0.58)           0.33 (0.58)             0.00 (0.00)             0.67 (1.15)       6.00 (0.00)              3     SRB   1.00 ( NA)            0.00 ( NA)              0.00 ( NA)              0.00 ( NA)        7.00 ( NA)              1
+24     SVK  0.00 (0.00)           0.50 (0.71)             2.00 (2.83)             2.00 (0.00)       8.00 (0.00)              2     SVN  0.00 (0.00)           0.00 (0.00)             3.50 (0.58)             2.00 (0.00)       7.25 (0.96)              4
+25     SWE  0.50 (0.58)           0.25 (0.50)             0.50 (1.00)             0.75 (0.96)       7.50 (1.73)              4     THA  0.67 (0.58)           0.33 (0.58)             0.00 (0.00)             0.33 (0.58)       5.00 (2.65)              3
+26     TUR  0.67 (0.58)           0.33 (0.58)             0.00 (0.00)             0.67 (1.15)       7.00 (1.73)              3     TWN  0.00 (0.00)           0.17 (0.41)             1.67 (0.82)             0.50 (0.55)       3.83 (1.33)              6
+27     UKR   0.00 ( NA)            0.00 ( NA)              4.00 ( NA)              1.00 ( NA)        6.00 ( NA)              1     URY   1.00 ( NA)            0.00 ( NA)              0.00 ( NA)              0.00 ( NA)        5.00 ( NA)              1
+28     USA  0.40 (0.55)           0.20 (0.45)             0.80 (1.10)             0.20 (0.45)       2.20 (0.45)              5     ZAF  1.00 (0.00)           0.00 (0.00)             0.00 (0.00)             0.00 (0.00)       6.00 (0.00)              2
+
+
+
+
+
+> ######## Table E.6: Fraction of seats earned by parties by survey ################
+> 
+> source("./Code/tabs_figs/TableE6.R")
+
+> tablee6 <- coveragenum
+
+> printsumtable(tablee6,"Table E.6: Fraction of seats earned by parties by survey")
+
+
+
+
+ Table E.6: Fraction of seats earned by parties by survey 
+
+                             >= 99% (99%,95%] (95%,90%] <90%
+Surveys in Tables 5,6, and 7     61        23         5   11
+
+
+
+
+
+> ###### Tables G.9 and G.10: Regressions using Core_0.01 and Condorcet_0.01 #######
+> 
+> source("./Code/tabs_figs/TablesG9_G10.R")
+
+> printregtable(list(GovOLS_01,Govparty_01),coef01,
++     "Table G.9: Government participation using Core$_{0.01}$ and Condorcet$_{0.01}$")
+
+
+ Table G.9: Government participation using Core$_{0.01}$ and Condorcet$_{0.01}$ 
+
+
+================================================================================================
+                                                Dependent variable:                             
+                   -----------------------------------------------------------------------------
+                                                     post_gov                                   
+                     (1)       (2)       (3)       (4)      (5)       (6)       (7)       (8)   
+------------------------------------------------------------------------------------------------
+Core0.01           0.427*** 0.259***            0.256***  0.475***  0.199**             0.202** 
+                   (0.041)   (0.051)             (0.051)  (0.095)   (0.094)             (0.094) 
+                                                                                                
+Condorcet0.01      0.422***             0.126     0.101   0.588***             0.141     0.153  
+                   (0.057)             (0.079)   (0.071)  (0.118)             (0.144)   (0.133) 
+                                                                                                
+LH seats                      0.003   0.007***    0.003            0.012***  0.015***  0.011*** 
+                             (0.002)   (0.002)   (0.002)            (0.004)   (0.004)   (0.004) 
+                                                                                                
+Seat Plurality              0.226***  0.255***   0.204**           0.335***  0.352***  0.306*** 
+                             (0.079)   (0.087)   (0.085)            (0.103)   (0.109)   (0.110) 
+                                                                                                
+Legislative Median           0.134**   0.130**   0.123*              0.066     0.043     0.051  
+                             (0.063)   (0.066)   (0.065)            (0.106)   (0.109)   (0.108) 
+                                                                                                
+Distance to median          -0.068*** -0.077*** -0.068***          -0.104*** -0.113*** -0.103***
+                             (0.012)   (0.013)   (0.012)            (0.031)   (0.034)   (0.031) 
+                                                                                                
+Incumbent party               0.058     0.062     0.059             -0.149*   -0.162*   -0.149* 
+                             (0.049)   (0.050)   (0.049)            (0.088)   (0.088)   (0.087) 
+                                                                                                
+Constant           0.178*** 0.268***  0.308***  0.271***                                        
+                   (0.019)   (0.037)   (0.039)   (0.038)                                        
+                                                                                                
+------------------------------------------------------------------------------------------------
+Observations         665       665       665       665      665       665       665       665   
+R2                  0.235     0.319     0.292     0.320    0.614     0.677     0.672     0.679  
+Adjusted R2         0.233     0.313     0.285     0.313    0.273     0.384     0.374     0.385  
+================================================================================================
+Note:                                                                *p<0.1; **p<0.05; ***p<0.01
+
+
+
+
+
+> printregtable(list(PMOLS_01,PMparty_01),coefp01,
++     "Table G.10: Premiership using Core$_{0.01}$ and Condorcet$_{0.01}$")
+
+
+ Table G.10: Premiership using Core$_{0.01}$ and Condorcet$_{0.01}$ 
+
+
+===========================================================================================
+                                             Dependent variable:                           
+                   ------------------------------------------------------------------------
+                                                    pmalt                                  
+                     (1)      (2)       (3)      (4)      (5)      (6)      (7)      (8)   
+-------------------------------------------------------------------------------------------
+Core0.01           0.327*** 0.083***           0.079*** 0.366*** 0.134**           0.141***
+                   (0.021)  (0.027)            (0.025)  (0.052)  (0.053)           (0.053) 
+                                                                                           
+Condorcet0.01      0.615***           0.177**  0.170**  0.755***          0.351*** 0.359***
+                   (0.067)            (0.085)  (0.083)  (0.098)           (0.126)  (0.124) 
+                                                                                           
+LH seats                    0.004*** 0.005***  0.004***          0.008*** 0.008*** 0.006** 
+                            (0.001)   (0.001)  (0.001)           (0.003)  (0.003)  (0.003) 
+                                                                                           
+Seat Plurality              0.568*** 0.548***  0.532***          0.624*** 0.589*** 0.557***
+                            (0.082)   (0.088)  (0.090)           (0.101)  (0.107)  (0.110) 
+                                                                                           
+Legislative Median           -0.028   -0.046    -0.048            -0.024   -0.064   -0.059 
+                            (0.037)   (0.037)  (0.037)           (0.060)  (0.065)  (0.065) 
+                                                                                           
+Distance to median          -0.016** -0.018*** -0.016**           -0.026   -0.028   -0.021 
+                            (0.006)   (0.006)  (0.006)           (0.019)  (0.019)  (0.018) 
+                                                                                           
+Incumbent premier            0.027     0.029    0.031             -0.076   -0.095   -0.088 
+                            (0.059)   (0.059)  (0.058)           (0.083)  (0.080)  (0.078) 
+                                                                                           
+Constant            -0.007   -0.005    0.012    0.001                                      
+                   (0.005)  (0.014)   (0.013)  (0.013)                                     
+                                                                                           
+-------------------------------------------------------------------------------------------
+Observations         665      665       665      665      665      665      665      665   
+R2                  0.402    0.620     0.621    0.626    0.708    0.794    0.801    0.807  
+Adjusted R2         0.401    0.616     0.617    0.622    0.448    0.607    0.620    0.631  
+===========================================================================================
+Note:                                                           *p<0.1; **p<0.05; ***p<0.01
+
+
+
+
+
+> ###### Tables G.11 and G.12: Regressions using Core_0.10 and Condorcet_0.10 #######
+> 
+> source("./Code/tabs_figs/TablesG11_G12.R")
+
+> printregtable(list(GovOLS_10,Govparty_10),coef10,
++     "Table G.11: Government participation using Core$_{0.10}$ and Condorcet$_{0.10}$")
+
+
+ Table G.11: Government participation using Core$_{0.10}$ and Condorcet$_{0.10}$ 
+
+
+================================================================================================
+                                                Dependent variable:                             
+                   -----------------------------------------------------------------------------
+                                                     post_gov                                   
+                     (1)       (2)       (3)       (4)      (5)       (6)       (7)       (8)   
+------------------------------------------------------------------------------------------------
+Core0.10           0.424*** 0.256***            0.255***  0.490***  0.232**             0.235** 
+                   (0.041)   (0.051)             (0.051)  (0.091)   (0.090)             (0.091) 
+                                                                                                
+Condorcet0.10      0.372***             0.088     0.071   0.492***             0.110     0.125  
+                   (0.058)             (0.074)   (0.070)  (0.115)             (0.139)   (0.133) 
+                                                                                                
+LH seats                      0.003   0.007***    0.002            0.011***  0.015***  0.010*** 
+                             (0.002)   (0.002)   (0.002)            (0.004)   (0.004)   (0.004) 
+                                                                                                
+Seat Plurality              0.226***  0.263***   0.210**           0.331***  0.359***  0.309*** 
+                             (0.079)   (0.086)   (0.084)            (0.101)   (0.108)   (0.107) 
+                                                                                                
+Legislative Median           0.146**   0.136**   0.139**             0.078     0.050     0.070  
+                             (0.062)   (0.065)   (0.063)            (0.106)   (0.109)   (0.106) 
+                                                                                                
+Distance to median          -0.066*** -0.077*** -0.066***          -0.100*** -0.112*** -0.098***
+                             (0.012)   (0.013)   (0.012)            (0.031)   (0.034)   (0.030) 
+                                                                                                
+Incumbent party               0.062     0.061     0.063             -0.140    -0.162*   -0.140  
+                             (0.049)   (0.050)   (0.049)            (0.086)   (0.088)   (0.086) 
+                                                                                                
+Constant           0.187*** 0.268***  0.307***  0.270***                                        
+                   (0.019)   (0.038)   (0.039)   (0.038)                                        
+                                                                                                
+------------------------------------------------------------------------------------------------
+Observations         665       665       665       665      665       665       665       665   
+R2                  0.230     0.321     0.291     0.322    0.618     0.681     0.671     0.682  
+Adjusted R2         0.228     0.315     0.284     0.315    0.279     0.391     0.373     0.392  
+================================================================================================
+Note:                                                                *p<0.1; **p<0.05; ***p<0.01
+
+
+
+
+
+> printregtable(list(PMOLS_10,PMparty_10),coefp10,
++     "Table G.12: Government participation using Core$_{0.10}$ and Condorcet$_{0.10}$")
+
+
+ Table G.12: Government participation using Core$_{0.10}$ and Condorcet$_{0.10}$ 
+
+
+===========================================================================================
+                                             Dependent variable:                           
+                   ------------------------------------------------------------------------
+                                                    pmalt                                  
+                     (1)      (2)       (3)      (4)      (5)      (6)      (7)      (8)   
+-------------------------------------------------------------------------------------------
+Core0.10           0.324*** 0.083***           0.080*** 0.349*** 0.126**           0.133** 
+                   (0.021)  (0.027)            (0.026)  (0.050)  (0.052)           (0.052) 
+                                                                                           
+Condorcet0.10      0.592***           0.180**  0.175**  0.665***          0.304**  0.312** 
+                   (0.064)            (0.082)  (0.081)  (0.102)           (0.125)  (0.124) 
+                                                                                           
+LH seats                    0.004*** 0.005***  0.004***          0.008*** 0.009*** 0.006** 
+                            (0.001)   (0.001)  (0.001)           (0.003)  (0.003)  (0.003) 
+                                                                                           
+Seat Plurality              0.568*** 0.547***  0.529***          0.627*** 0.602*** 0.574***
+                            (0.082)   (0.087)  (0.089)           (0.100)  (0.106)  (0.107) 
+                                                                                           
+Legislative Median           -0.025   -0.043    -0.042            -0.019   -0.050   -0.039 
+                            (0.037)   (0.037)  (0.037)           (0.059)  (0.063)  (0.061) 
+                                                                                           
+Distance to median          -0.016** -0.018*** -0.015**           -0.024   -0.027   -0.019 
+                            (0.006)   (0.006)  (0.006)           (0.018)  (0.018)  (0.017) 
+                                                                                           
+Incumbent premier            0.029     0.030    0.034             -0.072   -0.088   -0.077 
+                            (0.059)   (0.059)  (0.058)           (0.084)  (0.080)  (0.079) 
+                                                                                           
+Constant            0.0004   -0.004    0.012    0.001                                      
+                   (0.004)  (0.013)   (0.012)  (0.012)                                     
+                                                                                           
+-------------------------------------------------------------------------------------------
+Observations         665      665       665      665      665      665      665      665   
+R2                  0.400    0.620     0.622    0.627    0.695    0.794    0.800    0.807  
+Adjusted R2         0.399    0.617     0.618    0.623    0.425    0.607    0.619    0.630  
+===========================================================================================
+Note:                                                           *p<0.1; **p<0.05; ***p<0.01
+
+
+
+
+
+> ####### Tables G.13 and G.14: Regressions using Core_FDR and Condorcet_FDR ########
+> 
+> source("./Code/tabs_figs/TablesG13_G14.R")
+
+> printregtable(list(GovOLS_BY,Govparty_BY),coefBY,
++     "Table G.13: Government participation using Core$_{FDR}$ and Condorcet$_{FDR}$")
+
+
+ Table G.13: Government participation using Core$_{FDR}$ and Condorcet$_{FDR}$ 
+
+
+================================================================================================
+                                                Dependent variable:                             
+                   -----------------------------------------------------------------------------
+                                                     post_gov                                   
+                     (1)       (2)       (3)       (4)      (5)       (6)       (7)       (8)   
+------------------------------------------------------------------------------------------------
+CoreFDR            0.451*** 0.264***            0.261***  0.495***  0.213**             0.213** 
+                   (0.044)   (0.055)             (0.054)  (0.096)   (0.097)             (0.097) 
+                                                                                                
+CondorcetFDR       0.397***             0.120     0.087   0.566***             0.125     0.126  
+                   (0.062)             (0.082)   (0.074)  (0.124)             (0.150)   (0.140) 
+                                                                                                
+LH seats                      0.003   0.007***    0.003            0.012***  0.015***  0.011*** 
+                             (0.002)   (0.002)   (0.002)            (0.004)   (0.004)   (0.004) 
+                                                                                                
+Seat Plurality              0.217***  0.261***   0.202**           0.324***  0.358***  0.303*** 
+                             (0.080)   (0.086)   (0.085)            (0.106)   (0.108)   (0.112) 
+                                                                                                
+Legislative Median           0.135**   0.134**   0.127**             0.067     0.049     0.059  
+                             (0.063)   (0.065)   (0.064)            (0.106)   (0.109)   (0.106) 
+                                                                                                
+Distance to median          -0.068*** -0.077*** -0.068***          -0.104*** -0.113*** -0.103***
+                             (0.012)   (0.013)   (0.012)            (0.031)   (0.034)   (0.031) 
+                                                                                                
+Incumbent party               0.057     0.063     0.059             -0.151*   -0.160*   -0.149* 
+                             (0.049)   (0.050)   (0.049)            (0.087)   (0.088)   (0.087) 
+                                                                                                
+Constant           0.184*** 0.271***  0.307***  0.273***                                        
+                   (0.019)   (0.038)   (0.039)   (0.038)                                        
+                                                                                                
+------------------------------------------------------------------------------------------------
+Observations         665       665       665       665      665       665       665       665   
+R2                  0.230     0.319     0.291     0.320    0.612     0.678     0.671     0.679  
+Adjusted R2         0.228     0.313     0.285     0.313    0.268     0.386     0.373     0.385  
+================================================================================================
+Note:                                                                *p<0.1; **p<0.05; ***p<0.01
+
+
+
+
+
+> printregtable(list(PMOLS_BY,PMparty_BY),coefpBY,
++     "Table G.14: Premiership using Core$_{FDR}$ and Condorcet$_{FDR}$")
+
+
+ Table G.14: Premiership using Core$_{FDR}$ and Condorcet$_{FDR}$ 
+
+
+===========================================================================================
+                                             Dependent variable:                           
+                   ------------------------------------------------------------------------
+                                                    pmalt                                  
+                     (1)      (2)       (3)      (4)      (5)      (6)      (7)      (8)   
+-------------------------------------------------------------------------------------------
+CoreFDR            0.359*** 0.092***           0.087*** 0.401*** 0.154***          0.154***
+                   (0.022)  (0.029)            (0.027)  (0.051)  (0.056)           (0.053) 
+                                                                                           
+CondorcetFDR       0.618***           0.206**  0.195**  0.738***          0.334**  0.334** 
+                   (0.075)            (0.092)  (0.090)  (0.107)           (0.135)  (0.130) 
+                                                                                           
+LH seats                    0.004*** 0.005***  0.004***          0.008*** 0.009*** 0.006** 
+                            (0.001)   (0.001)  (0.001)           (0.003)  (0.003)  (0.003) 
+                                                                                           
+Seat Plurality              0.564*** 0.549***  0.528***          0.614*** 0.599*** 0.560***
+                            (0.083)   (0.087)  (0.089)           (0.102)  (0.107)  (0.111) 
+                                                                                           
+Legislative Median           -0.029   -0.044    -0.047            -0.023   -0.051   -0.044 
+                            (0.037)   (0.037)  (0.037)           (0.060)  (0.064)  (0.063) 
+                                                                                           
+Distance to median          -0.016** -0.018*** -0.015**           -0.025   -0.028   -0.021 
+                            (0.006)   (0.006)  (0.006)           (0.019)  (0.018)  (0.018) 
+                                                                                           
+Incumbent premier            0.028     0.034    0.037             -0.078   -0.081   -0.075 
+                            (0.059)   (0.059)  (0.058)           (0.083)  (0.079)  (0.078) 
+                                                                                           
+Constant            -0.005   -0.005    0.012    0.001                                      
+                   (0.005)  (0.014)   (0.013)  (0.013)                                     
+                                                                                           
+-------------------------------------------------------------------------------------------
+Observations         665      665       665      665      665      665      665      665   
+R2                  0.400    0.621     0.622    0.628    0.704    0.796    0.799    0.806  
+Adjusted R2         0.398    0.617     0.618    0.624    0.441    0.610    0.616    0.628  
+===========================================================================================
+Note:                                                           *p<0.1; **p<0.05; ***p<0.01
+
+
+
+
+
+> ###### Tables G.15 and G.16: Regressions using Core_FWER and Condorcet_FWER #######
+> 
+> source("./Code/tabs_figs/TablesG15_G16.R")
+
+> printregtable(list(GovOLS_holm,Govparty_holm),coefholm,
++     "Table G.15: Government participation using Core$_{FWER}$ and Condorcet$_{FWER}$")
+
+
+ Table G.15: Government participation using Core$_{FWER}$ and Condorcet$_{FWER}$ 
+
+
+================================================================================================
+                                                Dependent variable:                             
+                   -----------------------------------------------------------------------------
+                                                     post_gov                                   
+                     (1)       (2)       (3)       (4)      (5)       (6)       (7)       (8)   
+------------------------------------------------------------------------------------------------
+CoreFWER           0.476*** 0.267***            0.263***  0.521***  0.206**             0.203*  
+                   (0.045)   (0.058)             (0.057)  (0.099)   (0.104)             (0.104) 
+                                                                                                
+CondorcetFWER      0.365***             0.127     0.073   0.541***             0.144     0.128  
+                   (0.065)             (0.084)   (0.075)  (0.127)             (0.153)   (0.143) 
+                                                                                                
+LH seats                     0.003*   0.007***    0.003            0.013***  0.015***  0.012*** 
+                             (0.002)   (0.002)   (0.002)            (0.004)   (0.004)   (0.004) 
+                                                                                                
+Seat Plurality              0.216***  0.260***   0.204**           0.324***  0.355***  0.305*** 
+                             (0.082)   (0.086)   (0.086)            (0.108)   (0.108)   (0.113) 
+                                                                                                
+Legislative Median           0.132**   0.134**   0.126**             0.061     0.049     0.054  
+                             (0.063)   (0.065)   (0.064)            (0.105)   (0.109)   (0.106) 
+                                                                                                
+Distance to median          -0.067*** -0.077*** -0.067***          -0.104*** -0.112*** -0.103***
+                             (0.012)   (0.013)   (0.012)            (0.031)   (0.034)   (0.031) 
+                                                                                                
+Incumbent party               0.057     0.063     0.058             -0.153*   -0.159*   -0.151* 
+                             (0.049)   (0.050)   (0.049)            (0.087)   (0.088)   (0.087) 
+                                                                                                
+Constant           0.186*** 0.272***  0.307***  0.274***                                        
+                   (0.019)   (0.038)   (0.039)   (0.038)                                        
+                                                                                                
+------------------------------------------------------------------------------------------------
+Observations         665       665       665       665      665       665       665       665   
+R2                  0.228     0.316     0.292     0.317    0.610     0.677     0.672     0.677  
+Adjusted R2         0.226     0.310     0.285     0.310    0.265     0.383     0.373     0.383  
+================================================================================================
+Note:                                                                *p<0.1; **p<0.05; ***p<0.01
+
+
+
+
+
+> printregtable(list(PMOLS_holm,PMparty_holm),coefpholm,
++     "Table G.16: Premiership using Core$_{FWER}$ and Condorcet$_{FWER}$")
+
+
+ Table G.16: Premiership using Core$_{FWER}$ and Condorcet$_{FWER}$ 
+
+
+===========================================================================================
+                                             Dependent variable:                           
+                   ------------------------------------------------------------------------
+                                                    pmalt                                  
+                     (1)      (2)       (3)      (4)      (5)      (6)      (7)      (8)   
+-------------------------------------------------------------------------------------------
+CoreFWER           0.376*** 0.091***           0.081*** 0.418*** 0.146**           0.138** 
+                   (0.025)  (0.034)            (0.031)  (0.059)  (0.064)           (0.058) 
+                                                                                           
+CondorcetFWER      0.598***           0.206**  0.190**  0.703***          0.324**  0.313** 
+                   (0.079)            (0.095)  (0.092)  (0.113)           (0.137)  (0.130) 
+                                                                                           
+LH seats                    0.004*** 0.005***  0.004***          0.008*** 0.009*** 0.007** 
+                            (0.001)   (0.001)  (0.001)           (0.003)  (0.003)  (0.003) 
+                                                                                           
+Seat Plurality              0.564*** 0.549***  0.531***          0.615*** 0.601*** 0.568***
+                            (0.083)   (0.087)  (0.089)           (0.103)  (0.107)  (0.111) 
+                                                                                           
+Legislative Median           -0.029   -0.043    -0.046            -0.027   -0.049   -0.046 
+                            (0.037)   (0.037)  (0.037)           (0.059)  (0.063)  (0.062) 
+                                                                                           
+Distance to median          -0.016** -0.018*** -0.015**           -0.025   -0.028   -0.022 
+                            (0.006)   (0.006)  (0.006)           (0.019)  (0.018)  (0.018) 
+                                                                                           
+Incumbent premier            0.027     0.035    0.036             -0.080   -0.078   -0.076 
+                            (0.059)   (0.059)  (0.058)           (0.084)  (0.080)  (0.080) 
+                                                                                           
+Constant            -0.002   -0.004    0.012    0.002                                      
+                   (0.006)  (0.013)   (0.013)  (0.013)                                     
+                                                                                           
+-------------------------------------------------------------------------------------------
+Observations         665      665       665      665      665      665      665      665   
+R2                  0.393    0.620     0.622    0.626    0.696    0.794    0.798    0.803  
+Adjusted R2         0.391    0.616     0.618    0.622    0.426    0.607    0.614    0.622  
+===========================================================================================
+Note:                                                           *p<0.1; **p<0.05; ***p<0.01
+
+
+
+
+
+> ###### Tables G.17 and G.18: Regressions using Core_cont and Condorcet_cont #######
+> 
+> source("./Code/tabs_figs/TablesG17_G18.R")
+
+> printregtable(list(GovOLS_p,Govparty_p),coefcont,
++     "Table G.17: Government participation using Core$_{cont}$ and Condorcet$_{cont}$")
+
+
+ Table G.17: Government participation using Core$_{cont}$ and Condorcet$_{cont}$ 
+
+
+================================================================================================
+                                                Dependent variable:                             
+                   -----------------------------------------------------------------------------
+                                                     post_gov                                   
+                     (1)       (2)       (3)       (4)      (5)       (6)       (7)       (8)   
+------------------------------------------------------------------------------------------------
+Corecont           0.408*** 0.239***            0.239***  0.449***  0.188**             0.192** 
+                   (0.041)   (0.051)             (0.051)  (0.086)   (0.086)             (0.088) 
+                                                                                                
+Condorcetcont      0.372***             0.056     0.052   0.496***             0.080     0.098  
+                   (0.056)             (0.071)   (0.070)  (0.112)             (0.138)   (0.134) 
+                                                                                                
+LH seats                      0.003   0.007***    0.003            0.012***  0.015***  0.011*** 
+                             (0.002)   (0.002)   (0.002)            (0.004)   (0.004)   (0.004) 
+                                                                                                
+Seat Plurality              0.228***  0.270***   0.216**           0.341***  0.364***  0.323*** 
+                             (0.079)   (0.087)   (0.086)            (0.102)   (0.109)   (0.110) 
+                                                                                                
+Legislative Median           0.145**   0.139**   0.139**             0.074     0.051     0.066  
+                             (0.062)   (0.065)   (0.063)            (0.105)   (0.109)   (0.106) 
+                                                                                                
+Distance to median          -0.067*** -0.077*** -0.067***          -0.102*** -0.113*** -0.101***
+                             (0.012)   (0.013)   (0.012)            (0.031)   (0.034)   (0.031) 
+                                                                                                
+Incumbent party               0.062     0.061     0.063             -0.144*   -0.161*   -0.143* 
+                             (0.049)   (0.050)   (0.049)            (0.087)   (0.088)   (0.087) 
+                                                                                                
+Constant           0.189*** 0.267***  0.306***  0.269***                                        
+                   (0.019)   (0.038)   (0.039)   (0.038)                                        
+                                                                                                
+------------------------------------------------------------------------------------------------
+Observations         665       665       665       665      665       665       665       665   
+R2                  0.224     0.320     0.290     0.320    0.609     0.678     0.671     0.679  
+Adjusted R2         0.222     0.314     0.284     0.313    0.263     0.386     0.372     0.385  
+================================================================================================
+Note:                                                                *p<0.1; **p<0.05; ***p<0.01
+
+
+
+
+
+> printregtable(list(PMOLS_p,PMparty_p),coefpcont,
++     "Table G.18: Premiership using Core$_{cont}$ and Condorcet$_{cont}$")
+
+
+ Table G.18: Premiership using Core$_{cont}$ and Condorcet$_{cont}$ 
+
+
+===========================================================================================
+                                             Dependent variable:                           
+                   ------------------------------------------------------------------------
+                                                    pmalt                                  
+                     (1)      (2)       (3)      (4)      (5)      (6)      (7)      (8)   
+-------------------------------------------------------------------------------------------
+Corecont           0.302*** 0.071***           0.071*** 0.327*** 0.108**           0.118** 
+                   (0.020)  (0.026)            (0.025)  (0.047)  (0.046)           (0.048) 
+                                                                                           
+Condorcetcont      0.612***           0.175**  0.174**  0.691***          0.321**  0.331** 
+                   (0.063)            (0.086)  (0.086)  (0.102)           (0.129)  (0.129) 
+                                                                                           
+LH seats                    0.005*** 0.005***  0.004***          0.008*** 0.009*** 0.006** 
+                            (0.001)   (0.001)  (0.001)           (0.003)  (0.003)  (0.003) 
+                                                                                           
+Seat Plurality              0.570*** 0.546***  0.529***          0.632*** 0.598*** 0.574***
+                            (0.082)   (0.089)  (0.091)           (0.099)  (0.107)  (0.108) 
+                                                                                           
+Legislative Median           -0.025   -0.044    -0.044            -0.021   -0.054   -0.045 
+                            (0.036)   (0.036)  (0.036)           (0.058)  (0.062)  (0.060) 
+                                                                                           
+Distance to median          -0.016** -0.019*** -0.016**           -0.025   -0.027   -0.019 
+                            (0.006)   (0.006)  (0.006)           (0.018)  (0.018)  (0.018) 
+                                                                                           
+Incumbent premier            0.029     0.030    0.034             -0.073   -0.090   -0.079 
+                            (0.059)   (0.059)  (0.058)           (0.085)  (0.081)  (0.081) 
+                                                                                           
+Constant            0.004    -0.004    0.013    0.002                                      
+                   (0.005)  (0.013)   (0.013)  (0.013)                                     
+                                                                                           
+-------------------------------------------------------------------------------------------
+Observations         665      665       665      665      665      665      665      665   
+R2                  0.394    0.619     0.621    0.626    0.694    0.793    0.802    0.807  
+Adjusted R2         0.392    0.616     0.618    0.622    0.423    0.605    0.621    0.631  
+===========================================================================================
+Note:                                                           *p<0.1; **p<0.05; ***p<0.01
+
+
+
+
+
+> ######### Table H.19 and H.20: Regressions on surveys with 90%+coverage ############
+> 
+> source("./Code/tabs_figs/TablesH19_H20.R")
+
+> printregtable(list(Gov_full,Govparty_full),coef,
++     "Table H.19: Government participation (surveys with $\\geq$ 90\\% seat share coverage")
+
+
+ Table H.19: Government participation (surveys with $\geq$ 90\% seat share coverage 
+
+
+================================================================================================
+                                                Dependent variable:                             
+                   -----------------------------------------------------------------------------
+                                                     post_gov                                   
+                     (1)       (2)       (3)       (4)      (5)       (6)       (7)       (8)   
+------------------------------------------------------------------------------------------------
+Core0.05           0.440*** 0.278***            0.276***  0.484***  0.229**             0.231** 
+                   (0.043)   (0.054)             (0.054)  (0.097)   (0.101)             (0.102) 
+                                                                                                
+Condorcet0.05      0.380***             0.101     0.084   0.478***             0.103     0.111  
+                   (0.052)             (0.076)   (0.069)  (0.119)             (0.145)   (0.136) 
+                                                                                                
+LH seats                      0.002   0.006***    0.002             0.011**  0.015***   0.010** 
+                             (0.002)   (0.002)   (0.002)            (0.004)   (0.004)   (0.005) 
+                                                                                                
+Seat Plurality              0.217***  0.259***   0.198**           0.307***  0.338***   0.288** 
+                             (0.084)   (0.094)   (0.091)            (0.105)   (0.114)   (0.113) 
+                                                                                                
+Legislative Median           0.158**   0.151**   0.149**             0.130     0.102     0.121  
+                             (0.064)   (0.066)   (0.065)            (0.107)   (0.108)   (0.107) 
+                                                                                                
+Distance to median          -0.064*** -0.074*** -0.063***          -0.097*** -0.110*** -0.096***
+                             (0.013)   (0.013)   (0.013)            (0.035)   (0.038)   (0.034) 
+                                                                                                
+Incumbent party               0.083     0.084     0.084             -0.131    -0.150    -0.131  
+                             (0.052)   (0.053)   (0.052)            (0.095)   (0.096)   (0.094) 
+                                                                                                
+Constant           0.177*** 0.254***  0.296***  0.256***                                        
+                   (0.020)   (0.038)   (0.040)   (0.039)                                        
+                                                                                                
+------------------------------------------------------------------------------------------------
+Observations         607       607       607       607      607       607       607       607   
+R2                  0.241     0.331     0.297     0.332    0.627     0.690     0.681     0.691  
+Adjusted R2         0.239     0.324     0.290     0.324    0.285     0.398     0.381     0.398  
+================================================================================================
+Note:                                                                *p<0.1; **p<0.05; ***p<0.01
+
+
+
+
+
+> printregtable(list(PM_full,PMparty_full),coefp,
++     "Table H.20: Premimership (surveys with $\\geq$ 90\\% seat share coverage")
+
+
+ Table H.20: Premimership (surveys with $\geq$ 90\% seat share coverage 
+
+
+==========================================================================================
+                                             Dependent variable:                          
+                   -----------------------------------------------------------------------
+                                                    pmalt                                 
+                     (1)      (2)      (3)      (4)      (5)      (6)      (7)      (8)   
+------------------------------------------------------------------------------------------
+Core0.05           0.327*** 0.094***          0.090*** 0.352*** 0.130**           0.134** 
+                   (0.019)  (0.030)           (0.028)  (0.053)  (0.052)           (0.052) 
+                                                                                          
+Condorcet0.05      0.618***          0.224*** 0.219*** 0.655***          0.305**  0.310** 
+                   (0.059)           (0.083)  (0.081)  (0.101)           (0.124)  (0.123) 
+                                                                                          
+LH seats                    0.004*** 0.005*** 0.004**           0.009*** 0.009*** 0.007** 
+                            (0.001)  (0.001)  (0.001)           (0.003)  (0.003)  (0.003) 
+                                                                                          
+Seat Plurality              0.550*** 0.521*** 0.500***          0.608*** 0.584*** 0.556***
+                            (0.086)  (0.093)  (0.095)           (0.109)  (0.115)  (0.117) 
+                                                                                          
+Legislative Median           -0.019   -0.041   -0.041            0.007    -0.030   -0.019 
+                            (0.038)  (0.038)  (0.038)           (0.064)  (0.068)  (0.068) 
+                                                                                          
+Distance to median          -0.014** -0.017** -0.014**           -0.023   -0.028   -0.020 
+                            (0.006)  (0.007)  (0.006)           (0.018)  (0.018)  (0.017) 
+                                                                                          
+Incumbent premier            0.033    0.037    0.040             -0.072   -0.081   -0.071 
+                            (0.063)  (0.063)  (0.062)           (0.088)  (0.084)  (0.084) 
+                                                                                          
+Constant            -0.003   -0.007   0.012    -0.001                                     
+                   (0.005)  (0.014)  (0.013)  (0.014)                                     
+                                                                                          
+------------------------------------------------------------------------------------------
+Observations         607      607      607      607      607      607      607      607   
+R2                  0.417    0.607    0.611    0.618    0.714    0.805    0.811    0.817  
+Adjusted R2         0.415    0.603    0.607    0.614    0.452    0.622    0.632    0.643  
+==========================================================================================
+Note:                                                          *p<0.1; **p<0.05; ***p<0.01
+
+
+
+
+
+> ############## Table I.21: Including party and survey fixed effects #################
+> 
+> source("./Code/tabs_figs/TableI21.R")
+
+> printregtable(list(Govpartysurvey,PMpartysurvey),coefsurvey,
++     "Table I.21: Including party and survey fixed effects")
+
+
+ Table I.21: Including party and survey fixed effects 
+
+
+=============================================================================================
+                                              Dependent variable:                            
+                   --------------------------------------------------------------------------
+                                  post_gov                               pmalt               
+                     (1)       (2)       (3)       (4)      (5)      (6)      (7)      (8)   
+---------------------------------------------------------------------------------------------
+Core0.05           0.609*** 0.327***            0.319***  0.392*** 0.168***          0.133***
+                   (0.084)   (0.090)             (0.092)  (0.047)  (0.054)           (0.048) 
+                                                                                             
+Condorcet0.05      0.417***             0.152     0.076   0.686***          0.375*** 0.343***
+                   (0.102)             (0.111)   (0.109)  (0.077)           (0.098)  (0.092) 
+                                                                                             
+LH seats                    0.010***  0.017***  0.010***           0.008*** 0.009*** 0.007***
+                             (0.003)   (0.003)   (0.003)           (0.002)  (0.002)  (0.002) 
+                                                                                             
+Seat Plurality              0.297***  0.334***  0.285***           0.615*** 0.583*** 0.563***
+                             (0.079)   (0.084)   (0.083)           (0.077)  (0.081)  (0.082) 
+                                                                                             
+Legislative Median            0.059     0.031     0.053             -0.022   -0.054   -0.046 
+                             (0.078)   (0.081)   (0.078)           (0.047)  (0.050)  (0.049) 
+                                                                                             
+Distance to median          -0.107*** -0.121*** -0.106***           -0.024  -0.027*   -0.020 
+                             (0.024)   (0.027)   (0.023)           (0.016)  (0.016)  (0.015) 
+                                                                                             
+Incumbent party              -0.115*  -0.141**   -0.116*                                     
+                             (0.065)   (0.065)   (0.065)                                     
+                                                                                             
+Incumbent premier                                                   -0.078   -0.096   -0.085 
+                                                                   (0.064)  (0.060)  (0.060) 
+                                                                                             
+---------------------------------------------------------------------------------------------
+Observations         665       665       665       665      665      665      665      665   
+R2                  0.665     0.720     0.708     0.721    0.712    0.803    0.810    0.814  
+Adjusted R2         0.233     0.351     0.323     0.349    0.342    0.542    0.559    0.567  
+=============================================================================================
+Note:                                                             *p<0.1; **p<0.05; ***p<0.01
+
+
+
+
+
+> ########### Table J.22: Specifications removing lower house seat share ###############
+> 
+> source("./Code/tabs_figs/TableJ22.R")
+
+> printregtable(list(collinearity_models),coefm,
++     "Table J.22: Specifications removing lower house seat share")
+
+
+ Table J.22: Specifications removing lower house seat share 
+
+
+========================================================
+                            Dependent variable:         
+                   -------------------------------------
+                        post_gov             pmalt      
+                      (1)       (2)      (3)      (4)   
+--------------------------------------------------------
+Core0.05           0.297***  0.388***  0.170*** 0.179***
+                    (0.095)   (0.089)  (0.055)  (0.051) 
+                                                        
+Condorcet0.05        0.185     0.110   0.358*** 0.364***
+                    (0.124)   (0.108)  (0.117)  (0.092) 
+                                                        
+Seat Plurality     0.369***  0.346***  0.602*** 0.602***
+                    (0.111)   (0.086)  (0.104)  (0.079) 
+                                                        
+Legislative Median   0.097     0.079    -0.027   -0.029 
+                    (0.105)   (0.077)  (0.063)  (0.049) 
+                                                        
+Distance to median -0.097*** -0.104***  -0.019   -0.019 
+                    (0.030)   (0.023)  (0.018)  (0.016) 
+                                                        
+Incumbent party     -0.136    -0.114*                   
+                    (0.087)   (0.065)                   
+                                                        
+Incumbent premier                       -0.069   -0.075 
+                                       (0.079)  (0.060) 
+                                                        
+--------------------------------------------------------
+Observations          665       665      665      665   
+R2                   0.677     0.717    0.805    0.811  
+Adjusted R2          0.383     0.342    0.627    0.561  
+========================================================
+Note:                        *p<0.1; **p<0.05; ***p<0.01
+
+
+
+

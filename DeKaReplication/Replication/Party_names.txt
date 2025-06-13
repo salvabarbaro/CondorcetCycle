@@ -1,0 +1,1819 @@
+-------------------------MODULE 1-----------------------------------------------
+
+
+Australia 1996
+
+ALP - Australia Labour Party
+LP - Liberal Party
+AD - Australian Democrats
+Green - Australian Greens
+
+Belgium (Flanders) 1999
+
+VLD - Open Flemish Liberals and Democrats
+CDV - Christen-Democratisch en Vlaams
+SP - Socialistische Partij
+VB - Vlaams Blok
+Green - Anders Gaan Leven
+NVA - VOLKSUNIE (later known as Nieuw-Vlaamse Alliantie)
+
+Belgium (Walloon) 1999
+
+PS - Parti Socialiste
+MR - Parti Reformateur Liberal (merged into Mouvement Réformateur in 2002)
+Green - Ecologistes Confederes
+PSC - Parti Socialiste Chretien
+FN - Front National
+
+Belarus 2001
+
+CPB - Communist Party of Belarus
+AP - Agrarian Party
+LDP - Liberal Democratic Party
+BSDP - Belarusian Social Democratic Party
+UCP - United Civil Party
+BPF - Christian Conservative Party
+
+Canada 1997
+
+LP - Liberal Party
+RP - Reform Party
+CPC - Progressive Conservative Party of Canada (later merged into Conservatives)
+NDP - New Democratic Party
+BQ - Bloc Quebecois
+
+Chile 1999
+
+PD - Partido por la Democracia
+UDI - Union Democrata Independiente
+PC - Partido Comunista
+
+Czech Republic 1996
+
+ODS - Civic Democratic Party
+CSSD - Czech Social Democratic Party
+KSCM - Communist Party of Bohemia and Moravia
+KDU - Christian Democratic Union
+SPR - Czech Republican Party
+ODA - Civic Democratic Alliance
+
+Denmark 1998
+
+SDP - Social Democrats
+Venstre - Danish Liberal Party - Venstre
+CPP - Conservative People's Party
+SF - Socialist People's Party
+DF - Danish People's Party
+Centre - Centre Democrats
+
+Germany 1998
+
+SPD - Social Democratic Party
+CDU - Christian Democratic Party
+CSU - Christian Social Union
+Green - Alliance 90/Greens
+FDP - Free Democratic Party
+PDS - Party of Democratic Socialism
+
+Great Britain 1997
+
+Labour - Labour Party
+Cons - Conservative Party
+LibDem - Liberal Democrats
+SNP - Scottish Nationalist Party
+
+Hong Kong 1998
+
+DP - Democratic Party
+DAB - Democratic Alliance for the Betterment of Hong Kong
+TF - The Frontier
+ADPL - Association for Democracy and People's Livelihood
+LP - Liberal Party
+CP - Citizen's Party
+
+Hungary 1998
+
+MSZP - Hungary Socialist Party
+SZDSZ - Alliance of Free Democrats – Hungarian Liberal Party
+FKgP - Independent Smallholders' Party
+Fidesz - Hungarian Civic Party
+MIEP - Hungarian Justice and Life Party
+MDF - Hungarian Democratic Forum
+
+Iceland 1999
+
+Ind - Independence Party
+SDA - The Alliance - Iceland's Social Democratic Party
+FSF - Progressive Party
+VG - Left-Greens
+LP - Liberal Party
+
+Israel 1996
+
+Labor - Israeli Labor Party
+Likud - Likud - National Liberal Movement
+Shas - Shas
+Mafdal - National Religious Party
+Meretz - Meretz
+
+Japan 1996
+
+LDP - Liberal Democratic Party
+NFP - New Frontier Party
+DPJ - Democratic Party of Japan
+JCP - Japanese Communist Party
+SDP - Social Democratic Party
+NPH - New Party Harbinger
+
+Korea 2000
+
+GNP - Grand National Party
+MDP - Millennium Democratic Party
+ULD - United Liberal Democrats
+DPP - Democratic People's Party
+NKPH - New Korea Party of Hope
+DLP - Democratic Labor Party
+
+Lithuania 1997
+
+TS-LKD - Homeland Union – Lithuanian Christian Democrats
+SDP - Social Democratic Party
+CDP - Christian Democratic Party
+CU - Center Union
+DLP - Democratic Labor Party
+NP - Nationalist Party
+
+Mexico 1997
+
+PRI - Partido Revolucionario Institucional
+PAN - Partido Acción Nacional
+PRD - Party of the Democratic Revolution
+PVE - Partido Verde Ecologista de México
+PT - Partido del Trabajo
+PC - Partido Cardenista
+
+Mexico 2000
+
+PAN - Partido Acción Nacional
+PRI - Partido Revolucionario Institucional
+PRD - Party of the Democratic Revolution
+PT - Partido del Trabajo
+PVE - Partido Verde Ecologista de México
+PARM - Partido Auténtico de la Revolución Mexicana
+
+Netherlands 1998
+
+PA - Partij van de Arbeid
+VVD - Volkspartij voor Vrijheid en Democratie
+CDA - Christen-Democratisch Appèl
+D66 - Democraten 66
+GL - GroenLinks
+SP - Socialistische Partij
+GPV - Gereformeerd Politiek Verbond
+
+New Zealand 1996
+
+Sample notes:
+Divided into three samples
+(i) People on Maori roll were oversampled (postal)
+(ii) Respondents who also participated in 1990 and 1993 NZES (postal)
+(iii) Post-election survey (postal)
+
+Nats - New Zealand National Party
+Labour - New Zealand Labour Party
+NZfirst - New Zealand First
+Alliance - Alliance
+ACT - ACT New Zealand
+CC - Christian Coalition
+
+Norway 1997
+
+Lab - Norweigan Labour Party/Arbeiderpartiet
+FrP - Progress Party/Fremskrittspartiet
+H - Conservative Party/Høyre
+KrF - Christian People's Party/Kristelig Folkeparti
+SP - Center Party/Senterpartiet
+SV - Socialist Left Party/Sosialistisk Venstreparti
+
+Peru 2000
+
+P2000 - Peru 2000
+PP - Peru Posible
+FIM - Frente Independiente Moralizador
+PDSP - Partido Democrático Somos Perú
+APRA - Alianza Popular Revolucionaria Americana
+PSN - Partido Solidaridad Nacional
+
+Peru 2001
+
+PP - Peru Posible
+APRA - Alianza Popular Revolucionaria Americana
+UN - Unidad Nacional
+FIM - Frente Independiente Moralizador
+SP - Solucion Popular
+RA - Renacimiento Andino
+
+Poland 1997
+
+AWS - Solidarity Electoral Action/Akcja Wyborcza Solidarność
+SLD - Democratic Left Alliance/Sojusz Lewicy Demokratycznej
+UW - Freedom Union/Unia Wolności
+PSL - Polish People's Party/Polskie Stronnictwo Ludowe
+ROP - Movement for the Reconstruction of Poland/Ruch Odbudowy Polski
+UP - Labour Union/Unia Pracy
+
+Portugal 2002
+
+PSD - Partido Social Democrata
+PS - Partido Socialista
+CDS - Centro Democratico e Social - Partido Popular
+CDU - Coligação Democrática Unitária
+BE - Bloco de Esquerda
+PCTP - Partido Comunista dos Trabalhadores Portugueses
+
+Romania 1996
+
+PNT-CD - Christian National Democratic Peasant's Party
+PSD - Social Democratic Party
+PD - Democratic Party
+DAHR - Democratic Alliance of Hungarians in Romania
+PUNR - Romanian National Unity Party
+PNL - National Liberal Party
+
+Russia 1999 & 2000
+
+CPRF - Communist Party of the Russian Federation
+Unity - Interregional movement Unity
+OBP - Fatherland-All Russia
+SPS - Union of Right Forces
+LDPR - Liberal Democratic Party of Russia (ran as Bloc of Zhirinovsky)
+Yabloko - Russian United Democratic Party
+
+Slovenia 1996
+
+LDS - Liberal Democratic Party
+SLS - Slovenian People's Party
+SDS - Social Democratic Party
+SKD - Slovene Christian Democrats
+SD - Social Democrats
+SNS - Slovenian Nationalist Party
+
+Spain 1996 & 2000
+
+PP - Partido Popular
+PSOE - Partido Socialista Obrero Espanol
+IU - Izquierda Unida
+CiU - Convergència i Unió
+PNV - Partido Nacionalista Vasco
+
+Sweden 1998
+
+SAP - Swedish Social Democratic Party
+M - Moderate Party
+V - Left Party
+KD - Christian Democrats
+C - Centre Party
+L - People Party's Liberals
+
+Switzerland 1999
+
+SVP - Swiss People's Party
+SP - Social Democratic Party of Switzerland
+FDP - Free Democratic Party of Switzerland
+CVP - Christian Democratic People's Party of Switzerland
+Green - Green Party
+
+Thailand 2001
+
+TRT - Thais Love Thais Party
+DP - Democrat Party
+NAP - New Aspiration Party
+TNP - Thai Nation Party
+NDP - National Development Party
+
+Taiwan 1996
+
+KMT - Kuo-Ming Tang/Nationalists
+DPP - Democratic Progressive Party
+NP - Chinese New Party
+
+Ukraine 1998
+
+KPU - Communist Party of Ukraine
+Rukh - People's Movement of Ukraine
+SPU - Socialist Party of Ukraine
+NDP - People's Democratic Party
+PPU - Peasant Party of Ukraine
+SDPU - Social Democratic Party of Ukraine
+
+USA 1996
+
+Dem - Democratic Party
+Rep - Republican Party
+Reform - Reform Party
+
+-------------------------MODULE 2---------------------------------------------
+
+
+Albania 2005
+
+PD    Democratic Party
+PS    Socialist Party
+PR    Republican Party
+PSD   Social Democratic Party
+LSI   Socialist Movement for Integration
+PDR   New Democratic Party
+PAA   Agrarian Party
+PAD   Democratic Alliance Party
+PDK   Christian Democratic Party
+
+Australia 2004
+
+ALP - Australia Labour Party
+LP - Liberal Party
+AD - Australian Democrats
+Green - Australian Greens
+ON - One Nation
+
+Belgium (Flanders) 2003
+
+VLD - Open Flemish Liberals and Democrats
+CDV - Christen-Democratisch en Vlaams
+SP - Socialistische Partij
+VB - Vlaams Blok
+NVA - Nieuw-Vlaamse Alliantie
+
+Belgium (Walloon) 2003
+
+PS - Parti Socialiste
+MR - Mouvement Réformateur
+Green - Ecologistes Confederes
+CDH - Centre Démocrate Humaniste
+
+Brazil 2002
+
+PT      Workers’ Party (Partido dos Trabalhadores)
+PSDB    Brazilian Social Democratic Party (Partido da Social Democracia Brasileira)
+DEM     Party of the Liberal Front (later changed name to Democrats)
+PMDB    Party of the Brazilian Democratic Movement
+PPB     Brazilian Progressive Party (Partido Progressista Brasileiro)
+PSB     Brazilian Socialist Party (Partido Socialista Brasileiro)
+PDT     Labor Democratic Party (Partido Democratico Trabalhista)
+PTB     Brazilian Labor Party
+
+Bulgaria 2001
+
+NDST - National Movement Simeon the Second
+UDF - United Democratic Forces
+BSP - Bulgarian Socialist Party
+MRF - Movement for Rights and Freedom
+MG - Movement 'Georgievden'
+EL - Euroleft
+VMRO - Bulgarian National Movement
+
+Canada 2004
+
+LP - Liberal Party
+CPC - Conservative Party of Canada
+NDP - New Democratic Party
+BQ - Bloc Quebecois
+
+Chile 2005
+
+PD - Partido por la Democracia
+UDI - Union Democrata Independiente
+PC - Partido Comunista
+PDC - Partido Demócrata Cristiano
+RN - Renovacion National
+PS - Partido Socialista de Chile
+
+Czech Republic 2002
+
+ODS - Civic Democratic Party
+CSSD - Czech Social Democratic Party
+KSCM - Communist Party of Bohemia and Moravia
+KDU - Christian Democratic Union
+SPR - Czech Republican Party
+ODA - Civic Democratic Alliance
+US-DEU - Freedom Union - Democratic Union
+
+Denmark 2001
+
+S - Social Democrats
+V - Danish Liberal Party - Venstre
+KF - Conservative People's Party
+SF - Socialist People's Party
+DF - Danish People's Party
+RV - Radical Left
+RG - Red Green Alliance
+KD - Christian People's Party (renamed to Christian Democrats in 2003)
+
+Finland 2003
+
+KESK - Center Party
+SDP - Social Democratic Party of Finland
+KOK - National Coalition Party
+LA - Left Alliance
+Green - Green League
+CD - Christian Democrats
+RKP - Swedish People's Party
+
+France 2002
+
+Rep - Rassemblement pour la Republique
+    (later called UMP and currently called Les Republicans)
+FN - Front National
+PS - Parti Socialiste
+UDF - Union pour La Démocratie Francaise
+LO - Lutte Ouvrière
+MDC - Mouvement des Citoyens
+Green - Verts
+DL - Democratie Liberale
+PCF - Parti Communiste Francais
+
+Great Britain 2005
+
+Lab - Labour Party
+Con - Conservative Party
+LD - Liberal Democrats
+SNP - Scottish Nationalist Party
+
+Germany 2002
+
+SPD - Social Democratic Party
+CDU - Christian Democratic Party
+CSU - Christian Social Union
+Green - Alliance 90/Greens
+FDP - Free Democratic Party
+PDS - Party of Democratic Socialism
+Rep - Republikaner
+SP - Schill-Partei (Party of the Rule of Law Offensive)
+
+Hong Kong 2004
+
+DP - Democratic Party
+DAB - Democratic Alliance for the Betterment of Hong Kong
+ADPL - Association for Democracy and People's Livelihood
+LP - Liberal Party
+
+Hungary 2002
+
+MSZP - Hungary Socialist Party
+SZDSZ - Alliance of Free Democrats – Hungarian Liberal Party
+FKgP - Independent Smallholders' Party
+Fidesz - Hungarian Civic Party
+MIEP - Hungarian Justice and Life Party
+MDF - Hungarian Democratic Forum
+CP - Centre Party
+
+Ireland 2002
+
+FF - Fianna Fail
+FG - Fine Gael
+Lab - Labour
+SF - Sinn Fein
+PD - Progressive Democrats
+Green - Green
+
+Iceland 2003
+
+Ind - Independence Party
+SDA - The Alliance - Iceland's Social Democratic Party
+FSF - Progressive Party
+VG - Left-Greens
+LP - Liberal Party
+
+Israel 2003
+
+Labor - Israeli Labor Party
+Likud - Likud - National Liberal Movement
+Shinui - Shinui
+Shas - Shas
+Meretz - Meretz
+NU - National Union
+
+Italy 2006
+
+FI - Forza Italia
+DS - Democratici di Sinistra
+AN - Alleanza Nazionale
+DL - Democrazia e Liberte
+UDC - Unione dei Democratici Cristiani
+PRC - Partito della Rifondazione Comunista
+
+Japan 2004
+
+LDP - Liberal Democratic Party
+DPJ - Democratic Party of Japan
+JCP - Japanese Communist Party
+SDP - Social Democratic Party
+CGP - New Komeito
+
+Kyrgyzstan 2005
+
+AN - Ar-Namys
+PKK - Party of Communists of Kyrgyzstan
+AM - Ata Meken
+AK - Alga Kyrgyzstan
+CPK - Communist Party of Kyrgyzstan
+RNP - Republican National Party
+NK - New Kyrgyzstan
+FK - Free Kyrgyzstan
+
+Mexico 2003
+
+PRI - Partido Revolucionario Institucional
+PAN - Partido Acción Nacional
+PRD - Party of the Democratic Revolution
+PVE - Partido Verde Ecologista de México
+PT - Partido del Trabajo
+Conv - Convergencia
+
+Netherlands 2002
+
+PA - Partij van de Arbeid
+VVD - Volkspartij voor Vrijheid en Democratie
+CDA - Christen-Democratisch Appèl
+D66 - Democraten 66
+GL - GroenLinks
+SP - Socialistische Partij
+LPF - List Pim Fortuyn
+CU - ChristenUnie
+SGP - Staatkundig Gereformeerde Partij
+
+New Zealand 2002
+
+Nats - New Zealand National Party
+Lab - New Zealand Labour Party
+NZfirst - New Zealand First
+ACT - ACT New Zealand
+Green - Green Party
+UF - United Future
+PP - Progressive Party
+Alliance - Alliance
+
+
+Norway 2001
+
+Lab - Norweigan Labour Party/Arbeiderpartiet
+FrP - Progress Party/Fremskrittspartiet
+H - Conservative Party/Høyre
+KrF - Christian People's Party/Kristelig Folkeparti
+SP - Center Party/Senterpartiet
+SV - Socialist Left Party/Sosialistisk Venstreparti
+V - Venstre/Liberal Party
+
+Peru 2006
+
+UPP - Union por el Peru
+APRA - Alianza Popular Revolucionaria Americana
+UN - Unidad Nacional
+AF - Alianza por el Futuro
+FC - Frente de Centro
+RN - Restoracion Nacional
+PP - Peru Posible
+
+Philipines 2004
+
+LAKAS-CMD  Lakas - Christian-Muslim Democrats
+NPC        Nationalist People's Coalition
+LP         Liberal Party
+LDP        Laban ng Demokratikong
+AD         Aksyon Demokratiko
+BP     Bangon Pilipinas
+
+Poland 2001
+
+SLD-UP - Democratic Left Alliance/Sojusz Lewicy Demokratycznej
+        and Labour Union/Unia Pracy
+PO - Platforma Obywatelska
+SRP - Samoobrona Rzeczpospolitej Polskiej/Self-Defence of the Republic of Poland
+PIS - Prawo i Sprawiedliwość/Law and Justice
+PSL - Polish People's Party/Polskie Stronnictwo Ludowe
+LPR - Liga Polskich Rodzin/League of Polish Families
+AWS - Solidarity Electoral Action/Akcja Wyborcza Solidarność
+
+Portugal 2005
+
+PS - Partido Socialista
+PSD - Partido Social Democrata
+CDU - Coligação Democrática Unitária
+CDS - Centro Democratico e Social - Partido Popular
+BE - Bloco de Esquerda
+
+Romania 2004
+
+PSD - Social Democratic Party
+PNL - National Liberal Party
+PD - Democratic Party
+PRM - Greater Romania Party
+DAHR - Democratic Alliance of Hungarians in Romania
+PNT-CD - Christian National Democratic Peasant's Party
+PC - Humanist Party of Romania (later known as Conservative Party)
+
+Russia 2004
+
+ER - United Russia
+CPRF - Communist Party of the Russian Federation
+LDPR - Liberal Democratic Party of Russia
+RNPS - Homeland People's-Patriotic Union
+SPS - Union of Right Forces
+Yabloko - Russian United Democratic Party
+
+Slovenia 2004
+
+SDS - Social Democratic Party
+LDS - Liberal Democratic Party
+SD - Social Democrats
+NSi - New Slovenia-Christian People's Party (formed from SKD)
+SLS - Slovenian People's Party
+SNS - Slovenian National Party
+DeSUS - Democratic Party of Pensioners of Slovenia
+
+South Korea 2004
+
+OP - Our Party
+GNP - Grand National Party
+DLP - Democratic Labor Party
+MDP - Millennium Democratic Party
+ULD - United Liberal Democrats
+NA21 - National Integration 21
+
+Spain 2004
+
+PSOE - Partido Socialista Obrero Espanol
+PP - Partido Popular
+IU - Izquierda Unida
+CiU - Convergència i Unió
+
+Sweden 2002
+
+SAP - Swedish Social Democratic Party
+M - Moderate Party/Conservative Party
+L - People Party's Liberals
+KD - Christian Democrats
+V - Left Party
+C - Centre Party
+
+Switzerland 2003
+
+SVP - Swiss People's Party
+SP - Social Democratic Party of Switzerland
+FDP - Free Democratic Party of Switzerland
+CVP - Christian Democratic People's Party of Switzerland
+Green - Green Party
+
+
+Taiwan 2001 and 2004
+
+DPP - Democratic Progressive Party
+KMT - Kuo-Ming Tang/Nationalists
+PFP - People First Party
+TSU - Taiwan Solidarity Union
+NP - Chinese New Party
+
+USA 2004
+
+Rep - Republican Party
+Dem - Democratic Party
+Reform - Reform Party
+
+-------------------------MODULE 3---------------------------------------------
+
+Australia 2007
+
+ALP - Australian Labour Party
+LP - Liberal Party
+NP - National Party
+Green - Greens
+
+Austria 2008
+
+SPO - Social Democratic Party of Austria
+OVP - Austrian People's Party
+FPO - Freedom Party
+BZO - Alliance for the Future of Austria
+Green - Green Alternative
+LIF - Liberal Forum
+LD - List Dinkhauser
+
+Belarus 2008
+
+
+CPB - Communist Party of Belarus
+BPF - Christian Conservative Party
+BNF - Belarusian National Front
+BLP - Party of Belarusian Communists (later changed name to Belarusian Left Party)
+UCP - United Civil Party
+BSDP - Belarusian Social Democratic Party
+LDP - Liberal Democratic Party
+
+Brazil 2006
+
+PMDB    Party of the Brazilian Democratic Movement
+PT      Workers’ Party (Partido dos Trabalhadores)
+PSDB    Brazilian Social Democratic Party (Partido da Social Democracia Brasileira)
+DEM     Party of the Liberal Front (later changed to Democratas)
+PDT     Labor Democratic Party (Partido Democratico Trabalhista)
+PTB Partido Trabalhista Brasileiro
+
+
+Brazil 2010
+
+PT      Workers’ Party (Partido dos Trabalhadores)
+PMDB    Party of the Brazilian Democratic Movement
+PSDB    Brazilian Social Democratic Party (Partido da Social Democracia Brasileira)
+DEM Democratas (earlier known as PFL)
+PDT     Labor Democratic Party (Partido Democratico Trabalhista)
+PTB Partido Trabalhista Brasileiro
+
+
+Canada 2008
+
+CPC - Conservative Party of Canada
+LP - Liberal Party
+NDP - New Democratic Party
+BQ - Bloc Quebecois
+Green - Green Party
+
+
+Chile 2009
+
+UDI - Union Democrata Independiente
+RN - Renovacion National
+PDC - Partido Demócrata Cristiano
+PD - Partido por la Democracia
+PS - Partido Socialista de Chile
+PC - Partido Comunista
+
+Croatia 2007
+
+HDZ - Croatian Democratic Union
+SDP - Social Democratic Party
+HNS - Liberal Democrats
+HSS - Croatian Peasant Party
+HSU - Croatian Party of Pensioners
+HSP - Croatian Party of Rights
+HSLS - Croatian Social Liberal Party
+HDSSB - Croatian Democratic Alliance of Slovenia
+IDS - Istrian Democratic Assembly
+
+Czech Republic 2006
+
+ODS - Civic Democratic Party
+CSSD - Czech Social Democratic Party
+KSCM - Communist Party of Bohemia and Moravia
+KDU - Christian Democratic Union
+Green - Green Party
+
+
+Czech Republic 2010
+
+CSSD - Czech Social Democratic Party
+ODS - Civic Democratic Party
+TOP - Tradition, responsibility, prosperity
+KSCM - Communist Party of Bohemia and Moravia
+VV - Conservative Party
+KDU - Christian Democratic Union
+Green - Green Party
+
+Denmark 2007
+
+V - Danish Liberal Party - Venstre
+S - Social Democrats
+DF - Danish People's Party
+SF - Socialist People's Party
+KF - Conservative People's Party
+RV - Radical Left
+Y - New Alliance
+RG - Red Green Alliance
+KD - Christian People's Party (renamed to Christian Democrats in 2003)
+
+Estonia 2011
+
+Reform - Estonian Reform Party
+Centre - Estonian Centre Party
+Isamaa - Pro Patria and Res Publica Union (later renamed to Isamaa)
+SDE - Social Democratic Party of Estonia
+EKRE - Estonian People's Union (later merged in to Conservative People's Party of Estonia)
+Green - Estonian Greens
+
+Finland 2007
+
+KESK - Center Party
+KOK - National Coalition Party
+SDP - Social Democratic Party of Finland
+Vas - Left Alliance
+Green - Green League
+RKP - Swedish People's Party
+KD - Christian Democrats
+PS - True Finns
+
+Finland 2011
+
+KOK - National Coalition Party
+SDP - Social Democratic Party of Finland
+PS - True Finns
+KESK - Center Party
+Vas - Left Alliance
+Green - Green League
+RKP - Swedish People's Party
+KD - Christian Democrats
+
+France 2007
+
+Rep - UMP (currently called Les Republicans)
+PS - Parti Socialiste
+MD - Mouvement Démocrate
+FN - Front National
+PCF - Parti Communiste Français
+Green - Verts
+LCF - Ligue Communiste Francais
+
+Germany 2005
+
+SPD - Social Democratic Party
+CDU - Christian Democratic Party
+FDP - Free Democratic Party
+LP - Party of Democratic Socialism/Left Party
+Green - Alliance 90/Greens
+CSU - Christian Social Union
+NPD - National Democratic Party
+
+Germany 2009
+
+CDU - Christian Democratic Party
+SPD - Social Democratic Party
+FDP - Free Democratic Party
+LP - Party of Democratic Socialism/Left Party
+Green - Alliance 90/Greens
+CSU - Christian Social Union
+
+Greece 2009
+
+PASOK - Pan-Hellenic Socialist Movement
+ND - New Democracy
+KKE - Communist Party of Greece
+LAOS - Popular Orthodox Rally
+SYRIZA - Coalition of the Radical Left
+Green - Ecologists/Greens
+
+Hong Kong 2008
+
+DAB - Democratic Alliance for the Betterment of Hong Kong
+DP - Democratic Party
+CP - Civic Party
+LSD - League of Social Democrats
+LP - Liberal Party
+ADPL - Association for Democracy and People's Livelihood
+Frontier - The Frontier
+
+Iceland 2007
+
+Ind - Independence Party
+SDA - The Alliance - Iceland's Social Democratic Party
+VG - Left-Greens
+FSF - Progressive Party
+LP - Liberal Party
+IM - Icelandic Movement
+
+Iceland 2009
+
+SDA - The Alliance - Iceland's Social Democratic Party
+Ind - Independence Party
+VG - Left-Greens
+FSF - Progressive Party
+CM - Civic Movement
+LP - Liberal Party
+
+Ireland 2007
+
+FF - Fianna Fail
+FG - Fine Gael
+Lab - Labour
+Green - Green
+PD - Progressive Democrats
+SF - Sinn Fein
+
+Israel 2006
+
+Kadima - Kadima
+Labor - Israeli Labor Party
+Shas - Shas
+Likud - Likud - National Liberal Movement
+IB - Israel Betenyu
+Mafdal - Ihud - Mafdal
+
+Japan 2007
+
+DPJ - Democratic Party of Japan
+LDP - Liberal Democratic Party
+CGP - New Komeito (Clean Government Party)
+JCP - Japanese Communist Party
+SDP - Social Democratic Party
+
+Latvia 2010
+
+Unity - Vienotiba
+SC - Harmony Centre
+ZZS - Union of Greens and Farmers
+LNNK - For Fatherland and Freedom/LNNK, later merged into National Alliance
+AS - For a Good Latvia
+PCTVL - For Human Rights in a United Latvia, later renamed to Latvian Russian Union
+
+Mexico 2006
+
+PAN - Partido Acción Nacional
+PRD - Party of the Democratic Revolution
+PRI - Partido Revolucionario Institucional
+PVE - Partido Verde Ecologista de México
+PT - Partido del Trabajo
+Conv - Convergencia
+PANAL - Partido Nueva Alianza
+PSD - Partido Socialdemócrata
+
+Mexico 2009
+
+PRI - Partido Revolucionario Institucional
+PAN - Partido Acción Nacional
+PRD - Party of the Democratic Revolution
+PVE - Partido Verde Ecologista de México
+PT - Partido del Trabajo
+Conv - Convergencia
+PANAL - Partido Nueva Alianza
+PSD - Partido Socialdemócrata
+
+Netherlands 2006
+
+CDA - Christen-Democratisch Appèl
+PA - Partij van de Arbeid
+SP - Socialistische Partij
+VVD - Volkspartij voor Vrijheid en Democratie
+PVV - Partij voor de Vrijheid
+GL - GroenLinks
+CU - ChristenUnie
+D66 - Democraten 66
+SGP - Staatkundig Gereformeerde Partij
+
+Netherlands 2010
+
+VVD - Volkspartij voor Vrijheid en Democratie
+PA - Partij van de Arbeid
+PVV - Partij voor de Vrijheid
+CDA - Christen-Democratisch Appèl
+SP - Socialistische Partij
+D66 - Democraten 66
+GL - GroenLinks
+CU - ChristenUnie
+SGP - Staatkundig Gereformeerde Partij
+
+New Zealand 2008
+
+Nats - New Zealand National Party
+Lab - New Zealand Labour Party
+Green - Green Party
+NZfirst - New Zealand First
+ACT - ACT New Zealand
+Maori - Maori Party
+PP - Progressive Party
+UF - United Future
+
+Norway 2005
+
+Lab - Norweigan Labour Party/Arbeiderpartiet
+FrP - Progress Party/Fremskrittspartiet
+H - Conservative Party/Høyre
+SV - Socialist Left Party/Sosialistisk Venstreparti
+KrF - Christian People's Party/Kristelig Folkeparti
+SP - Center Party/Senterpartiet
+V - Venstre/Liberal Party
+RV - Raud Valgallianse/Red Electoral Alliance
+
+Norway 2009
+
+Lab - Norweigan Labour Party/Arbeiderpartiet
+FrP - Progress Party/Fremskrittspartiet
+H - Conservative Party/Høyre
+SV - Socialist Left Party/Sosialistisk Venstreparti
+SP - Center Party/Senterpartiet
+KrF - Christian People's Party/Kristelig Folkeparti
+V - Venstre/Liberal Party
+RV - Raud Valgallianse/Red Electoral Alliance
+
+Peru 2011
+
+PNP - Partido Nacionalista Peruano/Part of Peru Gana alliance
+FP - Fuerza Popular
+PP - Peru Posible
+APGC - Alianza por el Gran Cambio
+ASN - Alianza Solidaridad Nacional
+APRA - Alianza Popular Revolucionaria Americana
+
+Philippines 2010
+
+LP         Liberal Party
+PMP    Force of the Filipino Masses
+NP     Nationalist Party
+LAKAS-CMD  Lakas - Christian-Muslim Democrats
+BP     Bangon Pilipinas
+VNP    Volunteers for a New Philippines
+AKP    Brotherhood Party
+
+Poland 2005
+
+PIS - Prawo i Sprawiedliwość/Law and Justice
+PO - Platforma Obywatelska
+SRP - Samoobrona Rzeczpospolitej Polskiej/Self-Defence of the Republic of Poland
+SLD-UP - Democratic Left Alliance/Sojusz Lewicy Demokratycznej
+        and Labour Union/Unia Pracy
+LPR - Liga Polskich Rodzin/League of Polish Families
+PSL - Polish People's Party/Polskie Stronnictwo Ludowe
+PD - Democratic Party/Partia demokratyczna
+SDPL - Social Democracy of Poland/Socjaldemokracja polska
+
+Poland 2007
+
+PO - Platforma Obywatelska
+PIS - Prawo i Sprawiedliwość/Law and Justice
+LID - Lewica i Demokraci/Left and Democrats (coalition of SLD-UP, and PD)
+PSL - Polish People's Party/Polskie Stronnictwo Ludowe
+
+Portugal 2009
+
+PS - Partido Socialista
+PSD - Partido Social Democrata
+CDS - Centro Democratico e Social - Partido Popular
+BE - Bloco de Esquerda
+CDU - Coligação Democrática Unitária
+
+Romania 2009
+
+PD-L - Democratic-Liberal Party
+PSD+PC - Social Democratic Party + Conservative Party
+PNL - National Liberal Party
+PRM - Greater Romania Party
+DAHR - Democratic Alliance of Hungarians in Romania
+PNG-CD - New Generation Party-Christian Democrat
+
+Slovakia 2010
+
+SMER-SD - Direction - Social Democracy
+SDKU-DS - Slovak Democratic and Christian Union - Democratic Party
+SAS - Freedom and Solidarity
+KDH - Christian Democratic Movement
+MH - Most-Hid
+SNS - Slovak National Party
+SMK - Party of the Hungarian Coalition
+LS-HZDS - People's Party - Movement for a Democratic Slovakia
+
+Slovenia 2008
+
+SD - Social Democrats
+SDS - Social Democratic Party
+ZARES - "For Real-New Politics" Party
+DeSUS - Democratic Party of Pensioners of Slovenia
+SNS - Slovenian National Party
+SLS - Slovenian People's Party
+LDS - Liberal Democratic Party
+NSi - New Slovenia-Christian People's Party (formed from SKD)
+
+South Africa 2009
+
+ANC - African National Congress
+DA - Democratic Alliance
+COPE - Congress of the People
+IFP - Inkatha Freedom Party
+ID - Independent Democrats
+UDM - United Democratic Movement
+VF - Freedom Front Plus
+ACDP - African Christian Democratic Party
+
+South Korea 2008
+
+GNP - Grand National Party
+DP - Democratic Party
+LFP - Liberal Forward Party
+FHA - Future Hope Alliance (Pro-Park Coalition)
+DLP - Democratic Labor Party
+RKP - Renewal of Korea Party
+NPP - New Progressive Party
+
+Spain 2008
+
+PSOE - Partido Socialista Obrero Español
+PP - Partido Popular
+CiU - Convergència i Unió
+PNV - Partido Nacionalista Vasco
+ERC - Esquerra Republicana de Catalunya
+IU - Izquierda Unida
+BNG - Bloque Nacionalista Galego
+CC-PNC - Coalicion Canaria
+UPyD - Union Progreso y Democracia
+
+
+Sweden 2006
+
+SAP - Swedish Social Democratic Party
+M - Moderate Party/Conservative Party
+C - Centre Party
+L - People Party's Liberals
+KD - Christian Democrats
+V - Left Party
+Green - Green Party
+SD - Sweden Democrats
+F - Feminist Initiative
+
+Switzerland 2007
+
+SVP - Swiss People's Party
+SP - Social Democratic Party of Switzerland
+FDP - Free Democratic Party of Switzerland
+CVP - Christian Democratic People's Party of Switzerland
+Green - Green Party
+EVP - Protestant People's Party
+LP - Liberal Party
+SOL - Ticino League
+
+Taiwan 2008
+
+DPP - Democratic Progressive Party
+KMT - Kuomintang
+
+Thailand 2007
+
+PPP - People Power Party
+DP - Democrat Party
+CTP - Chart Thai Party
+PP - For the Motherland
+RC - Thais United National Development Party
+MCM - Neutral Democratic Party
+PRP - Royal People Party
+Pracha - Prachamati
+
+Turkey 2011
+
+AKP - Justice and Development Party
+CHP - Republican People's Party
+MHP - Nationalist Movement Party
+BDP - Peace and Development Party
+SP - Felicity Party
+HSP - People's Voice Party
+BBP - Great Union Party
+DP - Democratic Party
+DSP - Democratic Left Party
+
+USA 2008
+
+Dem - Democrats
+Rep - Republicans
+
+Uruguay 2009
+
+FA - Frente Amplia
+PN - Partido Nacional
+PC - Partido Colorado
+PI - Partido Independiente
+PAP - Partido Asamblea Popular
+
+-------------------------MODULE 4---------------------------------------------
+
+Argentina 2015
+
+FPV - Frente para la Victoria
+UNA - Alianza Unidos por una Nueva Alternative
+Pro - Progresistas
+PR - Propuesta Republicana
+UCR - Union Civica Radical
+PJ - Partido Justicialista
+
+Australia 2013
+
+ALP - Australian Labour Party
+LP - Liberal Party
+Green - Greens
+NP - National Party
+
+Austria 2013
+
+SPO - Social Democratic Party of Austria
+OVP - Austrian People's Party
+FPO - Freedom Party
+Green - Green Alternative
+BZO - Alliance for the Future of Austria
+NEOS - Alliance of New Austria and Liberal Forum
+Stronach - Team Stronach for Austria
+
+Brazil 2014
+
+PT      Workers’ Party (Partido dos Trabalhadores)
+PSDB    Brazilian Social Democratic Party (Partido da Social Democracia Brasileira)
+PMDB    Party of the Brazilian Democratic Movement
+PSB Brazilian Socialist Party
+PSD Social Democratic Party
+PR  Republic Party
+DEM     Party of the Liberal Front (later changed to Democratas)
+
+Bulgaria 2014
+
+GERB - Citizens for European Development of Bulgaria
+BSP - Bulgarian Socialist Party (in coalition with Bulgarian Social Democratic Party)
+MRF - Movement for Rights and Freedom
+RB - Reformist Bloc
+PF - Patriotic Front
+BBZ - Bulgaria without Censorship
+Attack - Attack
+ABV - Alternative for Bulgarian Revival
+
+Canada 2011
+
+CPC - Conservative Party of Canada
+NDP - New Democratic Party
+LP - Liberal Party
+BQ - Bloc Quebecois
+Green - Green Party
+
+Canada 2015
+
+LP - Liberal Party
+CPC - Conservative Party of Canada
+NDP - New Democratic Party
+BQ - Bloc Quebecois
+Green - Green Party
+
+Czech Republic 2013
+
+CSSD - Czech Social Democratic Party
+ANO - Action of Dissatisfied Citizens
+KSCM - Communist Party of Bohemia and Moravia
+TOP09 - Tradition Responsibility Prosperity 09
+ODS - Civic Democratic Party
+Usvit - Dawn of Direct Democracy
+KDU - Christian Democratic Union
+
+Finland 2015
+
+KESK - Center Party
+KOK - National Coalition Party
+PS - True Finns
+SDP - Social Democratic Party of Finland
+Green - Green League
+Vas - Left Alliance
+RKP - Swedish People's Party
+KD - Christian Democrats
+
+France 2012
+
+PS - Parti Socialiste
+Rep - UMP (currently called Les Republicans)
+FN - Front National
+PCF - Parti Communiste Français
+MD - Mouvement Démocrate
+Green - Verts
+
+Germany 2013
+
+CDU - Christian Democratic Party
+SPD - Social Democratic Party
+LP - Party of Democratic Socialism/Left Party
+Green - Alliance 90/Greens
+CSU - Christian Social Union
+FDP - Free Democratic Party
+AFD - Alternative for Germany
+Pirates - Pirate Party
+
+Great Britain 2015
+
+Con - Conservative Party
+Lab - Labour Party
+UKIP - UK Independence Party
+LD - Liberal Democrats
+SNP - Scottish Nationalist Party
+Green - Green Party
+PC - Plaid Cymru
+
+Greece 2012
+
+ND - New Democracy
+SYRIZA - Coalition of the Radical Left
+PASOK - Pan-Hellenic Socialist Movement
+ANEL - The Independent Greeks
+LS-XA - Golden Dawn
+DIMAR - Democratic Left
+KKE - Communist Party of Greece
+
+Greece 2015
+
+SYRIZA - Coalition of the Radical Left
+ND - New Democracy
+LS-XA - Golden Dawn
+Potami - The River
+KKE - Communist Party of Greece
+ANEL - The Independent Greeks
+PASOK - Pan-Hellenic Socialist Movement
+
+Hong Kong 2012
+
+DAB - Democratic Alliance for the Betterment of Hong Kong
+CP - Civic Party
+DP - Democratic Party
+PP - People Power
+FTU - Hong Kong Federation of Trade Unions
+Lab - Labour Party
+NPP - New People's Party
+LP - Liberal Party
+
+Iceland 2013
+
+Ind - Independence Party
+FSF - Progressive Party
+SDA - The Alliance - Iceland's Social Democratic Party
+VG - Left-Greens
+BF - Bright Future
+Pi - Pirates
+
+Ireland 2011
+
+FG - Fine Gael
+Lab - Labour
+FF - Fianna Fail
+SF - Sinn Fein
+ULA - United Left Alliance
+Green - Green Party
+
+Israel 2013
+
+Likud/YB - Likud and Yisrael Betenyu alliance
+YA - Yesh Atid
+Labor - Israeli Labor Party
+HH - Jewish Home (Alliance between Mafdal and Tkuma)
+Shas - Shas
+Hat - Hatuna the Movement
+
+Japan 2013
+
+LDP - Liberal Democratic Party
+DPJ - Democratic Party of Japan
+JCP - Japanese Communist Party
+YP - Your Party
+JReP - Japan Restoration Party
+CGP - New Komeito (Clean Government Party)
+PLP - People's Life Party
+SDP - Social Democratic Party
+GW - Green Wind
+
+Kenya 2013
+
+TNA - The National Alliance
+ODM - Orange Democratic Movement
+URP - United Republican Party
+WDM-K - Wiper Democratic Party - Kenya
+UDFP - United Democratic Front Party
+NARC-K - National Rainbow Coalition - Kenya
+
+Latvia 2011
+
+SC - Harmony Centre
+ZRP - Zalter's Reform Party
+Unity - Vienotiba
+LNNK - For Fatherland and Freedom/LNNK, later merged into National Alliance
+ZZS - Union of Greens and Farmers
+LPP/LC - Latvia's First Party/Latvian Way (merger of LPP and LC)
+
+Latvia 2014
+
+SC - Harmony Centre
+Unity - Vienotiba
+ZZS - Union of Greens and Farmers
+LNNK - For Fatherland and Freedom/LNNK, later merged into National Alliance
+NsL - For Latvia from the Heart
+LRa - Latvian Association of Regions
+
+Mexico 2012
+
+PRI - Partido Revolucionario Institucional
+PAN - Partido Acción Nacional
+PRD - Party of the Democratic Revolution
+PVE - Partido Verde Ecologista de México
+PT - Partido del Trabajo
+PANAL - Partido Nueva Alianza
+MC - Movimiento Ciudadano
+
+Mexico 2015
+
+PRI - Partido Revolucionario Institucional
+PAN - Partido Acción Nacional
+PRD - Party of the Democratic Revolution
+MORENA - Movimiento de Regeneracion Nacional
+PVE - Partido Verde Ecologista de México
+MC - Movimiento Ciudadano
+PT - Partido del Trabajo
+
+Montenegro 2012
+
+CG - Coalition for a European Montenegro
+DF - Democratic Front
+SNP - Socialist People's Party
+PCG - Positive Montenegro
+BS - Bosniak Party
+FZJ - Force for Unity
+AK - Albanian Coalition
+HGI - Croatian Civic Initiative
+
+New Zealand 2011
+
+Nats - National Party
+Lab - Labour Party
+Green - Green Party
+NZfirst - New Zealand First
+Maori - Maori Party
+MANA - MANA movement
+ACT - ACT New Zealand
+UFNZ - United Future
+
+New Zealand 2014
+
+Nat - National Party
+Lab - Labour Party
+Green - Green Party
+NZfirst - New Zealand First
+Con - Conservative Party
+MANA - MANA movement in alliance with Internet Party
+Maori - Maori Party
+ACT - ACT New Zealand
+UFNZ - United Future
+
+Norway 2013
+
+Lab - Norweigan Labour Party/Arbeiderpartiet
+H - Conservative Party/Høyre
+FrP - Progress Party/Fremskrittspartiet
+KrF - Christian People's Party/Kristelig Folkeparti
+SP - Center Party/Senterpartiet
+V - Venstre/Liberal Party
+SV - Socialist Left Party/Sosialistisk Venstreparti
+G - The Greens
+R - Red
+
+Peru 2016
+
+FP - Fuerza Popular
+PPK - Peruvians for a change
+FA - Frente Amplio
+APP - Alianza Para El Progreso del Peru
+AP - Accion Popular
+DD - Democratic Directa
+
+Philippines 2016
+
+LP         Liberal Party
+NPC        Nationalist People's Coalition
+NP     Nationalist Party
+UNA    United Nationalist Alliance
+PDP    Philippine Democratic Party
+PRP    People's Reform Party
+
+Poland 2011
+
+PO - Platforma Obywatelska
+PIS - Prawo i Sprawiedliwość/Law and Justice
+RP - Ruch Palikota/Palikots Movement
+PSL - Polish People's Party/Polskie Stronnictwo Ludowe
+SLD - Democratic Left Alliance/Sojusz Lewicy Demokratycznej
+
+Portugal 2015
+
+PSD - Partido Social Democrata
+PS - Partido Socialista
+BE - Bloco de Esquerda
+CDU - Coligação Democrática Unitária
+PDR - Partido Democratico Republicano
+CDS - Centro Democratico e Social - Partido Popular
+
+Romania 2012
+
+PP - People's Party
+DAHR - Democratic Alliance of Hungarians in Romania
+PRM - Greater Romania Party
+PSD - Social Democratic Party
+PNL - National Liberal Party
+PD-L - Democratic-Liberal Party
+
+Romania 2014
+
+AE - Electoral alliance between PSD, UNPR and PC
+ACL - Electoral alliance between PNL and PDL
+PMP - Popular Movement Party
+PP - People's Party
+PRM - Greater Romania Party
+DAHR - Democratic Alliance of Hungarians in Romania
+
+
+Serbia 2012
+
+SNS - Serbian Progressive Party
+DS - Democratic Party
+SPS - Socialist Party of Serbia
+DSS - Democratic Party of Serbia
+LDP - Liberal Democratic Party
+URS - United Regions of Serbia
+SRS - Serbian Radical party
+
+Slovakia 2016
+
+SMER-SD - Direction - Social Democracy
+SAS - Freedom and Solidarity
+OLaNO - Ordinary people - Independent personalities
+SNS - Slovak National Party
+LsNS - People's Party Our Slovakia
+SR - We are family
+MH - Most-Hid
+S - Network
+
+Slovenia 2011
+
+LZJ - Zoran Jankovic List - Positive Slovenija
+SDS - Social Democratic Party
+SD - Social Democrats
+DIGV - Gregor Virant's Civic List
+DeSUS - Democratic Party of Pensioners of Slovenia
+SLS - Slovenian People's Party
+NSi - New Slovenia-Christian People's Party (formed from SKD)
+SNS - Slovenian National Party
+
+South Africa 2014
+
+ANC - African National Congress
+DA - Democratic Alliance
+EFF - Economic Freedom Fighters
+IFP - Inkatha Freedom Party
+NFP - National Freedom Party
+UDM - United Democratic Movement
+VF - Freedom Front Plus
+COPE - Congress of the People
+ACDP - African Christian Democratic Party
+
+South Korea 2012
+
+NFP - Formerly the GNP, New Frontier Party
+DP - Democratic Party
+UPP - Unified Progressive Party, former Democratic Labor Party
+LFP - Liberty Forward Party
+
+Sweden 2014
+
+SAP - Swedish Social Democratic Party
+M - Moderate Party/Conservative Party
+SD - Sweden Democrats
+Green - Green Party
+C - Centre Party
+V - Left Party
+L - People Party's Liberals
+KD - Christian Democrats
+F - Feminist Initiative
+
+Switzerland 2011
+
+SVP - Swiss People's Party
+SP - Social Democratic Party of Switzerland
+FDP - Free Democratic Party of Switzerland
+CVP - Christian Democratic People's Party of Switzerland
+Green - Green Party
+GLP - Green Liberal Party
+BDP - Conservative Democratic Party
+
+Taiwan 2012
+
+KMT - Kuomintang
+DPP - Democratic Progressive Party
+PFP - People First Party
+
+Thailand 2011
+
+PPT - For Thais Party (successor of PPP)
+DP - Democrat Party
+BJT - Thai Pride Party
+PRT - Love Thailand Party
+CP - Thai Nation Development Party
+NDP - National Development Party
+PRS - Peaceloving Party
+PM - Motherland Party
+PPC - Power of Chonburi Party
+
+Turkey 2015
+
+AKP - Justice and Development Party
+CHP - Republican People's Party
+MHP - Nationalist Movement Party
+HDP - People's Democratic Party
+SP - Felicity Party
+VP - Patriotic Party
+
+USA 2012
+
+Dem - Democrats
+Rep - Republicans
+
+-------------------------MODULE 5 ---------------------------------------------
+
+Australia 2019
+
+LP - Liberal Party
+ALP - Australian Labor Party
+Green - Australian Greens
+NP - National Party
+ON - One Nation
+
+Austria 2017
+
+OVP - Austrian People's Party
+SPO - Social Democratic Party of Austria
+FPO - Freedom Party
+NEOS - Alliance of New Austria and Liberal Forum
+PILZ - List of Peter Pilz
+Green - Green Alternative
+
+Brazil 2018
+
+PSL - Partido Social Liberal
+PT - Partido dos Trabalhadores
+PSDB - Brazilian Social Democratic Party (Partido da Social Democracia Brasileira)
+PSD - Partido Social Democratico
+PP - Partido Progressista
+PMDB - Party of the Brazilian Democratic Movement
+PSB - Brazilian Socialist Party
+PR - Republic Party
+PRB - Partido Republicano Brasileiro
+
+
+Chile 2017
+
+RN - Renovacion National
+UDI - Union Democrata Independiente
+PDC - Partido Demócrata Cristiano
+PS - Partido Socialista de Chile
+PD - Partido por la Democracia
+RD - Revolucion Democratica
+PC - Partido Comunista
+Evopoli - Political Evolution
+PRSD - Partido Radical Socialdemocrata
+
+France 2017
+
+LaREM - En Marche
+FN -  Front National
+Rep - Les Républicains
+FI - France Insoumise
+PS - Parti Socialiste
+Green - Les Verts
+
+Germany 2017
+
+CDU - Christian Democratic Party
+SPD - Social Democratic Party
+AFD - Alternative for Germany
+FDP - Free Democratic Party
+LP - Party of Democratic Socialism/Left Party
+Green - Alliance 90/Greens
+CSU - Christian Social Union
+
+Greece 2015
+
+SYRIZA - Coalition of the Radical Left
+ND - New Democracy
+LS-XA - Golden Dawn
+PASOK - Pan-Hellenic Socialist Movement
+KKE - Communist Party of Greece
+Potami - The River
+ANEL - The Independent Greeks
+EK - Union of Centrists
+
+Hong Kong 2016
+
+DAB - Democratic Alliance for the Betterment of Hong Kong
+CP - Civic Party
+DP - Democratic Party
+FTU - Hong Kong Federation of Trade Unions
+NPP - New People's Party
+AHKG - AllinHKG, electoral alliance
+
+Hungary 2018
+
+Fidesz - Hungarian Civic Party
+Jobbik - Movement for a better Hungary
+MSZP - Hungary Socialist Party
+LMP - Politics can be different
+DK - Democratic Coalition
+
+Iceland 2016
+
+Ind - Independence Party
+VG - Left Greens
+Pi - Pirates
+FSF - Progressive Party
+Reform - Reform Party
+BF - Bright Future
+SDA - Alliance
+
+Iceland 2017
+
+Ind - Independence Party
+VG - Left Greens
+SDA - Alliance
+M - Centre Party
+FSF - Progressive Party
+Pi - Pirates
+FIF - People's Party
+Reform - Reform Party
+
+Ireland 2016
+
+FG - Fine Gael
+FF - Fianna Fail
+SF - Sinn Fein
+Lab - Labour
+AAA-PBP - Anti-Austerity Alliance-People Before Profit
+SD - Social Democrats
+Green - Green Party
+
+Italy 2018
+
+M5S - Movimento 5 Stelle
+PD - Partito Democratico
+LN - Lega
+FI - Forza Italia
+FdI - Fratelli dí Italia
+LeU - Liberi e Uguali
+
+Lithuania 2016
+
+TS-LKD - Homeland Union – Lithuanian Christian Democrats
+LVZS -   Lithuania Union of Farmers and Greens
+SDP - Social Democratic Party
+LRLS - Liberal Movement of the Republic of Lithuania
+LCP-LPP - Anti-Corruption Coalition
+LRA-KSS - Lithuanian Poles Electoral Action - Christian Families Alliance
+PTT - Party Order and Justice
+DLP - Democratic Labor Party
+
+
+Montenegro 2016
+
+DPS - Democratic Party of Socialists of Montenegro
+DF - Democratic Front
+DEMOS - Key coalition
+DCG - Democratic Montenegro
+SDP - Social Democratic Party of Montenegro
+SD - Social Democrats
+BS - Bosniak Party
+
+New Zealand 2017
+
+Nat - National Party
+Lab - Labour Party
+NZfirst - New Zealand First
+Green - Green Party
+TOP - The Opportunities Party
+Maori - Maori Party
+ACT - ACT New Zealand
+MANA - MANA movement
+
+Norway 2017
+
+Lab - Labour
+H - Conservatives
+FrP - Progress Party
+SP - Center Party
+SV - Socialist Left Party
+V - Liberal Party
+KrF - Christian Democrats
+G - Greens
+R - Red
+
+South Korea 2016
+
+LKP - Liberal Korea Party (Formerly known as New Frontier Party and the Grand National Party)
+DP - Democratic Party
+PP - People's Party
+JP - Justice Party
+
+Taiwan 2016
+
+DPP - Democratic Progressive Party
+KMT - Kuomintang
+NPP - New Power Party
+PFP - People First Party
+TSU - Taiwan Solidarity Union
+
+Turkey 2018
+
+AKP - Justice and Development
+CHP - Republican People's Party
+HDP - People's Democratic Party
+MHP - Nationalist Action Party
+IYI - Good Party
+SP - Felicity Party
+
+USA 2016
+
+Dem - Democrats
+Rep - Republicans
