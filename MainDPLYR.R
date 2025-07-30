@@ -14,7 +14,7 @@ setwd("~")
 load("Data/cses_imd.rdata")
 
 d <- cses_imd %>%
-  weight2rows(., "IMD1010_1") %>%
+  weight2rows(., "IMD1010_3") %>%
   mutate(cntry = ifelse(IMD1003 %in% c(5611999, 5612019), "B_FL", 
                         ifelse(IMD1003 %in% c(5621999, 5622019), "B_WA", 
                                IMD1006_NAM))) %>%
@@ -124,6 +124,7 @@ trank.fun <- function(case) {
 
 # Run the function over unique case_ID values
 caseid.party <- as.list(unique(d$case_ID))
+#caseid.party <- as.list(c("France_2007", "Italy_2018", "Germany_1998"))
 ## List of ranking tables
 ranking.list <- mclapply(caseid.party, trank.fun, mc.cores = 8)
 names(ranking.list) <- caseid.party
