@@ -68,7 +68,7 @@ rm(GBR15, GBR15.data)
 NDL17 <- res.party$Netherlands_2017
 NDL17$totals
 partyname.df %>% filter(., case_ID == "Netherlands_2017")
-## D (CW:) D66, A (2nd): VVD, E (3rd): SP (PvdA)
+## D (CW:) D66, A (2nd): VVD, E (3rd): GRL (Green Party)
 NDL17.data <- NDL17$data %>% as.data.frame(.) %>%
   mutate(AD = ifelse(A < D, 1, 0),
          DA = ifelse(D < A, 1, 0),
