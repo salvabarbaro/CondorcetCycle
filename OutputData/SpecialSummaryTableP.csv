@@ -1,0 +1,9 @@
+"case","count_candidate","count_tie","count_cycle"
+"Great.Britain_1997",10000,0,0
+"Great.Britain_2005",10000,0,0
+"Great.Britain_2015",10000,0,0
+"Great.Britain_2017",9976,0,24
+"Great.Britain_2019",9547,453,0
+"India_2019",10000,0,0
+"Spain_2004",10000,0,0
+"Switzerland_2007",10000,0,0

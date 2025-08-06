@@ -10,7 +10,7 @@ Authors: Salvatore Barbaro and Anna Kurella
 This repository contains replication scripts for the study on the prevalence of Condorcet's Paradox. The analysis uses data from the Comparative Study of Electoral Systems (CSES). The scripts are written in R.
 
 > **Note**: You will need to download the CSES data directly from the CSES project website. The source and DOI are provided in the paper's reference section and below (Section Data Accessibility).
-
+> **Quick Access**: In case you wish to skip running the replication files on inference, you can use their outputs in the subfolder "OutputData", which also includes an R-Script.
 ---
 
 ## 📊 Data Accessibility
@@ -25,11 +25,11 @@ The paper uses data from the **CSES project**, which is subject to redistributio
 ### 1. **Main Replication File**
    - `Main.R`: Main script.
 
-### 2. **Bootstrap and Random Noise Replication Files**
-   - `bootstrap.R`: Performs 10,000 bootstrap replications on each party election.
-   - `bootstrapCand.R`: Performs 10,000 bootstrap replications on each candidate election.
-   - `Noise_HPC.R`: Performs 10,000 random noise replications on each election. Noise interval: [-1.1, 1.1].
-   - `MainDPLYR.R`: Creates a list with the election outcomes that is required to run the bootstrap / noise analyses.
+### 2. **Inference Tests**
+   - `InferenceBootstrap_Parties.R`: Performs 10,000 bootstrap replications on each party election.
+   - `InferenceBootstrap_Candidates.R`: Performs 10,000 bootstrap replications on each candidate election.
+   - `Inference_Noise`: Performs 10,000 replications on each election with noise interval: [-1.1, 1.1].
+   - `Inference_PBW.R`: Performs 10,000 bootstrap replications by considering the PBW.
 
 ### 3. **Cabinet Analysis**
    - `cabinet.R`: Assesses how often the Condorcet winner (or loser) belongs to the cabinet after the respective election.
@@ -38,7 +38,7 @@ The paper uses data from the **CSES project**, which is subject to redistributio
 
 ## 🖥️ Software Requirements
 
-- **R Version**: 4.4.1 (Race for your life)
+- **R Version**: 4.5.1 (Great Square Root)
 - **Required R Libraries**:
   - `vote`
   - `parallel`
@@ -54,16 +54,17 @@ The scripts have been tested on both Linux-Debian and Windows systems. The scrip
 
 ## ⚙️ Controlled Randomness
 
-All bootstrap and Bayesian (Monte Carlo) replications use a fixed seed value for reproducibility:  
+All bootstrap and random-noise replications use a fixed seed value for reproducibility:  
 **Seed Value**: `55234` (the authors' zip code).
 
 ---
 
 ## ⏱️ Approximate Runtime
 
-- **Main Scripts**: ~6 minutes on a standard (2024) desktop machine.  
+- **Main Scripts**: ~16 minutes on a standard (2024) desktop machine.  
 - **Bootstrap**: ~8 hours each on a high-performance computer with 40 CPU cores.
-- **Noise**: ~ 12 hours on a high-performance computer with 40 CPU cores. 
+- **Noise**: ~ 16 hours on a high-performance computer with 40 CPU cores. 
+- **Weight**: ~ 3 hours on a high-performance computer with 40 CPU cores.
 
 > If running the scripts on a non-UNIX or non-Linux system, consider revising the parallelization logic for optimal performance.
 
