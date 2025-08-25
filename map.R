@@ -31,4 +31,4 @@ ggplot() +
   coord_sf(crs = st_crs("+proj=robin"), expand = FALSE, datum = NA) +
   theme_minimal() +
   theme(legend.position = "none")
-ggsave("~/Documents/Research/Elections/AnnaProjects/CondorcetParadox/git/6698fdf61cc3013a205e1eb4/PUCH/Presentation/map.pdf")
+#ggsave("~/Documents/Research/Elections/AnnaProjects/CondorcetParadox/git/6698fdf61cc3013a205e1eb4/PUCH/Presentation/map.pdf")
