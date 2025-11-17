@@ -1,7 +1,9 @@
 # CondorcetCycle
 
-**Replication Data: On the Prevalence of Condorcet's Paradox**  
-Authors: Salvatore Barbaro and Anna Kurella
+**Replication Data: On the Prevalence of Condorcet's Paradox**\  
+*Authors: Salvatore Barbaro and Anna Kurella*\
+*Public Choice (2024/2025) - In-Press status*\
+*DOI: tba*\
 
 ---
 
