@@ -6,7 +6,7 @@ library(rnaturalearthdata)
 library(dplyr)
 
 # Example data frame with countries to highlight
-load("~/Documents/Research/Elections/AnnaProjects/CondorcetParadox/mogon/d.RData")
+load("d.RData")
 ## iso3c = IMD1006_UNALPHA3
 #df <- d[,1:15] %>% filter(., IMD1006_UNALPHA3 != "RUS")
 #rm(d)
@@ -31,4 +31,4 @@ ggplot() +
   coord_sf(crs = st_crs("+proj=robin"), expand = FALSE, datum = NA) +
   theme_minimal() +
   theme(legend.position = "none")
-#ggsave("~/Documents/Research/Elections/AnnaProjects/CondorcetParadox/git/6698fdf61cc3013a205e1eb4/PUCH/Presentation/map.pdf")
+#ggsave("map.pdf")

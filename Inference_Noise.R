@@ -6,7 +6,6 @@ library(parallel)  # for mclapply (suitable for UNIX/LINUX only!)
 library(data.table)  # For frank()
 library(stringr)  # for renaming items
 
-#setwd("~/Documents/Research/Elections/AnnaProjects/CondorcetParadox/mogon/")
 load("d.RData")
 #
 ##################################################################################################

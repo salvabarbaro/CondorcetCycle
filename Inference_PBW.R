@@ -6,8 +6,7 @@ library(vote)   # for condorcet()
 library(parallel)  # for mclapply (suitable for UNIX/LINUX only!)
 library(data.table)  # For frank()
 library(stringr)  # for renaming items
-############################################################
-#setwd("~/Documents/Research/Elections/AnnaProjects/CondorcetParadox/mogon/")
+#######################################################
 load("d.RData")
 Repl <- 5000   # bootstrap replications
 nb.cores <- 40 # number of cores to use in lapply() !---! be carefully!
