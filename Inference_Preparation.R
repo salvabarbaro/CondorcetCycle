@@ -11,7 +11,7 @@ library(hutils)
 ###
 # Load CSES data 
 #load("Data/cses_imd.rdata") as cses_imd
-load("~/Documents/Research/Elections/AnnaProjects/CondorcetParadox/mogon/d.RData")
+load("d.RData")
 ###################################################
 #####   C H A P T E R  1: Base Inference ##########
 # The purpose of this chapter is to generate a    #
