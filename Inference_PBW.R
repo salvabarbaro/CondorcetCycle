@@ -8,7 +8,7 @@ library(data.table)  # For frank()
 library(stringr)  # for renaming items
 #######################################################
 load("d.RData")
-Repl <- 5000   # bootstrap replications
+Repl <- 10000   # bootstrap replications
 nb.cores <- 40 # number of cores to use in lapply() !---! be carefully!
 ############################################################
 ##############  FUNCTIONS ##################################
